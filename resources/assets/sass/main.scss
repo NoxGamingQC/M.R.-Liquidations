@@ -1,0 +1,25 @@
+.welcome-page {
+    background-image: url('/img/home_background.png');
+    background-color: $background-color;
+}
+
+.title {
+    font-family: 'Blenda Script', sans-serif !important;
+    text-shadow: 2px 2px #000;
+}
+
+.footer {
+    background-color: $footer-color;
+    color: $text-inverted-color;
+    a {
+        color: $text-inverted-color;
+    }
+    a:hover {
+        color: $text-inverted-color;
+        text-decoration: none;
+    }
+    a:visited {
+        color: $text-inverted-color;
+        text-decoration: none;
+    }
+}
