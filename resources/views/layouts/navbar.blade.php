@@ -15,9 +15,9 @@
         <div class="collapse navbar-collapse" id="bs-navbar-collapse">
             <ul class="nav navbar-nav">
                 <li class="nav-home"><a href="/"><i class="fa fa-home" aria-hidden="true"></i> Bienvenue <span class="sr-only">current</span></a></li>
-                <li class="nav-store"><a href="/store"><i class="fa fa-home" aria-hidden="true"></i> Boutique <span class="sr-only">current</span></a></li>
+                <li class="nav-store"><a href="#"><i class="fa fa-home" aria-hidden="true"></i> Boutique <span class="sr-only">current</span></a></li>
                 <li class="nav-privacy_policy"><a href="/privacy_policy"><i class="fa fa-home" aria-hidden="true"></i> Politique de confidentialité <span class="sr-only">current</span></a></li>
-                <li class="nav-contact"><a href="/contact_us"><i class="fa fa-home" aria-hidden="true"></i> Nous contacter <span class="sr-only">current</span></a></li>
+                <li class="nav-contact"><a href="#"><i class="fa fa-home" aria-hidden="true"></i> Nous contacter <span class="sr-only">current</span></a></li>
             </ul>
         </div>
     </div>
