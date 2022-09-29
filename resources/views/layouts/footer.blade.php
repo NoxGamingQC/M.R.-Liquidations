@@ -3,7 +3,7 @@
     <div class="col-md-3">
     <br />
     <br />
-        <a class="btn btn-primary disabled" href="#" disabled>{{trans('general.privacy_policy')}}</a>
+        <a class="btn btn-primary disabled" href="/{{app()->getLocale()}}/privacy_policy" disabled>{{trans('general.privacy_policy')}}</a>
     </div>
     <div class="col-md-9 text-center">
         <div style="margin:5%; margin-left:-25%">
