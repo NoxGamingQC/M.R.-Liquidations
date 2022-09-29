@@ -3,7 +3,7 @@
 return [
     'slogan' => "The low price specialists",
     'fast_delivery' => "Fast delivery",
-    'warranty_30' => "30 days waranty",
+    'warranty_30' => "30 days warranty",
     'store' => "Store",
     'privacy_policy' => "Privacy policy",
     'contact_us' => "Contact us",
