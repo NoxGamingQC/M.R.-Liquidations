@@ -3,7 +3,7 @@
     <div class="col-md-3">
     <br />
     <br />
-        <a class="btn btn-primary" href="/privacy_policy">Politique de confidentialité</a>
+        <a class="btn btn-primary" href="#">Politique de confidentialité</a>
     </div>
     <div class="col-md-9 text-center">
         <div style="margin:5%; margin-left:-25%">
