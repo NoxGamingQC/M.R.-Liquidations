@@ -11,11 +11,24 @@
 |
 */
 
-Route::get('/', 'WelcomeController@index');
-Route::get('/store', 'StoreController@index');
-Route::get('/contact_us', 'ContactUsController@index');
-Route::get('/privacy_policy', 'PrivacyPolicyController@index');
-
 Auth::routes();
-
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
+Route::get('/', function () {
+    return redirect(app()->getLocale() . '/');
+});
+
+Route::group(
+    [
+    'prefix' => '{locale}',
+    'where' => ['locale' => '[a-z]{2}-[a-z]{2}'],
+    'middleware' => 'setlocale'],
+    function () {
+        Route::get('/', 'WelcomeController@index');
+        Route::get('/store', 'StoreController@index');
+        Route::get('/contact_us', 'ContactUsController@index');
+        Route::get('/privacy_policy', 'PrivacyPolicyController@index');
+        Route::get('/profile/edit', 'ProfileController@index');
+    }
+);
+
