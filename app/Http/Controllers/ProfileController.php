@@ -14,6 +14,7 @@ class ProfileController extends Controller
             $user = User::findOrFail(Auth::user()->id);
             return view('profile.edit', [
                 'id' => $user->id,
+                'username' => $user->name,
                 'email' => $user->email,
                 'firstname' => $user->firstname,
                 'lastname' => $user->lastname,
@@ -21,6 +22,7 @@ class ProfileController extends Controller
                 'address' => $user->address,
                 'postalCode' => $user->postalCode,
                 'city' => $user->city,
+                'state' => $user->state,
                 'country' => $user->country,
                 'appartement' => $user->appartement,
                 'depositComment' => $user->depositComment,
