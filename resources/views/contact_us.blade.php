@@ -6,24 +6,24 @@
 <div class="container">
     <div class="row">
         <div class="col-md-12">
-            <h1>NOUS CONTACTER</h1>
+            <h1>{{trans('contact_us.contact_us')}}</h1>
             <hr />
         </div>
         <div class="col-md-12">
-            <label>Nom *</label>
-            <input class="form-control" type="text" placeholder="Saisissez votre nom">
+            <label>{{trans('contact_us.name')}} *</label>
+            <input class="form-control" type="text" placeholder="{{trans('contact_us.name_placeholder')}}">
             
-            <label>E-mail *</label>
-            <input class="form-control" type="text" placeholder="Saisissez votre e-mail">
+            <label>{{trans('contact_us.email')}} *</label>
+            <input class="form-control" type="text" placeholder="{{trans('contact_us.email_placeholder')}}">
             
-            <label>Objet</label>
-            <input class="form-control" type="text" placeholder="Saisissez l'objet">
+            <label>{{trans('contact_us.object')}}</label>
+            <input class="form-control" type="text" placeholder="{{trans('contact_us.object_placeholder')}}">
             
-            <label>Message *</label>
-            <textarea class="form-control" type="text" placeholder="Rédigez votre message ici..."></textarea>
+            <label>{{trans('contact_us.message')}} *</label>
+            <textarea class="form-control" type="text" placeholder="{{trans('contact_us.message_placeholder')}}"></textarea>
 
             <br />
-            <input class="btn btn-primary form-control" type="button" value="Envoyer"/>
+            <input class="btn btn-primary form-control" type="button" value="{{trans('general.send')}}"/>
         </div>
         <div class="col-md-12">
             Add map with address 621 12e rue shawinigan G9T 4A8

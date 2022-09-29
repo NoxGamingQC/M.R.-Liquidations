@@ -6,8 +6,8 @@ return [
     'email' => "Email",
     'object' => "Object",
     'message' => "Message",
-    'name_placeholder' => "Enter your nom",
-    'email_placeholder' => "Enter your e-mail",
+    'name_placeholder' => "Enter your name",
+    'email_placeholder' => "Enter your email",
     'object_placeholder' => "Enter the object",
     'message_placeholder' => "Write your message here..."
 ];
