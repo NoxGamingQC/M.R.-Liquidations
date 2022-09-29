@@ -22,3 +22,7 @@ Route::get('/store', function () {
 Route::get('/privacy_policy', function () {
     return view('privacy_policy');
 });
+
+Route::get('/contact_us', function () {
+    return view('contact_us');
+});
