@@ -2067,8 +2067,6 @@ module.exports = {
  */
 __webpack_require__(/*! ./bootstrap */ "./resources/assets/js/bootstrap.js");
 
-__webpack_require__(/*! ./console */ "./resources/assets/js/console.js");
-
 window.toastr = __webpack_require__(/*! toastr */ "./node_modules/toastr/toastr.js");
 
 /***/ }),
@@ -2126,20 +2124,6 @@ if (token) {
 //     cluster: 'mt1',
 //     encrypted: true
 // });
-
-/***/ }),
-
-/***/ "./resources/assets/js/console.js":
-/*!****************************************!*\
-  !*** ./resources/assets/js/console.js ***!
-  \****************************************/
-/***/ (() => {
-
-console.log('%c Hold Up!', 'color: #ff0000; font-weight: bold; font-size: 50px; text-transform: uppercase;');
-console.log('%c If someone told you to copy/paste something here you have an 11/10 chance you\'re being scammed.', 'font-size: 20px;');
-console.log('%c Pasting anything in here could give attackers access to your account.', 'color: #ff0000; font-weight: bold; font-size: 20px;');
-console.log('%c Unless you understand exactly what you are doing, close this window and stay safe. 🤗', 'font-size: 20px;');
-console.log('%c If you do understand exactly what you are doing, you should be helping us ❤️', 'font-size: 20px;');
 
 /***/ }),
 

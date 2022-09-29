@@ -6,5 +6,4 @@
  */
 
 require('./bootstrap');
-require('./console');
 window.toastr = require('toastr');
