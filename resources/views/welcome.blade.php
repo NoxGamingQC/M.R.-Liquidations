@@ -9,23 +9,23 @@
         </div>
         <div class="col-md-12 text-center">
             <img src="/img/logo.png" class="img-fluid" style="max-width: 100%;" />
-            <h1 class="title text-primary" style="">Les spécialistes du bas prix</h1>
+            <h1 class="title text-primary" style="">{{trans('general.slogan')}}</h1>
         </div>
         <div class="col-md-12 text-center">
-            <h3 class="title text-primary">En vedette</h3>
+            <h3 class="title text-primary">{{trans('general.featured')}}</h3>
         </div>
         <div class="col-md-offset-6 col-md-6 text-center">
-            <h3 class="title text-primary"><b>Livraison rapide</b></h3>
+            <h3 class="title text-primary"><b>{{trans('general.fast_delivery')}}</b></h3>
         </div>
         <div class="col-md-6 text-center">
-            <h3 class="title text-primary"><b>Garantie 30 Jours</b></h3>
+            <h3 class="title text-primary"><b>{{trans('general.warranty_30')}}</b></h3>
         </div>
         <div class="col-md-6 text-center">
             <br />
             <br />
         </div>
         <div class="col-md-12 text-center">
-            <a class="btn btn-primary title" style="font-size: 50px; padding:2%; padding-left:5%; padding-right: 5%">Boutique</a>
+            <a class="btn btn-primary title" style="font-size: 50px; padding:2%; padding-left:5%; padding-right: 5%">{{trans('general.store')}}</a>
         </div>
     </div>
 </div>
