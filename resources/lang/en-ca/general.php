@@ -16,6 +16,7 @@ return [
     'send' => "Send",
     'search' => "Search",
     'featured' => "Featured",
+    'edit_profile' => "Edit profile",
     'console_wait' => "HOLD UP!",
     'console_copy_paste01' => "If someone told you to copy/paste something here you have an 11/10 chance you're being scammed.",
     'console_copy_paste02' => "Pasting anything in here could give attackers access to your account.",

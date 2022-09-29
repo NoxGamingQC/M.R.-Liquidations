@@ -17,6 +17,7 @@ Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
 Route::get('/', function () {
     return redirect(app()->getLocale() . '/');
 });
+Route::get('language/set/{language}', 'LanguageController@index');
 
 Route::group(
     [

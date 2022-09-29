@@ -12,7 +12,7 @@ class ProfileController extends Controller
     public function index() {
         if(Auth::check()) {
             $user = User::findOrFail(Auth::user()->id);
-            return view('profile_edit', [
+            return view('profile.edit', [
                 'id' => $user->id,
                 'email' => $user->email,
                 'firstname' => $user->firstname,
