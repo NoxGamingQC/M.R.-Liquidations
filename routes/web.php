@@ -11,18 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
-Route::get('/store', function () {
-    return view('store');
-});
-
-Route::get('/privacy_policy', function () {
-    return view('privacy_policy');
-});
-
-Route::get('/contact_us', function () {
-    return view('contact_us');
-});
+Route::get('/', 'WelcomeController@index');
+Route::get('/store', 'StoreController@index');
+Route::get('/contact_us', 'ContactUsController@index');
+Route::get('/privacy_policy', 'PrivacyPolicyController@index');
