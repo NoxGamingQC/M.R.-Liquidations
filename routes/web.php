@@ -15,3 +15,7 @@ Route::get('/', 'WelcomeController@index');
 Route::get('/store', 'StoreController@index');
 Route::get('/contact_us', 'ContactUsController@index');
 Route::get('/privacy_policy', 'PrivacyPolicyController@index');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
