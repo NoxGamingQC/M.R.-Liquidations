@@ -6,7 +6,7 @@
 <div class="container">
     <div class="row">
         <div class="col-md-12">
-            <h1>Boutique</h1>
+            <h1>{{trans('store.store')}}</h1>
             <hr />
         </div>
         <div class="col-md-12">
@@ -19,101 +19,35 @@
             </div>
             <br />
         </div>
+        <div class="col-md-12 text-right">
+            <select class="selectpicker" title="{{trans('store.sort_by')}}">
+            </select>
+        </div>
+        <div class="col-md-12">
+            <br />
+        </div>
         <div class="col-md-3">
             <ul>
-                <h3>Filtrer par:</h3>
+                <h3>{{trans('store.filter_by')}}:</h3>
                 <hr />
-                <h4>Categorie:</h4>
-                <li></li>
-                <li></li>
-                <li></li>
-                <h4>Prix:</h4>
-                <li></li>
-                <li></li>
-                <li></li>
+                <h4>{{trans('store.categories')}}:</h4>
+                <h4>{{trans('store.prices')}}:</h4>
             </ul>
         </div>
         <div class="col-md-9">
             <div class="row">
-                <div class="col-md-12 text-right">
-                    <select placeholder="Trier par">
-                        <option>Trier par</option>
-                    </select>
-                </div>
-                <div class="col-md-12 text-center">
-                    <div class="col-md-3 panel panel-default">
-                        <div class="panel-body">
-                            <p>Description du produit</p>
-                            <p>200.00C$</p>
-                            <button class="btn btn primary">Ajouter au panier</button>
-                        </div>
-                    </div>
-                    <div class="col-md-3 panel panel-default">
-                        <div class="panel-body">
-                            <p>Description du produit</p>
-                            <p>200.00C$</p>
-                            <button class="btn btn primary">Ajouter au panier</button>
-                        </div>
-                    </div>
-                    <div class="col-md-3 panel panel-default">
-                        <div class="panel-body">
-                            <p>Description du produit</p>
-                            <p>200.00C$</p>
-                            <button class="btn btn primary">Ajouter au panier</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-12 text-center">
-                    <div class="col-md-3 panel panel-default">
-                        <div class="panel-body">
-                            <p>Description du produit</p>
-                            <p>200.00C$</p>
-                            <button class="btn btn primary">Ajouter au panier</button>
-                        </div>
-                    </div>
-                    <div class="col-md-3 panel panel-default">
-                        <div class="panel-body">
-                            <p>Description du produit</p>
-                            <p>200.00C$</p>
-                            <button class="btn btn primary">Ajouter au panier</button>
-                        </div>
-                    </div>
-                    <div class="col-md-3 panel panel-default">
-                        <div class="panel-body">
-                            <p>Description du produit</p>
-                            <p>200.00C$</p>
-                            <button class="btn btn primary">Ajouter au panier</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-12 text-center">
-                    <div class="col-md-3 panel panel-default">
-                        <div class="panel-body">
-                            <p>Description du produit</p>
-                            <p>200.00C$</p>
-                            <button class="btn btn primary">Ajouter au panier</button>
-                        </div>
-                    </div>
-                    <div class="col-md-3 panel panel-default">
-                        <div class="panel-body">
-                            <p>Description du produit</p>
-                            <p>200.00C$</p>
-                            <button class="btn btn primary">Ajouter au panier</button>
-                        </div>
-                    </div>
-                    <div class="col-md-3 panel panel-default">
-                        <div class="panel-body">
-                            <p>Description du produit</p>
-                            <p>200.00C$</p>
-                            <button class="btn btn primary">Ajouter au panier</button>
-                        </div>
+                <div class="col-md-4 panel panel-default text-center">
+                    <div class="panel-body">
+                        <p>Description du produit</p>
+                        <p>200.00C$</p>
+                        <button class="btn btn primary">{{trans('store.add_basket')}}</button>
                     </div>
                 </div>
             </div>
         </div>
         <div class="col-md-12 text-center">
         <br />
-            <button class="btn btn primary">Plus d'article</button>
+            <button class="btn btn primary">{{trans('store.more_item')}}</button>
         </div>
     </div>
 </div>
