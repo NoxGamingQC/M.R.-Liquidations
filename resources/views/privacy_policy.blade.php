@@ -61,7 +61,7 @@
 
             <p>Courriel :  M.R.Liquidations@hotmail.com </p>
 
-            <p>Téléphone :  819-729-0897 </p>
+            <p>Téléphone :  819-989-0867 </p>
 
             <p>Section du site web :   https://www.mrliquidations.ca/ </p>
             <hr />
@@ -75,7 +75,7 @@
 
             <p>Courriel :  M.R.Liquidations@hotmail.com </p>
 
-            <p>Téléphone :  819-729-0897 </p>
+            <p>Téléphone :  819-989-0867 </p>
 
             <p>Section du site web :   https://www.mrliquidations.ca/ </p>
             <hr />
