@@ -10,7 +10,13 @@
             <hr />
         </div>
         <div class="col-md-12">
-            <input class="form-control" type="text" placeholder="Search">
+            <div class="form-group">
+                <div class="input-group">
+                    <div class="input-group-addon"><i class="fa fa-search" aria-hidden="true"></i></div>
+                    <input type="text" class="form-control" placeholder="{{trans('general.search')}}">
+                    <span class="input-group-btn"><button class="btn btn-primary" type="button">{{trans('general.search')}}</button></span>
+                </div>
+            </div>
             <br />
         </div>
         <div class="col-md-3">
