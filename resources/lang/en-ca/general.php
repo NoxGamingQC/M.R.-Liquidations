@@ -14,6 +14,7 @@ return [
     'logout' => "Sign out",
     'copyright' => "2021 by M.R. Liquidations.",
     'send' => "Send",
+    'submit' => "Submit",
     'search' => "Search",
     'featured' => "Featured",
     'edit_profile' => "Edit profile",
