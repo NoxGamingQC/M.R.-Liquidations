@@ -9,7 +9,7 @@
         </div>
         <div class="col-md-12 text-center">
             <img src="/img/logo.png" />
-            <img src="/img/slogan.png" style="margin-top:-200px;" />
+            <h1 class="title text-primary" style="margin-top:-150px;margin-bottom:150px;font-size: 50px;">Les spécialistes du bas prix</h1>
         </div>
         <div class="col-md-12 text-center">
             <h1 class="title text-primary">En vedette</h1>
