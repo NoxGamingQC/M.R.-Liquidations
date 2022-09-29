@@ -13,7 +13,7 @@
     @else
     <title>M.R. Liquidations - @yield('title')</title>
     @endif
-    <link rel="icon" href="/img/logo.png" type="image/png">
+    <link rel="icon" href="/img/favicon.png" type="image/png">
     <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
     <link href="{{mix('css/app.css')}}" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.9/dist/css/bootstrap-select.min.css">
