@@ -96,7 +96,7 @@
         </div>
         <div class="col-md-12">
             <div class="col-md-12 text-right">
-                <button type="submit" id="submit" class="btn btn-primary">{{trans('generic.submit')}}</button>
+                <button type="submit" id="submit" class="btn btn-primary">{{trans('general.submit')}}</button>
             </div>
         </div>
     </div>
