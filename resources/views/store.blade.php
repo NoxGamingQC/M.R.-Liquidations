@@ -62,6 +62,13 @@
                                 <div class="col-md-4 panel panel-default" style="max-height:450px; height:450px">
                                     <div class="panel-body">
                                         <div class="row">
+                                            @if(Auth::check())
+                                                @if($isDev || $isManager)
+                                                    <div class="col-md-12 text-right">
+                                                        <button type="button" class="btn btn-warning"><i class="fa fa-pencil" aria-hidden="true"></i></button>
+                                                    </div>
+                                                @endif
+                                            @endif
                                             <div class="col-md-12 text-center">
                                                 <img class="img-rounded" src="{{$item->picture}}" style="max-width:250px; max-height:250px; height:250px;">
                                             </div>
