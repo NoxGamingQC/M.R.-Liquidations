@@ -3050,6 +3050,31 @@
   text-decoration: none;
 }
 
+.bg-primary {
+  color: #fff !important;
+  background-color: #B11201 !important;
+}
+
+.bg-info {
+  color: #000 !important;
+  background-color: #8eb4cb !important;
+}
+
+.bg-success {
+  color: #fff !important;
+  background-color: #2ab27b !important;
+}
+
+.bg-warning {
+  color: #000 !important;
+  background-color: #cbb956 !important;
+}
+
+.bg-danger {
+  color: #fff !important;
+  background-color: #bf5329 !important;
+}
+
 /*!
  * Bootstrap v3.4.1 (https://getbootstrap.com/)
  * Copyright 2011-2019 Twitter, Inc.

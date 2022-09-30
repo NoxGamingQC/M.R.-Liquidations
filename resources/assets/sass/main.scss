@@ -24,3 +24,28 @@
         text-decoration: none;
     }
 }
+
+.bg-primary {
+    color: $text-inverted-color !important;
+    background-color: $brand-primary !important;
+}
+
+.bg-info {
+    color: $text-color !important;
+    background-color: $brand-info !important;
+}
+
+.bg-success {
+    color: $text-inverted-color !important;
+    background-color: $brand-success !important;
+}
+
+.bg-warning {
+    color: $text-color !important;
+    background-color: $brand-warning !important;
+}
+
+.bg-danger {
+    color: $text-inverted-color !important;
+    background-color: $brand-danger !important;
+}

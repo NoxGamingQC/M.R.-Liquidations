@@ -35,7 +35,7 @@
         <div class="col-md-12">
             <div class="form-group">
                 <div class="input-group">
-                    <div class="input-group-addon"><i class="fa fa-search" aria-hidden="true"></i></div>
+                    <div class="input-group-addon bg-info"><i class="fa fa-search" aria-hidden="true"></i></div>
                     <input type="text" class="form-control disabled" placeholder="{{trans('general.search')}}" disabled>
                     <span class="input-group-btn"><button class="btn btn-primary disabled" type="button" disabled>{{trans('general.search')}}</button></span>
                 </div>
