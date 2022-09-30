@@ -28,10 +28,10 @@
         </div>
         <div class="col-md-3">
             <ul>
-                <h3>{{trans('store.filter_by')}}:</h3>
-                <hr />
-                <h4>{{trans('store.categories')}}:</h4>
-                <h4>{{trans('store.prices')}}:</h4>
+                <h3 class="hidden">{{trans('store.filter_by')}}:</h3>
+                <hr class="hidden" />
+                <h4 class="hidden">{{trans('store.categories')}}:</h4>
+                <h4 class="hidden">{{trans('store.prices')}}:</h4>
             </ul>
         </div>
         @if($displayedItemCount)
