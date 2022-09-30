@@ -26,7 +26,7 @@
             <input class="btn btn-primary form-control" type="button" value="{{trans('general.send')}}"/>
         </div>
         <div class="col-md-12">
-            Add map with address 621 12e rue shawinigan G9T 4A8
+            <br />
         </div>
     </div>
 </div>
