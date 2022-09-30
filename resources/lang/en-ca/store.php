@@ -10,6 +10,7 @@ return [
     'more_item' => "More item",
     'no_item_available' => "No items are available at this moment.",
     'available' => "Available",
-    'not_available' => "Not available"
+    'not_available' => "Not available",
+    'free' => "Free"
     
 ];

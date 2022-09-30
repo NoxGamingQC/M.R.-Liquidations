@@ -40,17 +40,29 @@
                     @if($items)
                         @foreach($items as $key => $item)
                             @if(!$item->isHidden)
-                                <div class="col-md-4 panel panel-default text-center">
+                                <div class="col-md-4 panel panel-default">
                                     <div class="panel-body">
-                                        <img class="img-circle" src="{{$item->picture}}" width="100px">
-                                        <br />
-                                        <p>{{$item->name}}</p>
-                                        <p>{{$item->price}}C$</p>
-                                        @if($item->isAvailable)
-                                            <button class="btn btn-success">{{trans('store.available')}}</button>
-                                        @else
-                                            <button class="btn btn-danger disabled" disabled>{{trans('store.not_available')}}</button>
-                                        @endif
+                                        <div class="row">
+                                            <div class="col-md-12 text-left">
+                                                <img class="img-rounded" src="{{$item->picture}}" width="100%">
+                                            </div>
+                                            <div class="col-md-6 text-left">
+                                                <br />
+                                                <h5>{{$item->name}}</h5>
+                                                <br />
+                                                <p>{{$item->price != "0.00" ? $item->price . 'C$' : trans('store.free')}}</p>
+                                            </div>
+                                            <div class="col-md-6 text-right">
+                                                <br />
+                                                <br />
+                                                <br />
+                                                @if($item->isAvailable)
+                                                    <button class="btn btn-success">{{trans('store.available')}}</button>
+                                                @else
+                                                    <button class="btn btn-danger disabled" disabled>{{trans('store.not_available')}}</button>
+                                                @endif
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             @endif
