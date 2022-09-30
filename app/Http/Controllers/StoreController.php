@@ -15,7 +15,8 @@ class StoreController extends Controller
         return view('store')->with([
             'items' => $items,
             'displayedItemCount' => $displayedItemCount,
-            
+            'isManager' => Auth::user()->isManager,
+            'isDev' => Auth::user()->isDev
         ]);
     }
 }

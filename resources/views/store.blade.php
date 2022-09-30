@@ -6,7 +6,7 @@
 <div class="container">
     <div class="row">
         @if(Auth::check())
-            @if(Auth::user()->isDev || Auth::user()->isManager)
+            @if($isDev || $isManager)
                 <div class="col-md-6">
                     <h1>{{trans('store.store')}}</h1> 
                     <hr />
@@ -59,21 +59,21 @@
                     @if($items)
                         @foreach($items as $key => $item)
                             @if(!$item->isHidden)
-                                <div class="col-md-4 panel panel-default">
+                                <div class="col-md-4 panel panel-default" style="max-height:450px; height:450px">
                                     <div class="panel-body">
                                         <div class="row">
-                                            <div class="col-md-12 text-left">
-                                                <img class="img-rounded" src="{{$item->picture}}" width="100%">
+                                            <div class="col-md-12 text-center">
+                                                <img class="img-rounded" src="{{$item->picture}}" style="max-width:250px; max-height:250px; height:250px;">
                                             </div>
                                             <div class="col-md-6 text-left">
                                                 <br />
                                                 <h5>{{$item->name}}</h5>
                                                 <br />
-                                                <p>{{$item->price != "0.00" ? $item->price . 'C$' : trans('store.free')}}</p>
+                                                @if($item->isAvailable)
+                                                    <p>{{$item->price != "0.00" ? $item->price . 'C$' : trans('store.free')}}</p>
+                                                    @endif
                                             </div>
                                             <div class="col-md-6 text-right">
-                                                <br />
-                                                <br />
                                                 <br />
                                                 @if($item->isAvailable)
                                                     <button class="btn btn-success">{{trans('store.available')}}</button>
