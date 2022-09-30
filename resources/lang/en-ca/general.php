@@ -25,5 +25,6 @@ return [
     'console_close_window' => "Unless you understand exactly what you are doing, close this window and stay safe. 🤗",
     'soon_in_english' => "(Available soon in english)",
     'soon_in_french' => "",
-    'my_profile' => "My profile"
+    'my_profile' => "My profile",
+    'feature_coming_soon' => 'This feature will be available soon.'
 ];

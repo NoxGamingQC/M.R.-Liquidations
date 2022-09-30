@@ -28,8 +28,9 @@
         </div>
         <div class="col-md-3">
             <ul>
-                <h3 class="hidden">{{trans('store.filter_by')}}:</h3>
-                <hr class="hidden" />
+                <h3>{{trans('store.filter_by')}}:</h3>
+                <hr />
+                <h4 class="text-warning">{{trans('general.feature_coming_soon')}}</h4>
                 <h4 class="hidden">{{trans('store.categories')}}:</h4>
                 <h4 class="hidden">{{trans('store.prices')}}:</h4>
             </ul>
