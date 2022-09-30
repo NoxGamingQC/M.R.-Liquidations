@@ -127,6 +127,8 @@ document.addEventListener("DOMContentLoaded", () => {
         var isAvailable = $('#isAvailable-' + id).val() ? true : false;
         var isHidden = $('#isHidden-' + id).val() ? true : false;
 
+        
+        $('#editItemID').val(id);
         $('#editItemName').val(name);
         $('#editItemDescription').val(description);
         $('#editItemPrice').val(price);

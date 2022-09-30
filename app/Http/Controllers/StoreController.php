@@ -26,4 +26,24 @@ class StoreController extends Controller
             'isDev' => $isDev
         ]);
     }
+
+    public function editItem(Request $request) {
+        if(Auth::check()) {
+            if(Auth::user()->isManager || Auth::user()->isDev) {
+                $item = Items::findOrFail($request->id);
+                $item->name = $request->name;
+                $item->description = $request->description;
+                $item->price = $request->price;
+                $item->stock = $request->stock;
+                $item->isAvailable = $request->isAvailable === 'checked';
+                $item->isHidden = $request->isHidden === 'checked';
+
+                $item->save();
+
+                return 200;
+            }
+            abort(403);
+        }
+        abort(403);
+    }
 }

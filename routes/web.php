@@ -18,6 +18,7 @@ Route::get('/', function () {
     return redirect(app()->getLocale() . '/');
 });
 Route::get('language/set/{language}', 'LanguageController@index');
+Route::post('/store/item/edit', 'StoreController@editItem');
 
 Route::group(
     [

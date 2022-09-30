@@ -10,6 +10,7 @@
             <form class="form-horizontal">
             {{ csrf_field() }}
                 <div class="modal-body">
+                    <input id="editItemID" type="hidden" class="form-control" />
                     <div class="form-group">
                         <label class="col-md-3 control-label">{{trans('store.name')}}: </label>
                         <div class="col-md-9">
@@ -69,16 +70,25 @@
 document.addEventListener("DOMContentLoaded", () => {
     $('#saveItem').on('click', function() {
         $.ajax({
-            url: "/" + $('html').attr('lang') + "/store/item/edit",
+            url: "/store/item/edit",
             method: "post",
             data: {
-                _token: $('meta[name="csrf-token"]').attr('content')
+                _token: $('meta[name="csrf-token"]').attr('content'),
+                id: $('#editItemID').val(),
+                name: $('#editItemName').val(),
+                description: $('#editItemDescription').val(),
+                price: $('#editItemPrice').val(),
+                stock: $('#editItemStock').val(),
+                isAvailable: $('#editItemIsAvailable').attr('checked'),
+                isHidden: $('#editItemisHidden').attr('checked')
             },
             success: function() {
-                toastr.success('L\'item à été ajouté avec succès.', 'Item ajouté');
+                console.log('L\'item à été modifier avec succès.');
+                toastr.success('L\'item à été modifier avec succès.', 'Item modifier');
             },
             error: function(error) {
-                toastr.error('Un problème est survenue?', 'Erreur');
+                console.log('Un problème est survenue');
+                toastr.error('Un problème est survenue', 'Erreur');
             }
         });
     });
