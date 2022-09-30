@@ -34,21 +34,39 @@
                 <h4>{{trans('store.prices')}}:</h4>
             </ul>
         </div>
-        <div class="col-md-9">
-            <div class="row">
-                <div class="col-md-4 panel panel-default text-center">
-                    <div class="panel-body">
-                        <p>Description du produit</p>
-                        <p>200.00C$</p>
-                        <button class="btn btn primary">{{trans('store.add_basket')}}</button>
-                    </div>
-                </div>
+        @if($displayedItemCount)
+            <div class="col-md-9">
+                <div class="row">
+                    @if($items)
+                        @foreach($items as $key => $item)
+                            @if(!$item->isHidden)
+                                <div class="col-md-4 panel panel-default text-center">
+                                    <div class="panel-body">
+                                        <img class="img-circle" src="{{$item->picture}}" width="100px">
+                                        <br />
+                                        <p>{{$item->name}}</p>
+                                        <p>{{$item->price}}C$</p>
+                                        @if($item->isAvailable)
+                                            <button class="btn btn-success">{{trans('store.available')}}</button>
+                                        @else
+                                            <button class="btn btn-danger disabled" disabled>{{trans('store.not_available')}}</button>
+                                        @endif
+                                    </div>
+                                </div>
+                            @endif
+                        @endforeach
+                    @endif
             </div>
         </div>
         <div class="col-md-12 text-center">
         <br />
             <button class="btn btn primary">{{trans('store.more_item')}}</button>
         </div>
+        @else
+            <div class="col-md-9">
+                <h3 class="text-center">{{trans('store.no_item_available')}}</h3>
+            </div>
+        @endif
     </div>
 </div>
 @stop
