@@ -3100,6 +3100,26 @@
   background-color: #EC4145 !important;
 }
 
+.text-primary {
+  color: #320500 !important;
+}
+
+.text-info {
+  color: #0169dc !important;
+}
+
+.text-success {
+  color: #194728 !important;
+}
+
+.text-warning {
+  color: #905c04 !important;
+}
+
+.text-danger {
+  color: #9e1013 !important;
+}
+
 /*!
  * Bootstrap v3.4.1 (https://getbootstrap.com/)
  * Copyright 2011-2019 Twitter, Inc.

@@ -74,3 +74,24 @@
     color: $text-inverted-color !important;
     background-color: $brand-danger !important;
 }
+
+
+.text-primary {
+    color: darken($brand-primary, 25%) !important;
+}
+
+.text-info {
+    color: darken($brand-info, 25%) !important;
+}
+
+.text-success {
+    color: darken($brand-success, 25%) !important;
+}
+
+.text-warning {
+    color: darken($brand-warning, 25%) !important;
+}
+
+.text-danger {
+    color: darken($brand-danger, 25%) !important;
+}
