@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('title', 'Welcome')
+@section('title', trans('general.contact_us'))
 @section('content')
 
 

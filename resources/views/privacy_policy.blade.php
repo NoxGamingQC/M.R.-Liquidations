@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('title', 'Welcome')
+@section('title', trans('general.privacy_policy'))
 @section('content')
 
 

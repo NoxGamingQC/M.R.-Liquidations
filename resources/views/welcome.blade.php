@@ -1,5 +1,5 @@
 @extends('layouts.welcome')
-@section('title', 'Welcome')
+@section('title', trans('general.welcome'))
 @section('content')
 
 <div class="container">
