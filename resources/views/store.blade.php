@@ -5,10 +5,28 @@
 
 <div class="container">
     <div class="row">
-        <div class="col-md-12">
-            <h1>{{trans('store.store')}}</h1>
-            <hr />
-        </div>
+        @if(Auth::check())
+            @if(Auth::user()->isDev || Auth::user()->isManager)
+                <div class="col-md-6">
+                    <h1>{{trans('store.store')}}</h1> 
+                    <hr />
+                </div>
+                <div class="col-md-6 text-right">
+                    <h1><button type="button" class="btn btn-success"><i class="fa fa-plus" aria-hidden="true"></i></button></h1> 
+                    <hr />
+                </div>
+            @else
+                <div class="col-md-12">
+                    <h1>{{trans('store.store')}}</h1> 
+                    <hr />
+                </div>
+            @endif
+        @else
+            <div class="col-md-12">
+                <h1>{{trans('store.store')}}</h1> 
+                <hr />
+            </div>
+        @endif
         <div class="col-md-12">
             <div class="form-group">
                 <div class="input-group">
