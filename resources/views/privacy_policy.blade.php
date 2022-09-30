@@ -6,7 +6,7 @@
 <div class="container">
     <div class="row">
         <div class="col-md-12">
-            <h1>Politique de confidentialité {{trans('general.soon_in_english')}}</h1>
+            <h1>Politique de confidentialité <small class="text-danger">{{trans('general.soon_in_english')}}</small></h1>
             <hr />
         </div>
         <div class="col-md-12">
