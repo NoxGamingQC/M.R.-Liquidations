@@ -26,5 +26,7 @@ return [
     'soon_in_english' => "",
     'soon_in_french' => "(Disponible bientôt en français)",
     'my_profile' => "Mon profile",
-    'feature_coming_soon' => 'Cette option sera disponible bientôt.'
+    'feature_coming_soon' => 'Cette option sera disponible bientôt.',
+    'save' => "Save",
+    'close' => "Close"
 ];

@@ -11,6 +11,12 @@ return [
     'no_item_available' => "Aucun article n'est disponible pour le moment.",
     'available' => "Disponible",
     'not_available' => "Non disponible",
-    'free' => "Gratuit"
-    
+    'free' => "Gratuit",
+    'name' => "Nom",
+    'description' => "Description",
+    'price' => "Prix",
+    'stock' => "Inventaire",
+    'isAvailable' => "Article disponible",
+    'isHidden' => "Caché l'article",
+    'add_item' => "Ajout d'article"
 ];

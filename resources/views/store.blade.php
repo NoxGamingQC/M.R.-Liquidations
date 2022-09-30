@@ -2,11 +2,11 @@
 @section('title', trans('general.store'))
 @section('content')
 
-
 <div class="container">
     <div class="row">
         @if(Auth::check())
             @if($isDev || $isManager)
+                @include('modals.edit_item')
                 <div class="col-md-6">
                     <h1>{{trans('store.store')}}</h1> 
                     <hr />
@@ -29,7 +29,7 @@
         @endif
         <div class="col-md-12">
             <span class="text-danger"><b>{{trans('general.soon_in_english')}}<b></span>
-            <span class="text-info"><b>**Les items listé ci-dessous sont disponible pour le ramassage à l'entrepôt gratuitement ou en livraison pour les villes et villages suivant: Shawinigan (15C$), Grand'Mère (15C$), Saint-Georges-de-Champlain (15C$), Saint-Boniface-de-Shawinigan (15C$), Shawinigan-Sud (15C$) et Trois-Rivières (20C$). La livraison se font les lundis seulement. Livraison gratuite avec tout achat de 250C$ ou plus.**<b></span>
+            <span class="text-info"><b>**Les items listé ci-dessous sont disponible pour le ramassage à l'entrepôt gratuitement ou en livraison pour les villes et villages suivant: Shawinigan (15C$), Grand'Mère (15C$), Saint-Georges-de-Champlain (15C$), Saint-Boniface-de-Shawinigan (15C$), Shawinigan-Sud (15C$) et Trois-Rivières (20C$). Les livraisons vers Trois-Rivières se font les lundis seulement. Livraison gratuite avec tout achat de 250C$ ou plus.**<b></span>
             <hr />
         </div>
         <div class="col-md-12">
@@ -67,10 +67,11 @@
                                 <div class="col-md-4 panel panel-default" style="max-height:450px; height:450px">
                                     <div class="panel-body">
                                         <div class="row">
+                                            <input type="hidden" id="name-{{$item->id}}" value="{{$item->name}}">
                                             @if(Auth::check())
                                                 @if($isDev || $isManager)
                                                     <div class="col-md-12 text-right">
-                                                        <button type="button" class="btn btn-warning"><i class="fa fa-pencil" aria-hidden="true"></i></button>
+                                                        <button id="{{$item->id}}" type="button" class="btn-edit-item btn btn-warning" data-toggle="modal" data-target="#addItemModal"><i class="fa fa-pencil" aria-hidden="true"></i></button>
                                                     </div>
                                                 @endif
                                             @endif
@@ -112,4 +113,15 @@
         @endif
     </div>
 </div>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    $('.btn-edit-item').on('click', function() {
+        var id = $(this).attr('id');
+        var name = $('#name-' + id).val();
+
+        $('#editItemName').val(name);
+    });
+});
+
+</script>
 @stop

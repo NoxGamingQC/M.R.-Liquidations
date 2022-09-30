@@ -14,6 +14,7 @@
     <title>M.R. Liquidations - @yield('title')</title>
     @endif
     <link rel="icon" href="/img/favicon.png" type="image/png">
+    <link href="{{mix('css/app.css')}}" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
     <link href="{{mix('css/app.css')}}" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.9/dist/css/bootstrap-select.min.css">
@@ -30,6 +31,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.9/dist/js/bootstrap-select.min.js"></script>
     <script src="{{mix('js/app.js')}}"></script>
     <script type="text/javascript">
+        $.fn.selectpicker.Constructor.BootstrapVersion = "3.3.7"
+        $.fn.datepicker.defaults.format = "yyyy-mm-dd";
         console.log("%c{{trans('general.console_wait')}}", 'color:#F00; font-size:60px; font-weight: bold; -webkit-text-stroke: 1px black;');
         console.log("%c{!!trans('general.console_copy_paste01')!!}", 'color:#FFF; font-size:18px;');
         console.log("%c{{trans('general.console_copy_paste02')}}", 'color:#F00; font-size:18px;');
