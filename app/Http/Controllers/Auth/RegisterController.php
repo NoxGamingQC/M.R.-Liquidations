@@ -27,8 +27,10 @@ class RegisterController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/home';
 
+    protected function redirectTo() {
+        return url()->previous();
+    }
     /**
      * Create a new controller instance.
      *
@@ -38,6 +40,17 @@ class RegisterController extends Controller
     {
         $this->middleware('guest');
     }
+
+    public function showRegistrationForm()
+    {
+        if(!session()->has('url.intended'))
+        {
+            session(['url.intended' => url()->previous()]);
+        }
+
+        return view('auth.register');
+    }
+
 
     /**
      * Get a validator for an incoming registration request.
