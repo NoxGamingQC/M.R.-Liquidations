@@ -11,9 +11,6 @@
             <img src="/img/logo.png" class="img-fluid" style="max-width: 100%;" />
             <h1 class="title text-primary" style="">{{trans('general.slogan')}}</h1>
         </div>
-        <div class="col-md-12 text-center">
-            <h3 class="title text-primary">{{trans('general.featured')}}</h3>
-        </div>
         <div class="col-md-offset-6 col-md-6 text-center">
             <h3 class="title text-primary"><b>{{trans('general.fast_delivery')}}</b></h3>
         </div>
