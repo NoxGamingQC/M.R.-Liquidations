@@ -22,7 +22,7 @@
             <br />
         </div>
         <div class="col-md-12 text-center">
-            <a class="btn btn-primary title disabled" href="/{{app()->getLocale()}}/store" style="font-size: 50px; padding:2%; padding-left:5%; padding-right: 5%" disabled>{{trans('general.store')}}</a>
+            <a class="btn btn-primary title" href="/{{app()->getLocale()}}/store" style="font-size: 50px; padding:2%; padding-left:5%; padding-right: 5%">{{trans('general.store')}}</a>
         </div>
     </div>
 </div>

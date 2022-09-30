@@ -13,14 +13,14 @@
             <div class="form-group">
                 <div class="input-group">
                     <div class="input-group-addon"><i class="fa fa-search" aria-hidden="true"></i></div>
-                    <input type="text" class="form-control" placeholder="{{trans('general.search')}}">
-                    <span class="input-group-btn"><button class="btn btn-primary" type="button">{{trans('general.search')}}</button></span>
+                    <input type="text" class="form-control disabled" placeholder="{{trans('general.search')}}" disabled>
+                    <span class="input-group-btn"><button class="btn btn-primary disabled" type="button" disabled>{{trans('general.search')}}</button></span>
                 </div>
             </div>
             <br />
         </div>
         <div class="col-md-12 text-right">
-            <select class="selectpicker" title="{{trans('store.sort_by')}}">
+            <select class="selectpicker disabled" title="{{trans('store.sort_by')}}" disabled>
             </select>
         </div>
         <div class="col-md-12">
@@ -60,7 +60,7 @@
         </div>
         <div class="col-md-12 text-center">
         <br />
-            <button class="btn btn primary">{{trans('store.more_item')}}</button>
+            <button class="btn btn primary disabled" disabled>{{trans('store.more_item')}}</button>
         </div>
         @else
             <div class="col-md-9">

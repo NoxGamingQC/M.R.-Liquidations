@@ -23,4 +23,6 @@ return [
     'console_copy_paste02' => "Pasting anything in here could give attackers access to your account.",
     'console_copy_paste03' => "If you do understand exactly what you are doing, you should be helping us ❤️",
     'console_close_window' => "Unless you understand exactly what you are doing, close this window and stay safe. 🤗",
+    'soon_in_english' => "(Available soon in english)",
+    'soon_in_french' => "",
 ];
