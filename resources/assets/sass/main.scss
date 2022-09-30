@@ -31,7 +31,7 @@
 }
 
 .bg-info {
-    color: $text-color !important;
+    color: $text-inverted-color !important;
     background-color: $brand-info !important;
 }
 
@@ -41,11 +41,36 @@
 }
 
 .bg-warning {
-    color: $text-color !important;
+    color: $text-inverted-color !important;
     background-color: $brand-warning !important;
 }
 
 .bg-danger {
+    color: $text-inverted-color !important;
+    background-color: $brand-danger !important;
+}
+
+.btn-primary {
+    color: $text-inverted-color !important;
+    background-color: $brand-primary !important;
+}
+
+.btn-info {
+    color: $text-inverted-color !important;
+    background-color: $brand-info !important;
+}
+
+.btn-success {
+    color: $text-inverted-color !important;
+    background-color: $brand-success !important;
+}
+
+.btn-warning {
+    color: $text-inverted-color !important;
+    background-color: $brand-warning !important;
+}
+
+.btn-danger {
     color: $text-inverted-color !important;
     background-color: $brand-danger !important;
 }
