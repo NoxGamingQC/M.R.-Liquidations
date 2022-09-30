@@ -25,4 +25,5 @@ return [
     'console_close_window' => "Si vous avez aucune idée de ce que vous faites, fermez cette fenêtre et rester en sécurité. 🤗",
     'soon_in_english' => "",
     'soon_in_french' => "(Disponible bientôt en français)",
+    'my_profile' => "Mon profile"
 ];
