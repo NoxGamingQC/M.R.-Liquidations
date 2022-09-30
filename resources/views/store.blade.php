@@ -68,10 +68,15 @@
                                     <div class="panel-body">
                                         <div class="row">
                                             <input type="hidden" id="name-{{$item->id}}" value="{{$item->name}}">
+                                            <input type="hidden" id="description-{{$item->id}}" value="{{$item->description}}">
+                                            <input type="hidden" id="price-{{$item->id}}" value="{{$item->price}}">
+                                            <input type="hidden" id="stock-{{$item->id}}" value="{{$item->stock}}">
+                                            <input type="hidden" id="isAvailable-{{$item->id}}" value="{{$item->isAvailable}}">
+                                            <input type="hidden" id="isHidden-{{$item->id}}" value="{{$item->isHidden}}">
                                             @if(Auth::check())
                                                 @if($isDev || $isManager)
                                                     <div class="col-md-12 text-right">
-                                                        <button id="{{$item->id}}" type="button" class="btn-edit-item btn btn-warning" data-toggle="modal" data-target="#addItemModal"><i class="fa fa-pencil" aria-hidden="true"></i></button>
+                                                        <button id="{{$item->id}}" type="button" class="btn-edit-item btn btn-warning" data-toggle="modal" data-target="#editItemModal"><i class="fa fa-pencil" aria-hidden="true"></i></button>
                                                     </div>
                                                 @endif
                                             @endif
@@ -81,14 +86,12 @@
                                             <div class="col-md-6 text-left">
                                                 <br />
                                                 <h5>{{$item->name}}</h5>
-                                                <br />
-                                                @if($item->isAvailable)
-                                                    <p>{{$item->price != "0.00" ? $item->price . 'C$' : trans('store.free')}}</p>
-                                                    @endif
                                             </div>
                                             <div class="col-md-6 text-right">
                                                 <br />
                                                 @if($item->isAvailable)
+                                                    <p>{{$item->price != "0.00" ? $item->price . 'C$' : trans('store.free')}}</p>
+                                                    <br />
                                                     <button class="btn btn-success">{{trans('store.available')}}</button>
                                                 @else
                                                     <button class="btn btn-danger disabled" disabled>{{trans('store.not_available')}}</button>
@@ -118,8 +121,18 @@ document.addEventListener("DOMContentLoaded", () => {
     $('.btn-edit-item').on('click', function() {
         var id = $(this).attr('id');
         var name = $('#name-' + id).val();
+        var description = $('#description-' + id).val();
+        var price = $('#price-' + id).val();
+        var stock = $('#stock-' + id).val();
+        var isAvailable = $('#isAvailable-' + id).val() ? true : false;
+        var isHidden = $('#isHidden-' + id).val() ? true : false;
 
         $('#editItemName').val(name);
+        $('#editItemDescription').val(description);
+        $('#editItemPrice').val(price);
+        $('#editItemStock').val(stock);
+        $('#editItemIsAvailable').attr('checked', isAvailable);
+        $('#editItemisHidden').attr('checked', isHidden);
     });
 });
 

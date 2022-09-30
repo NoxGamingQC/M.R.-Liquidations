@@ -18,6 +18,7 @@ return [
     'stock' => "Stock",
     'isAvailable' => "Item available",
     'isHidden' => "Hide item",
-    'add_item' => "Create an item"
+    'add_item' => "Create an item",
+    'edit_item' => "Edit an item"
     
 ];
