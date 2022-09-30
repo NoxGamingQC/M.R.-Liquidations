@@ -15,7 +15,13 @@ class LanguageController extends Controller
         } else {
             abort(403);
         }
+        if(!session()->has('url.intended'))
+        {
+            $redirectTo = str_replace([url('/'), '/en-ca', '/fr-ca'], '', url()->previous());
+        } else {
+            $redirectTo = '/';
+        }
 
-        return redirect(app()->getLocale() . '/');
+        return redirect(app()->getLocale() . $redirectTo);
     }
 }
