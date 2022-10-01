@@ -14,12 +14,10 @@
 
             <div class="modal-body">
                 <div class="row">
-                    <div class="col-md-8">
-                        <p id="showItemDescription" class="text-justify"></p>
-                    </div>
-                    <div class="col-md-4">
-                        <img id="showItemPicture" width="100%" hidden />
-                        <img id="noItemPicture" src="/img/no-image.png" width="100%" hidden />
+                    <div class="col-md-12">
+                        <img id="showItemPicture" width="40%" style="box-sizing: border-box;float: right; margin-left:5%;" hidden />
+                        <img id="noItemPicture" src="/img/no-image.png" width="40%" style="box-sizing: border-box;float: right; margin-left:5%;" hidden />
+                        <p id="showItemDescription" class="text-justify" style="box-sizing: border-box;"></p>
                     </div>
                     <div class="col-md-12">
                         <hr />
