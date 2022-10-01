@@ -93,5 +93,11 @@
 }
 
 .text-danger {
-    color: darken($brand-danger, 25%) !important;
+    color: $brand-danger !important;
+    opacity: 100% !important;
+}
+
+.close.text-danger:hover {
+    color: darken($brand-danger, 15%) !important;
+    opacity: 100% !important;
 }
