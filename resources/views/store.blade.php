@@ -133,7 +133,6 @@ document.addEventListener("DOMContentLoaded", () => {
         var stock = $('#stock-' + id).val();
         var isAvailable = $('#isAvailable-' + id).val() ? true : false;
         var isHidden = $('#isHidden-' + id).val() ? true : false;
-
         
         $('#editItemID').val(id);
         $('#editItemName').val(name);
@@ -151,6 +150,14 @@ document.addEventListener("DOMContentLoaded", () => {
         var price = $('#price-' + id).val();
         var stock = $('#stock-' + id).val();
         var picture = $('#picture-' + id).val() ? $('#picture-' + id).val() : '';
+
+        if(picture) {
+            $('#showItemPicture').removeAttr('hidden');
+            $('#noItemPicture').attr('hidden', true);
+        } else {
+            $('#showItemPicture').attr('hidden', true);
+            $('#noItemPicture').removeAttr('hidden');
+        }
 
         
         $('#showItemID').val(id);

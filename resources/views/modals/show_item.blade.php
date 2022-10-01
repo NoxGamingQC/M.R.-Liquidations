@@ -18,7 +18,8 @@
                         <p id="showItemDescription" class="text-justify"></p>
                     </div>
                     <div class="col-md-4">
-                        <img id="showItemPicture" width="100%"/>
+                        <img id="showItemPicture" width="100%" hidden />
+                        <img id="noItemPicture" src="/img/no-image.png" width="100%" hidden />
                     </div>
                     <div class="col-md-12">
                         <hr />
