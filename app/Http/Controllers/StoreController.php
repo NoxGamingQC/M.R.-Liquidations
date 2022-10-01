@@ -35,8 +35,8 @@ class StoreController extends Controller
                 $item->description = $request->description;
                 $item->price = $request->price;
                 $item->stock = $request->stock;
-                $item->isAvailable = ($request->isAvailable === 'checked');
-                $item->isHidden = ($request->isHidden === 'checked');
+                $item->isAvailable = $request->isAvailable;
+                $item->isHidden = $request->isHidden;
 
                 $item->save();
 

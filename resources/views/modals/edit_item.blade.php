@@ -79,8 +79,8 @@ document.addEventListener("DOMContentLoaded", () => {
                 description: $('#editItemDescription').val(),
                 price: $('#editItemPrice').val(),
                 stock: $('#editItemStock').val(),
-                isAvailable: $('#editItemIsAvailable').attr('checked'),
-                isHidden: $('#editItemisHidden').attr('checked')
+                isAvailable: $('#editItemIsAvailable').is(':checked'),
+                isHidden: $('#editItemIsHidden').is(':checked')
             },
             success: function() {
                 console.log('L\'item à été modifier avec succès.');
