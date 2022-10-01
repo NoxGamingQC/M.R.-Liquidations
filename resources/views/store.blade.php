@@ -1,6 +1,7 @@
 @extends('layouts.app')
 @section('title', trans('general.store'))
 @section('content')
+@include('modals.show_item')
 
 <div class="container">
     <div class="row">
@@ -74,6 +75,7 @@
                                             <input type="hidden" id="stock-{{$item->id}}" value="{{$item->stock}}">
                                             <input type="hidden" id="isAvailable-{{$item->id}}" value="{{$item->isAvailable}}">
                                             <input type="hidden" id="isHidden-{{$item->id}}" value="{{$item->isHidden}}">
+                                            <input type="hidden" id="picture-{{$item->id}}" value="{{$item->picture}}">
                                             @if(Auth::check())
                                                 @if($isDev || $isManager)
                                                     <div class="col-md-12 text-right">
@@ -93,7 +95,7 @@
                                                 @if($item->isAvailable)
                                                     <p>{{$item->price != "0.00" ? $item->price . 'C$' : trans('store.free')}}</p>
                                                     <br />
-                                                    <button class="btn btn-success">{{trans('store.available')}}</button>
+                                                    <button id="{{$item->id}}" type="button" class="btn-show-item btn btn-success" data-toggle="modal" data-target="#showItemModal">{{trans('store.available')}}</button>
                                                 @else
                                                     <button class="btn btn-danger disabled" disabled>{{trans('store.not_available')}}</button>
                                                 @endif
@@ -136,6 +138,23 @@ document.addEventListener("DOMContentLoaded", () => {
         $('#editItemStock').val(stock);
         $('#editItemIsAvailable').attr('checked', isAvailable);
         $('#editItemisHidden').attr('checked', isHidden);
+    });
+
+    $('.btn-show-item').on('click', function() {
+        var id = $(this).attr('id');
+        var name = $('#name-' + id).val();
+        var description = $('#description-' + id).val();
+        var price = $('#price-' + id).val();
+        var stock = $('#stock-' + id).val();
+        var picture = $('#picture-' + id).val() ? $('#picture-' + id).val() : '';
+
+        
+        $('#showItemID').val(id);
+        $('#showItemName').html(name);
+        $('#showItemDescription').html(description);
+        $('#showItemPrice').html(price);
+        $('#showItemStock').html(stock);
+        $('#showItemPicture').attr('src', picture);
     });
 });
 
