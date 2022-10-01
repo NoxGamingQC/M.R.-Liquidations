@@ -2,10 +2,14 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h4 class="modal-title" id="editItemLabel">{{trans('store.edit_item')}}</h4>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span class="error-text" aria-hidden="true">&times;</span>
-                </button>
+                <div class="col-md-8">
+                    <h4 class="modal-title" id="editItemLabel">{{trans('store.edit_item')}}</h4>
+                </div>
+                <div class="col-md-4">
+                    <button type="button" class="close text-danger" data-dismiss="modal" aria-label="Close" style="font-size: 30px">
+                        <span class="error-text" aria-hidden="true">&times;</span>
+                    </button>
+                </div>
             </div>
             <form class="form-horizontal">
             {{ csrf_field() }}
