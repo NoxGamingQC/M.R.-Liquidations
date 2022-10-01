@@ -85,6 +85,7 @@ document.addEventListener("DOMContentLoaded", () => {
             success: function() {
                 console.log('L\'item à été modifier avec succès.');
                 toastr.success('L\'item à été modifier avec succès.', 'Item modifier');
+                window.location.reload();
             },
             error: function(error) {
                 console.log('Un problème est survenue');
