@@ -19,5 +19,6 @@ return [
     'isAvailable' => "Article disponible",
     'isHidden' => "Caché l'article",
     'add_item' => "Ajout d'article",
-    'edit_item' => "Modifications d'article"
+    'edit_item' => "Modifications d'article",
+    'stock_left' => "Inventaire restant"
 ];
