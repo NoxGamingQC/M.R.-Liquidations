@@ -15,8 +15,10 @@
             <div class="modal-body">
                 <div class="row">
                     <div class="col-md-12">
-                        <img id="showItemPicture" width="40%" style="box-sizing: border-box;float: right; margin-left:5%;" hidden />
-                        <img id="noItemPicture" src="/img/no-image.png" width="40%" style="box-sizing: border-box;float: right; margin-left:5%;" hidden />
+                        <div class="image">
+                            <img id="showItemPicture" width="40%" style="box-sizing: border-box;float: right; margin-left:5%;" hidden />
+                            <img id="noItemPicture" src="/img/no-image.png" width="40%" style="box-sizing: border-box;float: right; margin-left:5%;" hidden />
+                        </div> 
                         <p id="showItemDescription" class="text-justify" style="box-sizing: border-box;"></p>
                     </div>
                     <div class="col-md-12">
@@ -30,7 +32,7 @@
                     </div>
                 </div>
             </div>
-
+            <div class="loupe"></div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-danger" data-dismiss="modal">{{trans('general.close')}}</button>
             </div>
