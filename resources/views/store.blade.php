@@ -7,12 +7,13 @@
         @if(Auth::check())
             @if($isDev || $isManager)
                 @include('modals.edit_item')
+                @include('modals.add_item')
                 <div class="col-md-6">
                     <h1>{{trans('store.store')}}</h1> 
                     <hr />
                 </div>
                 <div class="col-md-6 text-right">
-                    <h1><button type="button" class="btn btn-success"><i class="fa fa-plus" aria-hidden="true"></i></button></h1> 
+                    <h1><button type="button" class="btn btn-success" data-toggle="modal" data-target="#addItemModal"><i class="fa fa-plus" aria-hidden="true"></i></button></h1> 
                     <hr />
                 </div>
             @else

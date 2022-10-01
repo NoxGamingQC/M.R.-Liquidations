@@ -28,5 +28,6 @@ return [
     'my_profile' => "Mon profile",
     'feature_coming_soon' => 'Cette option sera disponible bientôt.',
     'save' => "Sauvegarder",
-    'close' => "Fermer"
+    'close' => "Fermer",
+    'required_fields' => "Champs requis"
 ];

@@ -1,9 +1,9 @@
-<div class="modal fade" id="editItemModal" tabindex="-1" aria-labelledby="editItemModal" aria-hidden="true" data-backdrop="false">
+<div class="modal fade" id="addItemModal" tabindex="-1" aria-labelledby="addItemModal" aria-hidden="true" data-backdrop="false">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
                 <div class="col-md-8">
-                    <h4 class="modal-title" id="editItemLabel">{{trans('store.edit_item')}}</h4>
+                    <h4 class="modal-title" id="addItemLabel">{{trans('store.add_item')}}</h4>
                 </div>
                 <div class="col-md-4">
                     <button type="button" class="close text-danger" data-dismiss="modal" aria-label="Close" style="font-size: 30px">
@@ -18,40 +18,40 @@
                     <div class="form-group">
                         <label class="col-md-3 control-label">{{trans('store.name')}}:<label class="text-primary" style="font-size: 20px">*</label> </label>
                         <div class="col-md-9">
-                            <input id="editItemName" type="text" class="form-control" />
+                            <input id="addItemName" type="text" class="form-control" />
                         </div>
                     </div>
                     <div class="form-group">
                         <label class="col-md-3 control-label">{{trans('store.description')}}:<label class="text-primary" style="font-size: 20px">*</label> </label>
                         <div class="col-md-9">
-                            <textarea id="editItemDescription" class="form-control"></textarea>
+                            <textarea id="addItemDescription" class="form-control"></textarea>
                         </div>
                     </div>
                     <div class="form-group">
-                        <label class="col-md-3 control-label">{{trans('store.price')}}:<label class="text-primary" style="font-size: 20px">*</label> </label>
+                        <label class="col-md-3 control-label">{{trans('store.price')}}:<label class="text-primary" style="font-size: 20px">*</label></label>
                         <div class="col-md-3">
-                            <input id="editItemPrice" class="form-control" />
+                            <input id="addItemPrice" class="form-control" />
                         </div>
                         <label class="col-md-3 control-label">{{trans('store.stock')}}: </label>
                         <div class="col-md-3">
-                            <input id="editItemStock" class="form-control" />
+                            <input id="addItemStock" class="form-control" />
                         </div>
                     </div>
                     <div class="form-group">
                         <label class="col-md-3 control-label">{{trans('store.categories')}}: </label>
                         <div class="col-md-9">
-                            <select class="selectpicker form-control" title="{{trans('store.categories')}}" id="editItemCategories"></select>
+                            <select class="selectpicker form-control" title="{{trans('store.categories')}}" id="addItemCategories"></select>
                         </div>
                     </div>
                     <div class="form-group">
                         <div class="col-md-6">
                             <label class="control-label">
-                                <label class="control-label">{{trans('store.isAvailable')}}:&nbsp</label><input id="editItemIsAvailable" type="checkbox" />
+                                <label class="control-label">{{trans('store.isAvailable')}}:&nbsp</label><input id="addItemIsAvailable" type="checkbox" />
                             </label>
                         </div>
                         <div class="col-md-6">
                             <label class="control-label">
-                                <label class="control-label">{{trans('store.isHidden')}}:&nbsp</label><input id="editItemIsHidden" type="checkbox" />
+                                <label class="control-label">{{trans('store.isHidden')}}:&nbsp</label><input id="addItemIsHidden" type="checkbox" />
                             </label>
                         </div>
                     </div>
@@ -64,7 +64,7 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-danger" data-dismiss="modal">{{trans('general.close')}}</button>
-                    <button id="saveItemEdit" type="button" class="btn btn-success">{{trans('general.save')}}</button>
+                    <button id="addNewItem" type="button" class="btn btn-success">{{trans('general.save')}}</button>
                 </div>
             </form>
         </div>
@@ -73,19 +73,19 @@
 
 <script type="text/javascript">
 document.addEventListener("DOMContentLoaded", () => {
-    $('#saveItemEdit').on('click', function() {
+    $('#addNewItem').on('click', function() {
         $.ajax({
-            url: "/store/item/edit",
+            url: "/store/item/add",
             method: "post",
             data: {
                 _token: $('meta[name="csrf-token"]').attr('content'),
-                id: $('#editItemID').val(),
-                name: $('#editItemName').val(),
-                description: $('#editItemDescription').val(),
-                price: $('#editItemPrice').val(),
-                stock: $('#editItemStock').val(),
-                isAvailable: $('#editItemIsAvailable').is(':checked'),
-                isHidden: $('#editItemIsHidden').is(':checked')
+                id: $('#addItemID').val(),
+                name: $('#addItemName').val(),
+                description: $('#addItemDescription').val(),
+                price: $('#addItemPrice').val(),
+                stock: $('#addItemStock').val(),
+                isAvailable: $('#addItemIsAvailable').is(':checked'),
+                isHidden: $('#addItemIsHidden').is(':checked')
             },
             success: function() {
                 console.log('L\'item à été modifier avec succès.');

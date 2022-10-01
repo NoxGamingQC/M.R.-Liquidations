@@ -28,5 +28,6 @@ return [
     'my_profile' => "My profile",
     'feature_coming_soon' => 'This feature will be available soon.',
     'save' => "Save",
-    'close' => "Close"
+    'close' => "Close",
+    'required_fields' => "Required fields"
 ];
