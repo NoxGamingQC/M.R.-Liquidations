@@ -84,7 +84,7 @@
                                                 @endif
                                             @endif
                                             <div class="col-md-12 text-center">
-                                                <img class="img-rounded" src="{{$item->picture}}" style="max-width:250px; max-height:250px; height:250px;">
+                                                <img class="img-rounded" src="{{$item->picture ? $item->picture : '/img/no-image.png'}}" style="max-width:250px; max-height:250px; height:250px;">
                                             </div>
                                             <div class="col-md-6 text-left">
                                                 <br />
