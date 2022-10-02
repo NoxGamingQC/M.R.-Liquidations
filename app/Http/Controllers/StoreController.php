@@ -37,6 +37,7 @@ class StoreController extends Controller
                 $item->stock = $request->stock;
                 $item->isAvailable = $request->isAvailable;
                 $item->isHidden = $request->isHidden;
+                $item->picture = $request->picture;
 
                 $item->save();
 
@@ -57,6 +58,7 @@ class StoreController extends Controller
                 $item->stock = $request->stock;
                 $item->isAvailable = $request->isAvailable;
                 $item->isHidden = $request->isHidden;
+                $item->picture = $request->picture;
 
                 $item->save();
 

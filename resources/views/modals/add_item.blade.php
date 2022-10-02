@@ -57,7 +57,18 @@
                     </div>
                     <div class="form-group">
                         <div class="col-md-12">
-                            <p class="text-warning">L'importation de photo sera disponible bientôt.</p>
+                            <div class="col-md-6">
+                                <label for="picture">{{trans('store.picture')}}</label>
+                                <input class="form-control" id="addItemPicture" type="file" accept="image/*"/>
+                            </div>
+                            <div class="col-md-6 text-center">
+                                <img id="newItemPicture" src="" width="100%"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-12">
+                            <p class="text-warning">{{trans('store.recommended_picture_ratio')}}</p>
                             <p class="text-danger"><label class="text-primary" style="font-size: 20px">*</label>{{trans('general.required_fields')}}</p>
                         </div>
                     </div>
@@ -85,7 +96,8 @@ document.addEventListener("DOMContentLoaded", () => {
                 price: $('#addItemPrice').val(),
                 stock: $('#addItemStock').val(),
                 isAvailable: $('#addItemIsAvailable').is(':checked'),
-                isHidden: $('#addItemIsHidden').is(':checked')
+                isHidden: $('#addItemIsHidden').is(':checked'),
+                picture: $('#newItemPicture').attr('src')
             },
             success: function() {
                 console.log('L\'item à été modifier avec succès.');
@@ -97,6 +109,34 @@ document.addEventListener("DOMContentLoaded", () => {
                 toastr.error('Un problème est survenue', 'Erreur');
             }
         });
+    });
+
+    var itemInput = document.getElementById("addItemPicture");
+    var itemPicture = document.getElementById("newItemPicture");
+
+    const convertBase64 = (file) => {
+        return new Promise((resolve, reject) => {
+            const fileReader = new FileReader();
+            fileReader.readAsDataURL(file);
+
+            fileReader.onload = () => {
+                resolve(fileReader.result);
+            };
+
+            fileReader.onerror = (error) => {
+                reject(error);
+            };
+        });
+    };
+
+    const uploadImage = async (event) => {
+        const file = event.target.files[0];
+        const base64 = await convertBase64(file);
+        itemPicture.src = base64;
+    };
+
+    itemInput.addEventListener("change", (e) => {
+        uploadImage(e);
     });
 });
 </script>

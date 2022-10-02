@@ -20,6 +20,7 @@ return [
     'isHidden' => "Hide item",
     'add_item' => "Create an item",
     'edit_item' => "Edit an item",
-    'stock_left' => "Stock left"
+    'stock_left' => "Stock left",
+    'recommended_picture_ratio' => "We highly recommend to use a 1:1 ratio \"square pictures\" for the item pictures."
     
 ];

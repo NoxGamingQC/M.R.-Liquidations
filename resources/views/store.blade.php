@@ -14,7 +14,7 @@
                     <hr />
                 </div>
                 <div class="col-md-6 text-right">
-                    <h1><button type="button" class="btn btn-success" data-toggle="modal" data-target="#addItemModal"><i class="fa fa-plus" aria-hidden="true"></i></button></h1> 
+                    <h1><button type="button" class=" btn-add-item btn btn-success" data-toggle="modal" data-target="#addItemModal"><i class="fa fa-plus" aria-hidden="true"></i></button></h1> 
                     <hr />
                 </div>
             @else
@@ -136,6 +136,7 @@ document.addEventListener("DOMContentLoaded", () => {
         var stock = $('#stock-' + id).val();
         var isAvailable = $('#isAvailable-' + id).val() ? true : false;
         var isHidden = $('#isHidden-' + id).val() ? true : false;
+        var picture = $('#picture-' + id).val() ? $('#picture-' + id).val() : '';
         
         $('#editItemID').val(id);
         $('#editItemName').val(name);
@@ -144,6 +145,8 @@ document.addEventListener("DOMContentLoaded", () => {
         $('#editItemStock').val(stock);
         $('#editItemIsAvailable').attr('checked', isAvailable);
         $('#editItemisHidden').attr('checked', isHidden);
+        $('#itemPicture').attr('src', picture);
+        $('#selectItemPicture').val('')
     });
 
     $('.btn-show-item').on('click', function() {
@@ -170,7 +173,11 @@ document.addEventListener("DOMContentLoaded", () => {
         $('#showItemStock').html(stock);
         $('#showItemPicture').attr('src', picture);
     });
-});
 
+    $('.btn-add-item').on('click', function() {
+        $('#addItemPicture').val('')
+        $('#newItemPicture').attr('src', '');
+    });
+});
 </script>
 @stop
