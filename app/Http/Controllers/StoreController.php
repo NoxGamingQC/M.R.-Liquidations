@@ -10,7 +10,7 @@ use Auth;
 class StoreController extends Controller
 {
     public function index() {
-        $items = Items::all();
+        $items = Items::orderBy('name')->get();
         $displayedItemCount = Items::getDisplayedItemCount($items);
         if(Auth::check()) {
             $isManager = Auth::user()->isManager;
