@@ -21,5 +21,6 @@ return [
     'add_item' => "Ajout d'article",
     'edit_item' => "Modifications d'article",
     'stock_left' => "Inventaire restant",
-    'recommended_picture_ratio' => "Nous recommendons fortement d'utiliser un ratio 1:1 \"photo carré\" pour les images des articles."
+    'recommended_picture_ratio' => "Nous recommendons fortement d'utiliser un ratio 1:1 \"photo carré\" pour les images des articles.",
+    'picture' => "Image"
 ];
