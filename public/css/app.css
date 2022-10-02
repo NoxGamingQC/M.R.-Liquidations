@@ -3153,6 +3153,10 @@ a.search-result .panel {
   margin: 0px !important;
 }
 
+#searchBarContainer {
+  margin-bottom: -3% !important;
+}
+
 /*!
  * Bootstrap v3.4.1 (https://getbootstrap.com/)
  * Copyright 2011-2019 Twitter, Inc.

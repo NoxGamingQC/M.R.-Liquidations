@@ -34,7 +34,7 @@
             <span class="text-info"><b>**Les items listé ci-dessous sont disponible pour le ramassage à l'entrepôt gratuitement ou en livraison pour les villes et villages suivant: Shawinigan (15C$), Grand'Mère (15C$), Saint-Georges-de-Champlain (15C$), Saint-Boniface-de-Shawinigan (15C$), Shawinigan-Sud (15C$) et Trois-Rivières (20C$). Les livraisons vers Trois-Rivières se font les lundis seulement. Livraison gratuite avec tout achat de 250C$ ou plus.**<b></span>
             <hr />
         </div>
-        <div class="col-md-12">
+        <div id="searchBarContainer" class="col-md-12">
             <div class="form-group">
                 <div class="input-group">
                     <div class="input-group-addon bg-info"><i class="fa fa-search" aria-hidden="true"></i></div>
