@@ -81,6 +81,9 @@
                                                     <div class="col-md-12 text-right">
                                                         <button id="{{$item->id}}" type="button" class="btn-edit-item btn btn-warning" data-toggle="modal" data-target="#editItemModal"><i class="fa fa-pencil" aria-hidden="true"></i></button>
                                                     </div>
+                                                    <div class="col-md-12">
+                                                        <br />
+                                                    </div>
                                                 @endif
                                             @endif
                                             <div class="col-md-12 text-center">
