@@ -3143,6 +3143,16 @@
   right: 0;
 }
 
+a.search-result h1, a.search-result h2, a.search-result h3, a.search-result h4, a.search-result h5, a.search-result h6, a.search-result p {
+  color: #000 !important;
+}
+a.search-result :hover h1, a.search-result :hover h2, a.search-result :hover h3, a.search-result :hover h4, a.search-result :hover h5, a.search-result :hover h6, a.search-result :hover p {
+  color: #000 !important;
+}
+a.search-result .panel {
+  margin: 0px !important;
+}
+
 /*!
  * Bootstrap v3.4.1 (https://getbootstrap.com/)
  * Copyright 2011-2019 Twitter, Inc.

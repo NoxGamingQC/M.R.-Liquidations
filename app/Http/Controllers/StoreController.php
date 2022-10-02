@@ -68,4 +68,8 @@ class StoreController extends Controller
         }
         abort(403);
     }
+
+    public function showItem(Request $request) {
+        abort(503);
+    }
 }

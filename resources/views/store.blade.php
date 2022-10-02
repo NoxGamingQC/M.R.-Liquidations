@@ -38,11 +38,21 @@
             <div class="form-group">
                 <div class="input-group">
                     <div class="input-group-addon bg-info"><i class="fa fa-search" aria-hidden="true"></i></div>
-                    <input type="text" class="form-control disabled" placeholder="{{trans('general.search')}}" disabled>
+                    <input type="text" class="search-bar form-control" placeholder="{{trans('general.search')}}" >
                     <span class="input-group-btn"><button class="btn btn-primary disabled" type="button" disabled>{{trans('general.search')}}</button></span>
                 </div>
             </div>
             <br />
+        </div>
+        <div id="searchResultContainer" class="col-md-12" hidden>
+            <div style="z-index:1; position: absolute;">
+                <div class="col-md-offset-3 col-md-6 panel panel-default">
+                    <div class="panel-body">
+                        <div id="searchResult">
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="col-md-12 text-right">
             <select class="selectpicker disabled" title="{{trans('store.sort_by')}}" disabled>
@@ -128,6 +138,52 @@
 </div>
 <script>
 document.addEventListener("DOMContentLoaded", () => {
+    $('.search-bar').on('change', function() {
+        var searchTerms = $(this).val();
+
+        $('#searchResultContainer').removeAttr('hidden');
+
+        if(searchTerms) {
+            $.ajax({
+                url: "/store/item/search",
+                method: "get",
+                data: {
+                    search: searchTerms
+                },
+                success: function(results) {
+                    $('#searchResult').children().remove();
+                    if(results) {
+                        var html = '';
+                        results.forEach(function(result, key) {
+                            var html = '<a class="search-result" href="/store/item/get/' + result['id'] + '">' +
+                                            '<div class="col-md-12 panel panel-default">' +
+                                                '<div class="panel-body">' +
+                                                    '<div class="col-md-9">' +
+                                                        '<h4>'+ result['name'] +'</h4>'+
+                                                        '<p>'+ result['description'] +'</p>'+
+                                                        '<p><b>'+ result['price'] +'</b></p>'+
+                                                    '</div>'+
+                                                    '<div class="col-md-3">' +
+                                                        '<img src="' + (result['picture'] ? result['picture'] : '/img/no-image.png') + '" width="100%" />'+
+                                                    '</div>'+
+                                                '</div>'+
+                                            '</div>'+
+                                        '</a>';
+                            $('#searchResult').append(html);
+                        })
+                    }
+                },
+                error: function(error) {
+                    console.log('Un problème est survenue');
+                    toastr.error('Un problème est survenue', 'Erreur');
+                }
+            });
+        } else {
+            $('#searchResultContainer').attr('hidden');
+            $('#searchResult').children().remove();
+        }
+    });
+
     $('.btn-edit-item').on('click', function() {
         var id = $(this).attr('id');
         var name = $('#name-' + id).val();
