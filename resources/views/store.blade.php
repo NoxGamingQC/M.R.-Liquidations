@@ -141,8 +141,6 @@ document.addEventListener("DOMContentLoaded", () => {
     $('.search-bar').on('change', function() {
         var searchTerms = $(this).val();
 
-        $('#searchResultContainer').removeAttr('hidden');
-
         if(searchTerms) {
             $.ajax({
                 url: "/store/item/search",
@@ -170,7 +168,8 @@ document.addEventListener("DOMContentLoaded", () => {
                                             '</div>'+
                                         '</a>';
                             $('#searchResult').append(html);
-                        })
+                        });
+                        $('#searchResultContainer').removeAttr('hidden');
                     }
                 },
                 error: function(error) {
