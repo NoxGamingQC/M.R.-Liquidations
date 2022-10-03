@@ -39,7 +39,7 @@
                 <div class="input-group">
                     <div class="input-group-addon bg-info"><i class="fa fa-search" aria-hidden="true"></i></div>
                     <input type="text" class="search-bar form-control" placeholder="{{trans('general.search')}}" >
-                    <span class="input-group-btn"><button class="btn btn-primary disabled" type="button" disabled>{{trans('general.search')}}</button></span>
+                    <span class="input-group-btn"><button id="searchBtn" class="btn btn-primary" type="button">{{trans('general.search')}}</button></span>
                 </div>
             </div>
             <br />
@@ -138,8 +138,8 @@
 </div>
 <script>
 document.addEventListener("DOMContentLoaded", () => {
-    $('.search-bar').on('change input', function() {
-        var searchTerms = $(this).val();
+    $('#searchBtn').on('click', function() {
+        var searchTerms = $('.search-bar').val();
 
         if(searchTerms) {
             $.ajax({
