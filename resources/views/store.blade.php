@@ -220,7 +220,7 @@ document.addEventListener("DOMContentLoaded", () => {
         $('#editItemPrice').val(price);
         $('#editItemStock').val(stock);
         $('#editItemIsAvailable').attr('checked', isAvailable);
-        $('#editItemisHidden').attr('checked', isHidden);
+        $('#editItemIsHidden').attr('checked', isHidden);
         $('#itemPicture').attr('src', picture);
         $('#selectItemPicture').val('')
     });
