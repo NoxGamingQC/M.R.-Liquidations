@@ -6,7 +6,6 @@
  */
 
 require('./bootstrap');
-require('./loupe');
 window.toastr = require('toastr');
 window.$ = require('jquery');
 window.jQuery = require('jquery');

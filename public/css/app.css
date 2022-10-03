@@ -3126,23 +3126,6 @@
   opacity: 100% !important;
 }
 
-.loupe {
-  display: none;
-  position: absolute;
-  width: 200px;
-  height: 200px;
-  border: 1px solid black;
-  box-shadow: 5px 5px 12px black;
-  background: rgba(0, 0, 0, 0.25);
-  cursor: crosshair;
-  overflow: hidden;
-}
-
-.loupe img {
-  position: absolute;
-  right: 0;
-}
-
 a.search-result h1, a.search-result h2, a.search-result h3, a.search-result h4, a.search-result h5, a.search-result h6, a.search-result p {
   color: #000 !important;
 }
