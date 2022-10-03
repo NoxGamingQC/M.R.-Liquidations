@@ -21,7 +21,37 @@
             </div>
             <div class="col-md-3">
                 @if ($picture)
-                    <img src="{{$picture}}" width="100%" />
+                    <div id="itemCarousel" class="carousel slide" data-ride="carousel">
+                        <!-- Indicators -->
+                        <ol class="carousel-indicators">
+                            @foreach($pictures as $key => $value)
+                                @if($key == 0)
+                                    <li data-target="#itemCarousel" data-slide-to="{{$key}}" class="active"></li>
+                                @else
+                                    <li data-target="#itemCarousel" data-slide-to="{{$key}}"></li>
+                                @endif
+                            @endforeach
+                                    <li data-target="#itemCarousel" data-slide-to="{{count($pictures) + 1}}"></li>
+                        </ol>
+                        <div class="carousel-inner" role="listbox">
+                            <div class="item active">
+                                <img src="{{$picture}}"/>
+                            </div>
+                            @foreach($pictures as $key => $value)
+                                <div class="item">
+                                    <img src="{{$value->picture}}" />
+                                </div>
+                            @endforeach
+                        </div>
+                        <a class="left carousel-control" href="#itemCarousel" role="button" data-slide="prev">
+                            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="right carousel-control" href="#itemCarousel" role="button" data-slide="next">
+                            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
                 @else
                     <img src="/img/no-image.png" width="100%" />
                 @endif
@@ -42,44 +72,6 @@
                 @else
                     <h4><b>{{trans('store.stock')}}: {{trans('store.item_not_available')}}</b></h4>
                 @endif
-            </div>
-            <div class="col-md-12">
-                <br />
-                <h3>{{trans('store.more_pictures')}}</h3>
-                <hr />
-            </div>
-            <div class="col-md-offset-2 col-md-8">
-                <div id="itemCarousel" class="carousel slide" data-ride="carousel">
-                    <!-- Indicators -->
-                    <ol class="carousel-indicators">
-                        @foreach($pictures as $key => $value)
-                            @if($key == 0)
-                                <li data-target="#itemCarousel" data-slide-to="{{$key}}" class="active"></li>
-                            @else
-                                <li data-target="#itemCarousel" data-slide-to="{{$key}}"></li>
-                            @endif
-                        @endforeach
-                    </ol>
-                    <div class="carousel-inner" role="listbox">
-                        @foreach($pictures as $key => $value)
-                            @if($key == 0)
-                                <div class="item active">
-                            @else
-                                <div class="item">
-                            @endif
-                                <img src="{{$value->picture}}" />
-                            </div>
-                        @endforeach
-                    </div>
-                    <a class="left carousel-control" href="#itemCarousel" role="button" data-slide="prev">
-                        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-                        <span class="sr-only">Previous</span>
-                    </a>
-                    <a class="right carousel-control" href="#itemCarousel" role="button" data-slide="next">
-                        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-                        <span class="sr-only">Next</span>
-                    </a>
-                </div>
             </div>
         </div>
     </div>
