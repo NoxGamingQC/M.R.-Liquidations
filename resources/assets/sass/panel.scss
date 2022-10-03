@@ -1,0 +1,22 @@
+.panel-disabled {
+    border-color: darken($brand-disabled, 15%);
+    .btn-success {
+        background-color: darken($brand-success, 35%) !important;
+    }
+
+    .btn-warning {
+        background-color: darken($brand-warning, 35%) !important;
+    }
+
+    .btn-danger {
+        background-color: darken($brand-danger, 35%) !important;
+    }
+}
+
+.panel.panel-disabled {
+    margin-bottom: 22px;
+    background-color: $brand-disabled;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    box-shadow: 0 1px 1px rgb(0 0 0 / 5%);
+}

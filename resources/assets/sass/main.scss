@@ -101,3 +101,11 @@
     color: darken($brand-danger, 15%) !important;
     opacity: 100% !important;
 }
+
+img.disabled {
+    -webkit-filter: grayscale(100%);
+   -moz-filter: grayscale(100%);
+     -o-filter: grayscale(100%);
+    -ms-filter: grayscale(100%);
+        filter: grayscale(100%); 
+}

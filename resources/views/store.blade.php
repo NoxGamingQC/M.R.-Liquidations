@@ -76,52 +76,50 @@
                 <div class="row">
                     @if($items)
                         @foreach($items as $key => $item)
-                            @if(!$item->isHidden)
-                                <div class="col-md-4 panel panel-default" style="max-height:450px; height:450px">
-                                    <div class="panel-body">
-                                        <div class="row">
-                                            <input type="hidden" id="name-{{$item->id}}" value="{{$item->name}}">
-                                            <input type="hidden" id="description-{{$item->id}}" value="{{$item->description}}">
-                                            <input type="hidden" id="price-{{$item->id}}" value="{{$item->price}}">
-                                            <input type="hidden" id="stock-{{$item->id}}" value="{{$item->stock}}">
-                                            <input type="hidden" id="isAvailable-{{$item->id}}" value="{{$item->isAvailable}}">
-                                            <input type="hidden" id="isHidden-{{$item->id}}" value="{{$item->isHidden}}">
-                                            <input type="hidden" id="picture-{{$item->id}}" value="{{$item->picture}}">
-                                            @if(Auth::check())
-                                                @if($isDev || $isManager)
-                                                    <div class="col-md-12 text-right">
-                                                        <button id="{{$item->id}}" type="button" class="btn-edit-item btn btn-warning" data-toggle="modal" data-target="#editItemModal"><i class="fa fa-pencil" aria-hidden="true"></i></button>
-                                                    </div>
-                                                    <div class="col-md-12">
-                                                        <br />
-                                                    </div>
-                                                @endif
-                                            @endif
-                                            <div class="col-md-12 text-center">
-                                                 @if($item->picture)
-                                                    <img class="img-rounded" src="{{$item->picture}}" style="max-width:250px; max-height:250px; height:250px;">
-                                                @else
-                                                    <img src="/img/no-image.png" width="100%">
-                                                @endif
-                                            </div>
-                                            <div class="col-md-6 text-left">
-                                                <br />
-                                                <h5>{{$item->name}}</h5>
-                                            </div>
-                                            <div class="col-md-6 text-right">
-                                                <br />
-                                                @if($item->isAvailable)
-                                                    <p>{{$item->price != "0.00" ? $item->price . 'C$' : trans('store.free')}}</p>
+                            <div class="col-md-4 panel {{$item->isHidden ? 'panel-disabled' : 'panel-default'}}" style="max-height:450px; height:450px">
+                                <div class="panel-body">
+                                    <div class="row">
+                                        <input type="hidden" id="name-{{$item->id}}" value="{{$item->name}}">
+                                        <input type="hidden" id="description-{{$item->id}}" value="{{$item->description}}">
+                                        <input type="hidden" id="price-{{$item->id}}" value="{{$item->price}}">
+                                        <input type="hidden" id="stock-{{$item->id}}" value="{{$item->stock}}">
+                                        <input type="hidden" id="isAvailable-{{$item->id}}" value="{{$item->isAvailable}}">
+                                        <input type="hidden" id="isHidden-{{$item->id}}" value="{{$item->isHidden}}">
+                                        <input type="hidden" id="picture-{{$item->id}}" value="{{$item->picture}}">
+                                        @if(Auth::check())
+                                            @if($isDev || $isManager)
+                                                <div class="col-md-12 text-right">
+                                                    <button id="{{$item->id}}" type="button" class="btn-edit-item btn btn-warning" data-toggle="modal" data-target="#editItemModal"><i class="fa fa-pencil" aria-hidden="true"></i></button>
+                                                </div>
+                                                <div class="col-md-12">
                                                     <br />
-                                                    <button id="{{$item->id}}" type="button" class="btn-show-item btn btn-success" data-toggle="modal" data-target="#showItemModal">{{trans('store.available')}}</button>
-                                                @else
-                                                    <button class="btn btn-danger disabled" disabled>{{trans('store.not_available')}}</button>
-                                                @endif
-                                            </div>
+                                                </div>
+                                            @endif
+                                        @endif
+                                        <div class="col-md-12 text-center">
+                                                @if($item->picture)
+                                                <img class="img-rounded {{$item->isHidden ? 'disabled' : ''}}" src="{{$item->picture}}" style="max-width:250px; max-height:250px; height:250px;">
+                                            @else
+                                                <img class="{{$item->isHidden ? 'disabled' : ''}}" src="/img/no-image.png" width="100%">
+                                            @endif
+                                        </div>
+                                        <div class="col-md-6 text-left">
+                                            <br />
+                                            <h5>{{$item->name}}</h5>
+                                        </div>
+                                        <div class="col-md-6 text-right">
+                                            <br />
+                                            @if($item->isAvailable)
+                                                <p>{{$item->price != "0.00" ? $item->price . 'C$' : trans('store.free')}}</p>
+                                                <br />
+                                                <button id="{{$item->id}}" type="button" class="btn-show-item btn btn-success" data-toggle="modal" data-target="#showItemModal">{{trans('store.available')}}</button>
+                                            @else
+                                                <button class="btn btn-danger disabled" disabled>{{trans('store.not_available')}}</button>
+                                            @endif
                                         </div>
                                     </div>
                                 </div>
-                            @endif
+                            </div>
                         @endforeach
                     @endif
             </div>
