@@ -55,6 +55,7 @@
             </div>
         </div>
         <div class="col-md-12 text-right">
+            <br />
             <select class="selectpicker disabled" title="{{trans('store.sort_by')}}" disabled>
             </select>
         </div>
