@@ -128,7 +128,13 @@
         </div>
         <div class="col-md-12 text-center">
         <br />
-            <button class="btn btn primary disabled" disabled>{{trans('store.more_item')}}</button>
+            @for($i = 1; $i <= $pageCount; $i++)
+                @if($i == 6 && $pageCount > 11)
+                    ...
+                    {{$i = $pageCount - 6}}
+                @endif
+                <a class="btn btn primary" href="/{{app()->getLocale()}}/store/{{$i}}">{{$i}}</a>
+            @endfor
         </div>
         @else
             <div class="col-md-9">

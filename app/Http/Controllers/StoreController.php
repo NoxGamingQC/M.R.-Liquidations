@@ -9,8 +9,11 @@ use Auth;
 
 class StoreController extends Controller
 {
-    public function index() {
-        $items = Items::orderBy('name')->get();
+    public function index($language, $page) {
+        $itemCount = Items::all()->count() ? Items::all()->count() : 9;
+        $pageCount = ($itemCount / 9);
+        $skipCount = (($page * 9) - 9);
+        $items = Items::orderBy('name')->skip($skipCount)->take(9)->get();
         $displayedItemCount = Items::getDisplayedItemCount($items);
         if(Auth::check()) {
             $isManager = Auth::user()->isManager;
@@ -23,7 +26,8 @@ class StoreController extends Controller
             'items' => $items,
             'displayedItemCount' => $displayedItemCount,
             'isManager' => $isManager,
-            'isDev' => $isDev
+            'isDev' => $isDev,
+            'pageCount' => $pageCount
         ]);
     }
 

@@ -33,7 +33,7 @@ Route::group(
     'middleware' => 'setlocale'],
     function () {
         Route::get('/', 'WelcomeController@index');
-        Route::get('/store', 'StoreController@index');
+        Route::get('/store/{page}', 'StoreController@index');
         Route::get('/store/item/{id}', 'StoreController@showItem');
         Route::get('/contact_us', 'ContactUsController@index');
         Route::get('/privacy_policy', 'PrivacyPolicyController@index');
