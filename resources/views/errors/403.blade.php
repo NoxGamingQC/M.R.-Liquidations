@@ -7,9 +7,9 @@
         <div class="col-md-12">
             <div class="panel panel-block-primary">
                 <div class="panel-body">
-                    <h1 class="text-highlight">ERROR 403 - ACCESS FORBIDDEN</h1>
+                    <h1 class="text-highlight">ERREUR 403 - ACCÈS INTERDIT</h1>
                     <hr />
-                    <h5 class="text-highlight">HEY! STOP RIGHT THERE! You don't have the right to go any further.</h5>
+                    <h5 class="text-highlight">HEY! VOUS! ARRÊTEZ-VOUS LÀ! Vous n'etes pas autorisé à aller plus loin.</h5>
                     <br />
                     <br />
                     <br />

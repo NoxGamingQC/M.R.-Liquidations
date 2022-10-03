@@ -6,9 +6,9 @@
     <div class="row">
         <div class="col-md-12">
                 <div class="panel-body">
-                    <h1 class="text-highlight">ERROR 404 - PAGE NOT FOUND</h1>
+                    <h1 class="text-highlight">ERREUR 404 - LA PAGE DEMANDÉ N'EXISTE PAS</h1>
                     <hr />
-                    <h5 class="text-highlight">Sorry bud, but are you lost? The page you requested doesn't exist.</h5>
+                    <h5 class="text-highlight">Hey! Etes-vous perdu? La page demandée n'existe pas.</h5>
                     <br />
                     <br />
                     <br />

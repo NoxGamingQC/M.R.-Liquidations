@@ -7,9 +7,9 @@
         <div class="col-md-12">
             <div class="panel panel-block-primary">
                 <div class="panel-body">
-                    <h1 class="text-highlight">ERROR 500 - INTERNAL SERVER ERROR.</h1>
+                    <h1 class="text-highlight">ERREUR 500 - ERREUR INTERNE DU SERVEUR.</h1>
                     <hr />
-                    <h5 class="text-highlight">Hey congratulations, you found a special page. Make sure to tell us the steps you took to get over here we are curious. Pssst. yep something went wrong. Thanks for helping us.</h5>
+                    <h5 class="text-highlight">Félicitation, Vous avez attéris sur une page spéciale. Merci de bien vouloir nous décrire les étapes que vous avez suivis pour vous rendre jusqu'ici. Pssst. et oui quelque chose s'est mal passé. Ah, et merci pour votre aide. ;)</h5>
                     <br />
                     <br />
                     <br />

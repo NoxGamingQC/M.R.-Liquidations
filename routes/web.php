@@ -21,7 +21,7 @@ Route::get('language/set/{language}', 'LanguageController@index');
 Route::post('/store/item/add', 'StoreController@addItem');
 Route::post('/store/item/edit', 'StoreController@editItem');
 Route::get('/store/item/search', 'SearchController@item');
-Route::get('/store/item/get/{id}', 'StoreController@showItem');
+Route::get('/store/item/{id}', 'StoreController@showItem');
 
 Route::group(
     [

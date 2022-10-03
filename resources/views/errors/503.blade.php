@@ -7,9 +7,9 @@
         <div class="col-md-12">
             <div class="panel panel-block-primary">
                 <div class="panel-body">
-                    <h1 class="text-highlight">ERROR 503 - Service Unavailable.</h1>
+                    <h1 class="text-highlight">ERREUR 503 - SERVICE NON DISPONIBLE.</h1>
                     <hr />
-                    <h5 class="text-highlight">Under maintenance. Sorry for any inconveniance.</h5>
+                    <h5 class="text-highlight">Désolé, mais la page demandé est présentement en maintenance. Elle devrait être de retour bientôt.</h5>
                     <br />
                     <br />
                     <br />

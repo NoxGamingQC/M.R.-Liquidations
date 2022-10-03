@@ -155,7 +155,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     if(results) {
                         var html = '';
                         results.forEach(function(result, key) {
-                            var html = '<a class="search-result" href="/store/item/get/' + result['id'] + '">' +
+                            var html = '<a class="search-result" href="/store/item/' + result['id'] + '">' +
                                             '<div class="col-md-12 panel panel-default">' +
                                                 '<div class="panel-body">' +
                                                     '<div class="col-md-9">' +
