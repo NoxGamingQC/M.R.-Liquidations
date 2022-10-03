@@ -138,7 +138,7 @@
 </div>
 <script>
 document.addEventListener("DOMContentLoaded", () => {
-    $('.search-bar').on('change', function() {
+    $('.search-bar').on('change input', function() {
         var searchTerms = $(this).val();
 
         if(searchTerms) {
