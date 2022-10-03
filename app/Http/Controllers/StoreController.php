@@ -80,16 +80,25 @@ class StoreController extends Controller
 
     public function showItem($language, $id) {
        $item = Items::findOrFail($id);
-       $pictures = ItemPictures::getAllPictures($item->id);
+       $canSeeHiddenItems = false;
+       if(Auth::check()) {
+            if(Auth::user()->isAdmin || Auth::user()->isDev) {
+                $canSeeHiddenItems = true;
+            }
+       }
+       if(!$item->isHidden || $canSeeHiddenItems) {
+            $pictures = ItemPictures::getAllPictures($item->id);
 
-        return view('item')->with([
-            'name' => $item->name,
-            'description' => $item->description,
-            'price' => $item->price,
-            'stock' => $item->stock,
-            'isAvailable' => $item->isAvailable,
-            'picture' => $item->picture,
-            'pictures' => $pictures
-        ]);
+            return view('item')->with([
+                'name' => $item->name,
+                'description' => $item->description,
+                'price' => $item->price,
+                'stock' => $item->stock,
+                'isAvailable' => $item->isAvailable,
+                'picture' => $item->picture,
+                'pictures' => $pictures
+            ]);
+        }
+        abort(404);
     }
 }
