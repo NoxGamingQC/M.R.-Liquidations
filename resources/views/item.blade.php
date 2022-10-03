@@ -12,7 +12,7 @@
                 </div>
                 <div class="col-md-2">
                 <br />
-                    <a href="/{{app()->getLocale()}}/store" class="text-right btn btn-danger">{{trans('store.back_to_store')}}</a>
+                    <a href="/{{app()->getLocale()}}/store/1" class="text-right btn btn-danger">{{trans('store.back_to_store')}}</a>
                 </div>
             </div>
             <hr />
