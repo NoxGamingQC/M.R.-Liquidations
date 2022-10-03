@@ -20,7 +20,7 @@
                 <p class="text-justify">{{$description}}</p>
             </div>
             <div class="col-md-3">
-                @if ($picture)
+                @if (count($pictures))
                     <div id="itemCarousel" class="carousel slide" data-ride="carousel">
                         <!-- Indicators -->
                         <ol class="carousel-indicators">
@@ -35,7 +35,11 @@
                         </ol>
                         <div class="carousel-inner" role="listbox">
                             <div class="item active">
-                                <img src="{{$picture}}"/>
+                                @if($picture)
+                                    <img src="{{$picture}}"/>
+                                @else
+                                    <img src="/img/no-image.png"/>
+                                @endif
                             </div>
                             @foreach($pictures as $key => $value)
                                 <div class="item">
@@ -53,7 +57,11 @@
                         </a>
                     </div>
                 @else
-                    <img src="/img/no-image.png" width="100%" />
+                    @if($picture)
+                        <img src="{{$picture}}" width="100%" />
+                    @else
+                        <img src="/img/no-image.png" width="100%" />
+                    @endif
                 @endif
             </div>
             <div class="col-md-12">
