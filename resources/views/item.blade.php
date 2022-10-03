@@ -20,7 +20,7 @@
                 <p class="text-justify">{{$description}}</p>
             </div>
             <div class="col-md-3">
-                @if (count($pictures))
+                @if (count($pictures) > 1)
                     <div id="itemCarousel" class="carousel slide" data-ride="carousel">
                         <!-- Indicators -->
                         <ol class="carousel-indicators">
@@ -31,20 +31,18 @@
                                     <li data-target="#itemCarousel" data-slide-to="{{$key}}"></li>
                                 @endif
                             @endforeach
-                                    <li data-target="#itemCarousel" data-slide-to="{{count($pictures) + 1}}"></li>
                         </ol>
                         <div class="carousel-inner" role="listbox">
-                            <div class="item active">
-                                @if($picture)
-                                    <img src="{{$picture}}"/>
-                                @else
-                                    <img src="/img/no-image.png"/>
-                                @endif
-                            </div>
                             @foreach($pictures as $key => $value)
-                                <div class="item">
-                                    <img src="{{$value->picture}}" />
-                                </div>
+                                @if($key == 0)
+                                    <div class="item active">
+                                        <img src="{{$value->picture}}" />
+                                    </div>
+                                @else
+                                    <div class="item">
+                                        <img src="{{$value->picture}}" />
+                                    </div>
+                                @endif
                             @endforeach
                         </div>
                         <a class="left carousel-control" href="#itemCarousel" role="button" data-slide="prev">
@@ -57,8 +55,8 @@
                         </a>
                     </div>
                 @else
-                    @if($picture)
-                        <img src="{{$picture}}" width="100%" />
+                    @if(count($pictures) == 1)
+                        <img src="{{$pictures[0]->picture}}" width="100%" />
                     @else
                         <img src="/img/no-image.png" width="100%" />
                     @endif

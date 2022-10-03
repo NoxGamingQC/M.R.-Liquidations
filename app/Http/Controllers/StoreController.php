@@ -10,11 +10,14 @@ use Auth;
 
 class StoreController extends Controller
 {
-    public function index($language, $page) {
-        $itemCount = Items::where('isHidden', false)->count() ? Items::all()->count() : 9;
-        $pageCount = (int)ceil(($itemCount / 9));
+    public function index($language, $page, $sortby = 'alphabetical') {
         $skipCount = (($page * 9) - 9);
-        $items = Items::orderBy('name')->where('isHidden', false)->skip($skipCount)->take(9)->get();
+        if($sortby == 'alphabetical') {
+            $items = Items::getItemsAlphabetical()->skip($skipCount)->take(9)->get();
+            $itemCount = Items::getItemsAlphabetical()->count() ? Items::getItemsAlphabetical()->count() : 9;
+        }
+        $pageCount = (int)ceil(($itemCount / 9));
+        
         $displayedItemCount = Items::getDisplayedItemCount($items);
         if(Auth::check()) {
             $isManager = Auth::user()->isManager;
