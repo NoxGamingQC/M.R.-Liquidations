@@ -69,7 +69,7 @@ class StoreController extends Controller
         abort(403);
     }
 
-    public function showItem($id) {
+    public function showItem($language, $id) {
        $item = Items::findOrFail($id);
         return view('item')->with([
             'name' => $item->name,

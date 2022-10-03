@@ -21,7 +21,10 @@ Route::get('language/set/{language}', 'LanguageController@index');
 Route::post('/store/item/add', 'StoreController@addItem');
 Route::post('/store/item/edit', 'StoreController@editItem');
 Route::get('/store/item/search', 'SearchController@item');
-Route::get('/store/item/{id}', 'StoreController@showItem');
+
+Route::get('/store/item/{id}', function ($id) {
+    return redirect(app()->getLocale() . '/store/item/' . $id);
+});
 
 Route::group(
     [
@@ -31,6 +34,7 @@ Route::group(
     function () {
         Route::get('/', 'WelcomeController@index');
         Route::get('/store', 'StoreController@index');
+        Route::get('/store/item/{id}', 'StoreController@showItem');
         Route::get('/contact_us', 'ContactUsController@index');
         Route::get('/privacy_policy', 'PrivacyPolicyController@index');
         Route::get('/profile/edit', 'ProfileController@index');
