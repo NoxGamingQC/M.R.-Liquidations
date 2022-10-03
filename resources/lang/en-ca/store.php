@@ -27,6 +27,7 @@ return [
     'item_left'=> "left",
     'back_to_store' => "Back to the store",
     'last_page' => "Previous",
-    'next_page' => "Next"
+    'next_page' => "Next",
+    'more_pictures' => "More pictures"
     
 ];

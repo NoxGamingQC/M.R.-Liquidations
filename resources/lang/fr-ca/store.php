@@ -27,5 +27,6 @@ return [
     'item_left'=> "restant",
     'back_to_store' => "Retournez vers la boutique",
     'last_page' => "Précédente",
-    'next_page' => "Suivante"
+    'next_page' => "Suivante",
+    'more_pictures' => "Plus de photos"
 ];

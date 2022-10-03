@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\ItemPictures;
 use App\Items;
 use Auth;
 
@@ -76,13 +77,16 @@ class StoreController extends Controller
 
     public function showItem($language, $id) {
        $item = Items::findOrFail($id);
+       $pictures = ItemPictures::getAllPictures($item->id);
+
         return view('item')->with([
             'name' => $item->name,
             'description' => $item->description,
             'price' => $item->price,
             'stock' => $item->stock,
             'isAvailable' => $item->isAvailable,
-            'picture' => $item->picture
+            'picture' => $item->picture,
+            'pictures' => $pictures
         ]);
     }
 }

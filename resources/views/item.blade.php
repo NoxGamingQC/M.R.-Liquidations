@@ -43,6 +43,18 @@
                     <h4><b>{{trans('store.stock')}}: {{trans('store.item_not_available')}}</b></h4>
                 @endif
             </div>
+            <div class="col-md-12">
+                <br />
+                <h3>{{trans('store.more_pictures')}}</h3>
+                <hr />
+            </div>
+            <div class="col-md-12">
+                @foreach($pictures as $key => $value)
+                    <div class="col-md-4">
+                        <img src="{{$value->picture}}" width="100%" />
+                    </div>
+                @endforeach
+            </div>
         </div>
     </div>
 </div>
