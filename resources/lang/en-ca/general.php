@@ -30,5 +30,6 @@ return [
     'save' => "Save",
     'close' => "Close",
     'required_fields' => "Required fields",
-    'see_more' => "See more"
+    'see_more' => "See more",
+    'management' => "Management"
 ];

@@ -30,5 +30,6 @@ return [
     'save' => "Sauvegarder",
     'close' => "Fermer",
     'required_fields' => "Champs requis",
-    'see_more' => "Voir plus"
+    'see_more' => "Voir plus",
+    'management' => "Administration",
 ];

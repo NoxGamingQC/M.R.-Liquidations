@@ -32,6 +32,21 @@
                     </ul>
                 </li>
                 @auth
+                    @if(Auth::user()->isDev || Auth::user()->isAdmin)
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true">
+                                <i class="fa fa-dashboard" aria-hidden="true"></i> {{trans('general.management')}} <span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="/{{app()->getLocale()}}/management/pages"><i class="fa fa-wrench" aria-hidden="true"></i> {{trans('management.pages')}}</a>
+                                    <a href="/{{app()->getLocale()}}/management/categories"><i class="fa fa-wrench" aria-hidden="true"></i> {{trans('management.categories')}}</a>
+                                    <a href="/{{app()->getLocale()}}/management/items"><i class="fa fa-wrench" aria-hidden="true"></i> {{trans('management.items')}}</a>
+                                    <a href="/{{app()->getLocale()}}/management/logs"><i class="fa fa-wrench" aria-hidden="true"></i> {{trans('management.logs')}}</a>
+                                </li>
+                            </ul>
+                        </li>
+                    @endif
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true">
                             <i class="fa fa-user-circle-o" aria-hidden="true"></i> {{ Auth::user()->name }} <span class="caret"></span>
