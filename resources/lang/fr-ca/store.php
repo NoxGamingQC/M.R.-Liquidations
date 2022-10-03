@@ -26,4 +26,6 @@ return [
     'item_not_available' => "Article non disponible",
     'item_left'=> "restant",
     'back_to_store' => "Retournez vers la boutique",
+    'last_page' => "Précédente",
+    'next_page' => "Suivante"
 ];
