@@ -25,5 +25,6 @@ return [
     'picture' => "Picture",
     'item_not_available' => "Item not available",
     'item_left'=> "left",
+    'back_to_store' => "Back to the store",
     
 ];

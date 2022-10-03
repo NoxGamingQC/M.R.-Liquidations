@@ -228,6 +228,7 @@ document.addEventListener("DOMContentLoaded", () => {
         $('#showItemPrice').html(price);
         $('#showItemStock').html(stock);
         $('#showItemPicture').attr('src', picture);
+        $('#showItemSeeMoreBtn').attr('href', '/store/item/' + id)
     });
 
     $('.btn-add-item').on('click', function() {

@@ -6,7 +6,15 @@
 <div class="container">
     <div class="row">
         <div class="col-md-12">
-            <h1>{{$name}}</h1>
+            <div class="row">
+                <div class="col-md-10">
+                    <h1>{{$name}}</h1>
+                </div>
+                <div class="col-md-2">
+                <br />
+                    <a href="/{{app()->getLocale()}}/store" class="text-right btn btn-danger">{{trans('store.back_to_store')}}</a>
+                </div>
+            </div>
             <hr />
             <div class="col-md-9">
                 <p class="text-justify">{{$description}}</p>

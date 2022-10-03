@@ -29,5 +29,6 @@ return [
     'feature_coming_soon' => 'Cette option sera disponible bientôt.',
     'save' => "Sauvegarder",
     'close' => "Fermer",
-    'required_fields' => "Champs requis"
+    'required_fields' => "Champs requis",
+    'see_more' => "Voir plus"
 ];

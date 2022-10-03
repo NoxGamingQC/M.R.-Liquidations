@@ -34,7 +34,12 @@
             </div>
             <div class="loupe"></div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-danger" data-dismiss="modal">{{trans('general.close')}}</button>
+                <div class="col-md-6 text-left">
+                    <a type="button" id="showItemSeeMoreBtn" class="btn btn-info">{{trans('general.see_more')}}</a>
+                </div>
+                <div class="col-md-6 text-right">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">{{trans('general.close')}}</button>
+                </div>
             </div>
         </div>
     </div>
