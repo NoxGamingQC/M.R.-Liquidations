@@ -14,8 +14,8 @@
         
         <div class="collapse navbar-collapse" id="bs-navbar-collapse">
             <ul class="nav navbar-nav">
-                <li class="nav-home"><a href="/"><i class="fa fa-home" aria-hidden="true"></i> {{trans('general.welcome')}} <span class="sr-only">current</span></a></li>
-                <li class="nav-store"><a href="/{{app()->getLocale()}}/store"><i class="fa fa-shopping-cart" aria-hidden="true"></i> {{trans('general.store')}} <span class="sr-only">current</span></a></li>
+                <li class="nav-home"><a href="/{{app()->getLocale()}}"><i class="fa fa-home" aria-hidden="true"></i> {{trans('general.welcome')}} <span class="sr-only">current</span></a></li>
+                <li class="nav-store"><a href="/{{app()->getLocale()}}/store/1"><i class="fa fa-shopping-cart" aria-hidden="true"></i> {{trans('general.store')}} <span class="sr-only">current</span></a></li>
                 <li class="nav-privacy_policy"><a href="/{{app()->getLocale()}}/privacy_policy"><i class="fa fa-file-text" aria-hidden="true"></i> {{trans('general.privacy_policy')}} <span class="sr-only">current</span></a></li>
                 <li class="nav-contact"><a href="/{{app()->getLocale()}}/contact_us"><i class="fa fa-address-book " aria-hidden="true"></i> {{trans('general.contact_us')}} <span class="sr-only">current</span></a></li>
             </ul>
