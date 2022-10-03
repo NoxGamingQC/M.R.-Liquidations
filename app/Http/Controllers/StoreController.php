@@ -69,7 +69,15 @@ class StoreController extends Controller
         abort(403);
     }
 
-    public function showItem(Request $request) {
-        abort(503);
+    public function showItem($id) {
+       $item = Items::findOrFail($id);
+        return view('item')->with([
+            'name' => $item->name,
+            'description' => $item->description,
+            'price' => $item->price,
+            'stock' => $item->stock,
+            'isAvailable' => $item->isAvailable,
+            'picture' => $item->picture
+        ]);
     }
 }

@@ -22,6 +22,8 @@ return [
     'edit_item' => "Edit an item",
     'stock_left' => "Stock left",
     'recommended_picture_ratio' => "We highly recommend to use a 1:1 ratio \"square pictures\" for the item pictures.",
-    'picture' => "Picture"
+    'picture' => "Picture",
+    'item_not_available' => "Item not available",
+    'item_left'=> "left",
     
 ];
