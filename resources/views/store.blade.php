@@ -126,7 +126,7 @@
                     @endif
             </div>
         </div>
-        <div class="col-md-12 text-center">
+        <div class="col-md-offset-3 col-md-9 text-center">
         <br />
             @if($currentPage != 1)
                 <a class="btn btn-default" href="/{{app()->getLocale()}}/store/{{$currentPage - 1}}">{{trans('store.last_page')}}</a>
