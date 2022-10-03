@@ -38,6 +38,9 @@ Route::group(
         Route::get('/contact_us', 'ContactUsController@index');
         Route::get('/privacy_policy', 'PrivacyPolicyController@index');
         Route::get('/profile/edit', 'ProfileController@index');
+
+        
+        Route::get('/management/logs', 'Management\LogController@index');
     }
 );
 
