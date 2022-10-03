@@ -42,7 +42,7 @@
                                     <a href="/{{app()->getLocale()}}/management/pages"><i class="fa fa-wrench" aria-hidden="true"></i> {{trans('management.pages')}}</a>
                                     <a href="/{{app()->getLocale()}}/management/categories"><i class="fa fa-wrench" aria-hidden="true"></i> {{trans('management.categories')}}</a>
                                     <a href="/{{app()->getLocale()}}/management/items"><i class="fa fa-wrench" aria-hidden="true"></i> {{trans('management.items')}}</a>
-                                    <a href="/{{app()->getLocale()}}/management/logs"><i class="fa fa-wrench" aria-hidden="true"></i> {{trans('management.logs')}}</a>
+                                    <a href="/{{app()->getLocale()}}/management/logs"><i class="fa fa-tasks" aria-hidden="true"></i> {{trans('management.logs')}}</a>
                                 </li>
                             </ul>
                         </li>
