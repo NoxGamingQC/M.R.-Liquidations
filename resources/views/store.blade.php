@@ -151,6 +151,13 @@
 </div>
 <script>
 document.addEventListener("DOMContentLoaded", () => {
+    $('.search-bar').on('keyup', function() {
+        var searchTerms = $(this).val();
+        if(!searchTerms) {
+            $('#searchResultContainer').attr('hidden', true);
+            $('#searchResult').children().remove();
+        }
+    });
     $('#searchBtn').on('click', function() {
         var searchTerms = $('.search-bar').val();
 
