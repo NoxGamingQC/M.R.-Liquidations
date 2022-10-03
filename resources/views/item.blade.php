@@ -48,7 +48,7 @@
                 <h3>{{trans('store.more_pictures')}}</h3>
                 <hr />
             </div>
-            <div class="col-md-12">
+            <div class="col-md-offset-2 col-md-8">
                 <div id="itemCarousel" class="carousel slide" data-ride="carousel">
                     <!-- Indicators -->
                     <ol class="carousel-indicators">
