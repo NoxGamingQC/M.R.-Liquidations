@@ -150,7 +150,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 },
                 success: function(results) {
                     $('#searchResult').children().remove();
-                    if(results) {
+                    if(results && results.length !== 0) {
                         var html = '';
                         results.forEach(function(result, key) {
                             var html = '<a class="search-result" href="/store/item/' + result['id'] + '">' +
@@ -170,15 +170,18 @@ document.addEventListener("DOMContentLoaded", () => {
                             $('#searchResult').append(html);
                         });
                         $('#searchResultContainer').removeAttr('hidden');
+                    } else {
+                        $('#searchResultContainer').attr('hidden', true);
                     }
                 },
                 error: function(error) {
+                    $('#searchResultContainer').attr('hidden', true);
                     console.log('Un problème est survenue');
                     toastr.error('Un problème est survenue', 'Erreur');
                 }
             });
         } else {
-            $('#searchResultContainer').attr('hidden');
+            $('#searchResultContainer').attr('hidden', true);
             $('#searchResult').children().remove();
         }
     });
