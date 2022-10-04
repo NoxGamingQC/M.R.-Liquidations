@@ -12,11 +12,19 @@ $panel-inner-border: $laravel-border-color;
 
 // Brands
 $brand-primary: #B11201;
-$brand-info: #5faafe;
-$brand-success: #3AA55D;
-$brand-warning: #F9A61A;
-$brand-danger: #EC4145;
-$brand-disabled: #686868;
+$brand-success: #5cb85c;
+$brand-info:    #5bc0de;
+$brand-warning: #f0ad4e;
+$brand-danger:  #d9534f;
+$brand-disabled: #555;
+
+$brand-blue: #337ab7;
+
+$gray-darker:  #222; 
+$gray-dark:    #333;   
+$gray:         #555;
+$gray-light:   #777;
+$gray-lighter: #eee;
 
 // Typography
 $icon-font-path: "~bootstrap-sass/assets/fonts/bootstrap/";
