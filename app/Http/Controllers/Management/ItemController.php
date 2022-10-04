@@ -60,7 +60,17 @@ class ItemController extends Controller
                     if(!count($allItemPictures->where('isFeatured', true)->get())) {
                         $itemPicture->isFeatured = true;
                     }
+                    
                     $itemPicture->save();
+                }
+                if($request->featured) {
+                    $currentlyFeaturedItem = ItemPictures::where('itemID', $request->id)->where('isFeatured', true)->first();
+                    $currentlyFeaturedItem->isFeatured = false;
+                    $currentlyFeaturedItem->save();
+
+                    $featuredItem = ItemPictures::findOrFail($request->featured);
+                    $featuredItem->isFeatured = true;
+                    $featuredItem->save();
                 }
                 $item->save();
 

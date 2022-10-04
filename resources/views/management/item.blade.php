@@ -91,7 +91,7 @@
                         <div class="col-md-4 panel panel-default text-center">
                             <div class="col-md-6 text-left">
                                 <br />
-                                <input type="radio" id="featured" name="item_pictures" value="{{$value->id}}" {{$value->isFeatured ? 'checked' : ''}}>
+                                <input type="radio" class="featured" name="item_pictures" value="{{$value->id}}" {{$value->isFeatured ? 'checked' : ''}}>
                             </div>
                             <div class="col-md-6 text-right">
                                 <br />
@@ -139,7 +139,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 isAvailable: $('#isAvailable').is(':checked'),
                 isHidden: $('#isHidden').is(':checked'),
                 picture: $('#itemPicture').attr('src'),
-                featured: $('#featured').val()
+                featured: $('.featured:checked').val()
             },
             beforeSend: function() {
                 $('#saveItem').attr('disabled', true)

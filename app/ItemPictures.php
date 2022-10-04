@@ -12,7 +12,7 @@ class ItemPictures extends Model
     const UPDATED_AT = 'updated_at';
 
     public static function getAllPictures($id) {
-        $pictures = ItemPictures::where('itemID', $id)->get(['id', 'picture', 'isFeatured']);
+        $pictures = ItemPictures::where('itemID', $id)->get(['id', 'picture', 'isFeatured'])->sortby('id');
 
         return $pictures;
     }
