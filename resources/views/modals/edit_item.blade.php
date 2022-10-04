@@ -93,7 +93,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 stock: $('#editItemStock').val(),
                 isAvailable: $('#editItemIsAvailable').is(':checked'),
                 isHidden: $('#editItemIsHidden').is(':checked')
-                //picture: $('#itemPicture').attr('src')
             },
             success: function() {
                 console.log('L\'item à été modifier avec succès.');
@@ -105,34 +104,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 toastr.error('Un problème est survenue', 'Erreur');
             }
         });
-    });
-
-    var itemInput = document.getElementById("selectItemPicture");
-    var itemPicture = document.getElementById("itemPicture");
-
-    const convertBase64 = (file) => {
-        return new Promise((resolve, reject) => {
-            const fileReader = new FileReader();
-            fileReader.readAsDataURL(file);
-
-            fileReader.onload = () => {
-                resolve(fileReader.result);
-            };
-
-            fileReader.onerror = (error) => {
-                reject(error);
-            };
-        });
-    };
-
-    const uploadImage = async (event) => {
-        const file = event.target.files[0];
-        const base64 = await convertBase64(file);
-        itemPicture.src = base64;
-    };
-
-    itemInput.addEventListener("change", (e) => {
-        uploadImage(e);
     });
 });
 </script>
