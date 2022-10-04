@@ -4,5 +4,6 @@ return [
     'pages' => "Pages",
     'categories' => "Categorie",
     'items' => "Items",
-    'logs' => "Logs"
+    'logs' => "Logs",
+    'edit_page' => "Edit page"
 ];

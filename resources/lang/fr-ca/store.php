@@ -37,4 +37,5 @@ return [
     'item_pictures' => "Photos de l'article",
     'check_radio_feature_picture' => "Cocher la case circulaire pour choisir la photo principal à afficher dans la boutique. En voici un exemple: ",
     'add_picture' => "Ajouter une photo",
+    'place_to_edit_picture' => "Pour modifier ou ajouter des photos, vous devez aller sur la page de modification de l'article"
 ];
