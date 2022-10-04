@@ -100,6 +100,7 @@ class StoreController extends Controller
             $pictures = ItemPictures::getAllPictures($item->id);
 
             return view('item')->with([
+                'id' => $item->id,
                 'name' => $item->name,
                 'description' => $item->description,
                 'price' => $item->price,
