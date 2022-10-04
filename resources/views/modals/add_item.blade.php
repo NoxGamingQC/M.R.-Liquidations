@@ -59,7 +59,7 @@
                         <div class="col-md-12">
                             <div class="col-md-6">
                                 <label for="picture">{{trans('store.picture')}}</label>
-                                <input class="form-control disabled" id="addItemPicture" type="file" accept="image/*" disabled />
+                                <input class="form-control" id="addItemPicture" type="file" accept="image/*" />
                             </div>
                             <div class="col-md-6 text-center">
                                 <img id="newItemPicture" src="" width="100%"/>
@@ -97,7 +97,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 stock: $('#addItemStock').val(),
                 isAvailable: $('#addItemIsAvailable').is(':checked'),
                 isHidden: $('#addItemIsHidden').is(':checked'),
-                //picture: $('#newItemPicture').attr('src')
+                picture: $('#newItemPicture').attr('src')
             },
             success: function() {
                 console.log('L\'item à été modifier avec succès.');
