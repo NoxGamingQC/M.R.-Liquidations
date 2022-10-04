@@ -11,7 +11,7 @@
                     <input class="form-control input-lg" type="text" value="{{$name}}">
                 </div>
                 <div class="col-md-2">
-                    <a href="" class="text-right btn btn-success btn-lg disabled" disabled>{{trans('general.save')}}</a>
+                    <button type="submit" class="text-right btn btn-success btn-lg disabled" disabled>{{trans('general.save')}}</button>
                 </div>
             </div>
             <hr />
@@ -101,6 +101,7 @@
                         </div>
                     @endforeach
                      <div class="col-md-12 panel panel-default text-center">
+                        <br />
                         <h4>{{trans('store.add_picture')}}</h4>
                         <div class="col-md-offset-4 col-md-4">
                             <input class="form-control disabled" id="itemPictureInput" type="file" accept="image/*" />
@@ -122,7 +123,7 @@
 </div>
 <script type="text/javascript">
 document.addEventListener("DOMContentLoaded", () => {
-    $('#addNewItem').on('click', function() {
+    $('#saveItem').on('submit', function() {
         $.ajax({
             url: "/management/item/edit",
             method: "post",
