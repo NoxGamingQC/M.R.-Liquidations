@@ -42,6 +42,7 @@ Route::group(
         
         Route::get('/management/logs', 'Management\LogController@index');
         Route::get('/management/logs/download', 'Management\LogController@download');
+        Route::get('/management/item/{id}', 'Management\ItemController@index');
     }
 );
 

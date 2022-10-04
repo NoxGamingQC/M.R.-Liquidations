@@ -106,7 +106,6 @@ class StoreController extends Controller
                 'price' => $item->price,
                 'stock' => $item->stock,
                 'isAvailable' => $item->isAvailable,
-                'picture' => $item->picture,
                 'pictures' => $pictures
             ]);
         }
