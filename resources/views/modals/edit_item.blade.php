@@ -65,7 +65,7 @@
                 <div class="modal-footer">
                     <div class="row">
                         <div class="col-md-6 text-left">
-                            <a id="editItemPage" class="btn btn-info" href="">{{trans('management.edit_page')}}</a>
+                            <a id="editItemPage" class="btn btn-primary" href="">{{trans('management.edit_page')}}</a>
                         </div>
                         <div class="col-md-6 text-right">
                             <button type="button" class="btn btn-danger" data-dismiss="modal">{{trans('general.close')}}</button>
