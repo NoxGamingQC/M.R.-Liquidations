@@ -11,7 +11,7 @@
                     <input class="form-control input-lg" type="text" value="{{$name}}">
                 </div>
                 <div class="col-md-2">
-                    <a href="" class="text-right btn btn-success disabled" disabled>{{trans('general.save')}}</a>
+                    <a href="" class="text-right btn btn-success btn-lg disabled" disabled>{{trans('general.save')}}</a>
                 </div>
             </div>
             <hr />
@@ -99,7 +99,10 @@
                      <div class="col-md-12 panel panel-default text-center">
                         <h4>{{trans('store.add_picture')}}</h4>
                         <div class="col-md-offset-4 col-md-4">
-                            <input type="file" class="form-control" />
+                            <input class="form-control disabled" id="itemPictureInput" type="file" accept="image/*" />
+                            <br />
+                            <img id="itemPicture" src="" width="100%"/>
+                            <br />
                             <br />
                         </div>
                         <div class="col-md-offset-4 col-md-4">
@@ -113,4 +116,56 @@
         </div>
     </div>
 </div>
+<script type="text/javascript">
+document.addEventListener("DOMContentLoaded", () => {
+    $('#addNewItem').on('click', function() {
+        $.ajax({
+            url: "/management/item/edit",
+            method: "post",
+            data: {
+                _token: $('meta[name="csrf-token"]').attr('content'),
+                id: $('#itemID').val(),
+                picture: $('#itemPicture').attr('src')
+            },
+            success: function() {
+                console.log('L\'item à été modifier avec succès.');
+                toastr.success('L\'item à été modifier avec succès.', 'Item modifier');
+                window.location.reload();
+            },
+            error: function(error) {
+                console.log('Un problème est survenue');
+                toastr.error('Un problème est survenue', 'Erreur');
+            }
+        });
+    });
+
+    var itemInput = document.getElementById("itemPictureInput");
+    var itemPicture = document.getElementById("itemPicture");
+
+    const convertBase64 = (file) => {
+        return new Promise((resolve, reject) => {
+            const fileReader = new FileReader();
+            fileReader.readAsDataURL(file);
+
+            fileReader.onload = () => {
+                resolve(fileReader.result);
+            };
+
+            fileReader.onerror = (error) => {
+                reject(error);
+            };
+        });
+    };
+
+    const uploadImage = async (event) => {
+        const file = event.target.files[0];
+        const base64 = await convertBase64(file);
+        itemPicture.src = base64;
+    };
+
+    itemInput.addEventListener("change", (e) => {
+        uploadImage(e);
+    });
+});
+</script>
 @stop
