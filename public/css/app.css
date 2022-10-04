@@ -3187,6 +3187,18 @@ img.disabled {
   border-color: #173853 !important;
 }
 
+.btn-main {
+  color: #fff !important;
+  background-color: #B11201 !important;
+  border-color: #650a01 !important;
+}
+
+.btn-main:hover {
+  color: #fff !important;
+  background-color: #650a01 !important;
+  border-color: #320500 !important;
+}
+
 .btn-success {
   color: #fff !important;
   background-color: #5cb85c !important;

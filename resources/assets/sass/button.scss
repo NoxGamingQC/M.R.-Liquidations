@@ -10,6 +10,18 @@
     border-color: darken($brand-blue, 25%) !important;
 }
 
+.btn-main {
+    color: #fff !important;
+    background-color: $brand-primary !important;
+    border-color: darken($brand-primary, 15%) !important;
+}
+
+.btn-main:hover {
+    color: #fff !important;
+    background-color: darken($brand-primary, 15%) !important;
+    border-color: darken($brand-primary, 25%) !important;
+}
+
 .btn-success {
     color: #fff !important;
     background-color: $brand-success !important;
