@@ -22,6 +22,7 @@
                             <th class="text-center">{{trans('store.isHidden')}}</th>
                             <th class="text-center">{{trans('general.view')}}</th>
                             <th class="text-center">{{trans('general.edit')}}</th>
+                            <th class="text-center">{{trans('general.delete')}}</th>
                         </tr>
                         @foreach($items as $key => $item)
                             <tr>
@@ -34,6 +35,7 @@
                                 <td class="text-center">{{$item->isHidden ? trans('general.yes') : trans('general.no')}}</td>
                                 <td class="text-center"><a class="btn btn-primary btn-sm" href="/store/item/{{$item->id}}"><i class="fa fa-eye" area-hidden="true"></i></a></td>
                                 <td class="text-center"><a class="btn btn-warning btn-sm" href="/management/item/{{$item->id}}"><i class="fa fa-pencil" area-hidden="true"></i></a></td>
+                                <td class="text-center"><a class="btn btn-danger btn-sm disabled" href="#" disabled><i class="fa fa-times" area-hidden="true"></i></a></td>
                             </tr>
                         @endforeach
                     </table>

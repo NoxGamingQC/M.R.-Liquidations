@@ -35,5 +35,6 @@ return [
     'yes' => "Yes",
     'no' => "No",
     'view' => "View",
-    'edit' => "Edit"
+    'edit' => "Edit",
+    'delete' => "Delete"
 ];
