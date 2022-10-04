@@ -70,10 +70,14 @@
                 <hr />
             </div>
             <div class="col-md-6">
-                <h4><b>{{trans('store.price')}}: <input type="text" class="form-control" value="{{$price}}"></b></h4>
+                <div class="form-inline">
+                    <h4><b>{{trans('store.price')}}: <input type="text" class="form-control" value="{{$price}}"> C$</b></h4>
+                </div>
             </div>
             <div class="col-md-6">
-                <h4><b>{{trans('store.stock')}}: <input type="text" class="form-control" value="{{$stock}}">
+                <div class="form-inline">
+                    <h4><b>{{trans('store.stock')}}: <input type="text" class="form-control" value="{{$stock}}"> {{trans('store.item_left')}}</b></h4>
+                </div>
             </div>
             <div class="col-md-12">
                 <hr />
