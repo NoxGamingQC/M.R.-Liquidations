@@ -32,4 +32,8 @@ return [
     'required_fields' => "Champs requis",
     'see_more' => "Voir plus",
     'management' => "Administration",
+    'yes' => "Oui",
+    'no' => "Non",
+    'view' => "Voir",
+    'edit' => "Modifier"
 ];

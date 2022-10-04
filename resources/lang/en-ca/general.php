@@ -31,5 +31,9 @@ return [
     'close' => "Close",
     'required_fields' => "Required fields",
     'see_more' => "See more",
-    'management' => "Management"
+    'management' => "Management",
+    'yes' => "Yes",
+    'no' => "No",
+    'view' => "View",
+    'edit' => "Edit"
 ];

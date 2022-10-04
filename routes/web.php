@@ -21,6 +21,7 @@ Route::get('language/set/{language}', 'LanguageController@index');
 Route::post('/store/item/add', 'StoreController@addItem');
 Route::post('/store/item/edit', 'StoreController@editItem');
 Route::get('/store/item/search', 'SearchController@item');
+
 Route::post('/management/item/edit', 'Management\ItemController@edit');
 Route::post('/management/item/picture/delete', 'Management\ItemController@deletePicture');
 
@@ -49,6 +50,7 @@ Route::group(
         Route::get('/management/logs', 'Management\LogController@index');
         Route::get('/management/logs/download', 'Management\LogController@download');
         Route::get('/management/item/{id}', 'Management\ItemController@index');
+        Route::get('/management/items', 'Management\ItemsController@index');
     }
 );
 

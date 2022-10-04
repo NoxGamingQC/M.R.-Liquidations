@@ -5,5 +5,6 @@ return [
     'categories' => "Catégorie",
     'items' => "Articles",
     'logs' => "Journeaux",
-    'edit_page' => "Page de modification"
+    'edit_page' => "Page de modification",
+    'item_management' => "Gestion d'articles"
 ];
