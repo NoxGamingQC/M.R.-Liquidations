@@ -82,7 +82,7 @@
                         <div class="col-md-4 panel panel-default text-center">
                             <div class="col-md-6 text-left">
                                 <br />
-                                <input type="radio" id="{{$value->id}}" name="item_pictures" value="{{$value->id}}">
+                                <input type="radio" id="{{$value->id}}" name="item_pictures" value="{{$value->id}}" {{$value->isFeatured ? 'checked' : ''}}>
                             </div>
                             <div class="col-md-6 text-right">
                                 <br />
