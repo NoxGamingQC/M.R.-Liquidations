@@ -127,6 +127,7 @@
 <script type="text/javascript">
 document.addEventListener("DOMContentLoaded", () => {
     $('#saveItem').on('click', function() {
+        var $btnText = $('#saveItem').html();
         $.ajax({
             url: "/management/item/edit",
             method: "post",
@@ -145,18 +146,18 @@ document.addEventListener("DOMContentLoaded", () => {
             beforeSend: function() {
                 $('#saveItem').attr('disabled', true)
                 $('#saveItem').addClass('disabled', true)
+                $('#saveItem').html('<i class="fa fa-spinner fa-pulse fa-fw" area-hidden="true"></i>')
             },
             success: function() {
                 $('#saveItem').attr('disabled', false)
-                $('#saveItem').removeClass('disabled', true)
-                console.log('L\'item à été modifier avec succès.');
+                $('#saveItem').removeClass('disabled', true)<
                 toastr.success('L\'item à été modifier avec succès.', 'Item modifier');
                 window.location.reload();
             },
             error: function(error) {
+                $('#saveItem').html(btnText);
                 $('#saveItem').attr('disabled', false)
                 $('#saveItem').removeClass('disabled', true)
-                console.log('Un problème est survenue');
                 toastr.error('Un problème est survenue', 'Erreur');
             }
         });
