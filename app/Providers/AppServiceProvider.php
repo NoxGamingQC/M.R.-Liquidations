@@ -15,13 +15,10 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        if($this->app->environment('production') || env('APP_URL') !== 'http://localhost') {
-            \URL::forceScheme('https');
-        }
-
         $pageList = PageList::all();
         $pages = [];
         if($this->app->environment('production') || env('APP_URL') !== 'http://localhost') {
+            \URL::forceScheme('https');
             foreach($pageList as $key => $page) {
                 $pages[$page->slug] = [
                     'slug' => $page->slug,
