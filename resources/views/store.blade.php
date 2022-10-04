@@ -238,6 +238,7 @@ document.addEventListener("DOMContentLoaded", () => {
         $('#editItemIsHidden').attr('checked', isHidden);
         $('#itemPicture').attr('src', picture);
         $('#selectItemPicture').val('')
+        $('#editItemPage').attr('href', '/management/item/' + id)
     });
 
     $('.btn-show-item').on('click', function() {

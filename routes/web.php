@@ -28,6 +28,10 @@ Route::get('/store/item/{id}', function ($id) {
     return redirect(app()->getLocale() . '/store/item/' . $id);
 });
 
+Route::get('/management/item/{id}', function ($id) {
+    return redirect(app()->getLocale() . '/management/item/' . $id);
+});
+
 Route::group(
     [
     'prefix' => '{locale}',

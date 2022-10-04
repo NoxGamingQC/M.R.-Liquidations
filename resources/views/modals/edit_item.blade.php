@@ -57,25 +57,21 @@
                     </div>
                     <div class="form-group">
                         <div class="col-md-12">
-                            <div class="col-md-6">
-                                <label for="picture">{{trans('store.picture')}}</label>
-                                <input class="form-control disabled" id="selectItemPicture" type="file" accept="image/*" disabled />
-                            </div>
-                            <div class="col-md-6 text-center">
-                                <img id="itemPicture" src="" width="100%"/>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <div class="col-md-12">
-                            <p class="text-warning">{{trans('store.recommended_picture_ratio')}}</p>
                             <p class="text-danger"><label class="text-primary" style="font-size: 20px">*</label>{{trans('general.required_fields')}}</p>
+                            <p class="text-info">{{trans('store.place_to_edit_picture')}}</p>
                         </div>
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-danger" data-dismiss="modal">{{trans('general.close')}}</button>
-                    <button id="saveItemEdit" type="button" class="btn btn-success">{{trans('general.save')}}</button>
+                    <div class="row">
+                        <div class="col-md-6 text-left">
+                            <a id="editItemPage" class="btn btn-info" href="">{{trans('management.edit_page')}}</a>
+                        </div>
+                        <div class="col-md-6 text-right">
+                            <button type="button" class="btn btn-danger" data-dismiss="modal">{{trans('general.close')}}</button>
+                            <button id="saveItemEdit" type="button" class="btn btn-success">{{trans('general.save')}}</button>
+                        </div>
+                    </div>
                 </div>
             </form>
         </div>

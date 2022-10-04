@@ -85,6 +85,7 @@
             <div class="col-md-12">
                 <h3>{{trans('store.item_pictures')}}</h3>
                 <span class="text-warning">{{trans('store.check_radio_feature_picture')}} <input type="radio" name="reference" checked></span>
+                <p class="text-warning">{{trans('store.recommended_picture_ratio')}}</p>
                 <hr />
                 <div class="row">
                     @foreach($pictures as $key => $value)
