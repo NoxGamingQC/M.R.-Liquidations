@@ -11,7 +11,7 @@
                     <input class="form-control input-lg" type="text" value="{{$name}}">
                 </div>
                 <div class="col-md-2">
-                    <a href="" class="text-right btn btn-success">{{trans('general.save')}}</a>
+                    <a href="" class="text-right btn btn-success disabled" disabled>{{trans('general.save')}}</a>
                 </div>
             </div>
             <hr />
