@@ -13,7 +13,7 @@ class LogController extends Controller
     public function index(Request $request)
     {
         if (Auth::user()) {
-            if (Auth::user()->isAdmin || Auth::user()->isDev) {
+            if (Auth::user()->isDev) {
                 if($request->date) {
                     $date = new Carbon($request->date);
                 } else {

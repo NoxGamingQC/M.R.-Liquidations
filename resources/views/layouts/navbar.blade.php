@@ -38,12 +38,14 @@
                                 <i class="fa fa-dashboard" aria-hidden="true"></i> {{trans('general.management')}} <span class="caret"></span>
                             </a>
                             <ul class="dropdown-menu">
-                                <li>
-                                    <a href="/{{app()->getLocale()}}/management/pages"><i class="fa fa-wrench" aria-hidden="true"></i> {{trans('management.pages')}}</a>
-                                    <a href="/{{app()->getLocale()}}/management/categories"><i class="fa fa-wrench" aria-hidden="true"></i> {{trans('management.categories')}}</a>
-                                    <a href="/{{app()->getLocale()}}/management/items"><i class="fa fa-cubes" aria-hidden="true"></i> {{trans('management.items')}}</a>
-                                    <a href="/{{app()->getLocale()}}/management/logs"><i class="fa fa-tasks" aria-hidden="true"></i> {{trans('management.logs')}}</a>
-                                </li>
+                                @if(Auth::user()->isDev)
+                                    <li><a href="/{{app()->getLocale()}}/management/pages"><i class="fa fa-wrench" aria-hidden="true"></i> {{trans('management.pages')}}</a></li>    
+                                @endif
+                                <li class="disabled"><a href="/{{app()->getLocale()}}/management/categories"><i class="fa fa-wrench" aria-hidden="true"></i> {{trans('management.categories')}}</a></li>
+                                <li><a href="/{{app()->getLocale()}}/management/items"><i class="fa fa-cubes" aria-hidden="true"></i> {{trans('management.items')}}</a></li>
+                                @if(Auth::user()->isDev)
+                                    <li><a href="/{{app()->getLocale()}}/management/logs"><i class="fa fa-tasks" aria-hidden="true"></i> {{trans('management.logs')}}</a></li>
+                                @endif
                             </ul>
                         </li>
                     @endif
