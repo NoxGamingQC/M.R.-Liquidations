@@ -21,6 +21,8 @@ Route::get('language/set/{language}', 'LanguageController@index');
 Route::post('/store/item/add', 'StoreController@addItem');
 Route::post('/store/item/edit', 'StoreController@editItem');
 Route::get('/store/item/search', 'SearchController@item');
+Route::post('/management/item/edit', 'Management\ItemController@edit');
+Route::post('/management/item/picture/delete', 'Management\ItemController@deletePicture');
 
 Route::get('/store/item/{id}', function ($id) {
     return redirect(app()->getLocale() . '/store/item/' . $id);

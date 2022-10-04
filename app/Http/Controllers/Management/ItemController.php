@@ -41,4 +41,45 @@ class ItemController extends Controller
         }
         abort(403);
     }
+
+    public function edit(Request $request) {
+        if(Auth::check()) {
+            if(Auth::user()->isManager || Auth::user()->isDev) {
+                $item = Items::findOrFail($request->id);
+                $item->name = $request->name;
+                $item->description = $request->description;
+                $item->price = $request->price;
+                $item->stock = $request->stock;
+                $item->isAvailable = $request->isAvailable;
+                $item->isHidden = $request->isHidden;
+                if($request->picture) {
+                    $itemPicture = new ItemPictures;
+                    $itemPicture->picture = $request->picture;
+                    $itemPicture->itemID = $request->id;
+                    $allItemPictures = ItemPictures::where('itemID', $request->id);
+                    if(!count($allItemPictures->where('isFeatured', true)->get())) {
+                        $itemPicture->isFeatured = true;
+                    }
+                    $itemPicture->save();
+                }
+                $item->save();
+
+                return 200;
+            }
+            abort(403);
+        }
+        abort(403);
+    }
+
+    public function deletePicture(Request $request) {
+        if(Auth::check()) {
+            if(Auth::user()->isManager || Auth::user()->isDev) {
+                $picture = ItemPictures::findOrFail($request->id);
+                $picture->delete();
+                return 200;
+            }
+            abort(403);
+        }
+        abort(403);
+    }
 }
