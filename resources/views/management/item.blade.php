@@ -60,6 +60,11 @@
                         <img src="/img/no-image.png" width="100%" />
                     @endif
                 @endif
+                <br />
+                <br />
+                <label>{{trans('store.isAvailable')}}: <input type="checkbox" {{$isAvailable ? 'checked' : ''}} /></label>
+                <br />
+                <label>{{trans('store.isHidden')}}: <input type="checkbox" {{$isHidden ? 'checked' : ''}} /></label>
             </div>
             <div class="col-md-12">
                 <hr />

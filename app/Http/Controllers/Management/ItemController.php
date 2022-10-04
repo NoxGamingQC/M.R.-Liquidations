@@ -31,6 +31,7 @@ class ItemController extends Controller
                         'price' => $item->price,
                         'stock' => $item->stock,
                         'isAvailable' => $item->isAvailable,
+                        'isHidden' => $item->isHidden,
                         'pictures' => $pictures
                     ]);
                 }
