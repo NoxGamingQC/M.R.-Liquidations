@@ -28,5 +28,10 @@ return [
     'back_to_store' => "Retournez vers la boutique",
     'last_page' => "Précédente",
     'next_page' => "Suivante",
-    'more_pictures' => "Plus de photos"
+    'more_pictures' => "Plus de photos",
+    'management' => "Administration",
+    'displayed_items' => "Articles affichés",
+    'hidden_items' => "Articles cachés",
+    'available_items' => "Articles disponibles",
+    'not_available_items' => "Articles non disponibles"
 ];

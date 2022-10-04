@@ -12,6 +12,23 @@ class Items extends Model
     const CREATED_AT = 'created_at';
     const UPDATED_AT = 'updated_at';
 
+
+    public function scopeHidden($query) {
+        return $query->where('isHidden', true);
+    }
+
+    public function scopeDisplayed($query) {
+        return $query->where('isHidden', false);
+    }
+
+    public function scopeAvailable($query) {
+        return $query->where('isAvailable', true);
+    }
+
+    public function scopeNotAvailable($query) {
+        return $query->where('isAvailable', false);
+    }
+
     static public function getHiddenItemsCount($items) {
         $itemCount = 0;
         foreach($items as $key => $item) {

@@ -28,6 +28,11 @@ return [
     'back_to_store' => "Back to the store",
     'last_page' => "Previous",
     'next_page' => "Next",
-    'more_pictures' => "More pictures"
+    'more_pictures' => "More pictures",
+    'management' => "Management",
+    'displayed_items' => "Displayed items",
+    'hidden_items' => "Hidden items",
+    'available_items' => "Available items",
+    'not_available_items' => "Not available items"
     
 ];

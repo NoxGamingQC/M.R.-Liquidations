@@ -18,7 +18,7 @@ class StoreController extends Controller
         }
         $pageCount = (int)ceil(($itemCount / 9));
         
-        $displayedItemCount = Items::getDisplayedItemCount($items);
+        $currentItemCount = Items::getDisplayedItemCount($items);
         if(Auth::check()) {
             $isManager = Auth::user()->isManager;
             $isDev = Auth::user()->isDev;
@@ -26,13 +26,23 @@ class StoreController extends Controller
             $isManager = false;
             $isDev = false;
         }
+
+        $hiddenItem = Items::hidden()->get();
+        $displayedItem = Items::displayed()->get();
+        $availableItem = Items::available()->get();
+        $notAvailableItem = Items::notAvailable()->get();
+
         return view('store')->with([
             'items' => $items,
-            'displayedItemCount' => $displayedItemCount,
+            'currentItemCount' => $currentItemCount,
             'isManager' => $isManager,
             'isDev' => $isDev,
             'pageCount' => $pageCount,
-            'currentPage' => $page
+            'currentPage' => $page,
+            'displayedItemCount' => count($displayedItem),
+            'hiddenItemCount' => count($hiddenItem),
+            'availableItemCount' => count($displayedItem),
+            'notAvailableItemCount' => count($hiddenItem),
         ]);
     }
 

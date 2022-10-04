@@ -66,12 +66,27 @@
             <ul>
                 <h3>{{trans('store.filter_by')}}:</h3>
                 <hr />
-                <h4 class="text-warning">{{trans('general.feature_coming_soon')}}</h4>
+                @guest
+                    <h4 class="text-warning">{{trans('general.feature_coming_soon')}}</h4>
+                @endguest
+                @auth
+                    @if(Auth::user()->isAdmin || Auth::user()->isDev)
+                        <h4>{{trans('store.management')}}:</h4>
+                        <ul>
+                            <li>{{trans('store.displayed_items')}} ({{$displayedItemCount}})</li>
+                            <li>{{trans('store.hidden_items')}} ({{$hiddenItemCount}})</li>
+                            <li>{{trans('store.available_items')}} ({{$availableItemCount}})</li>
+                            <li>{{trans('store.not_available_items')}} ({{$notAvailableItemCount}})</li>
+                        </ul>
+                    @else
+                        <h4 class="text-warning">{{trans('general.feature_coming_soon')}}</h4>
+                    @endif
+                @endauth
                 <h4 class="hidden">{{trans('store.categories')}}:</h4>
                 <h4 class="hidden">{{trans('store.prices')}}:</h4>
             </ul>
         </div>
-        @if($displayedItemCount)
+        @if($currentItemCount)
             <div class="col-md-9">
                 <div class="row">
                     @if($items)
