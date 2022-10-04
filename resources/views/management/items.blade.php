@@ -32,7 +32,7 @@
                                 <td class="text-center">{{$item->stock}}</td>
                                 <td class="text-center">{{$item->isAvailable ? trans('general.yes') : trans('general.no')}}</td>
                                 <td class="text-center">{{$item->isHidden ? trans('general.yes') : trans('general.no')}}</td>
-                                <td class="text-center"><a class="btn btn-info btn-sm" href="/store/item/{{$item->id}}"><i class="fa fa-eye" area-hidden="true"></i></a></td>
+                                <td class="text-center"><a class="btn btn-primary btn-sm" href="/store/item/{{$item->id}}"><i class="fa fa-eye" area-hidden="true"></i></a></td>
                                 <td class="text-center"><a class="btn btn-warning btn-sm" href="/management/item/{{$item->id}}"><i class="fa fa-pencil" area-hidden="true"></i></a></td>
                             </tr>
                         @endforeach

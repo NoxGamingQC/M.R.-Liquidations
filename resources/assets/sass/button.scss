@@ -1,5 +1,59 @@
 .btn-primary {
-    background-color: $brand-blue;
-    color: #fff;
-    border-color: darken($brand-blue, 15%);
+    color: #fff !important;
+    background-color: $brand-blue !important;
+    border-color: darken($brand-blue, 15%) !important;
+}
+
+.btn-primary:hover {
+    color: #fff !important;
+    background-color: darken($brand-blue, 15%) !important;
+    border-color: darken($brand-blue, 25%) !important;
+}
+
+.btn-success {
+    color: #fff !important;
+    background-color: $brand-success !important;
+    border-color: darken($brand-success, 15%) !important;
+}
+
+.btn-success:hover {
+    color: #fff !important;
+    background-color: darken($brand-success, 15%) !important;
+    border-color: darken($brand-success, 25%) !important;
+}
+
+.btn-info {
+    color: #fff !important;
+    background-color: $brand-info !important;
+    border-color: darken($brand-info, 15%) !important;
+}
+
+.btn-info:hover {
+    color: #fff !important;
+    background-color: darken($brand-info, 15%) !important;
+    border-color: darken($brand-info, 25%) !important;
+}
+
+.btn-warning {
+    color: #fff !important;
+    background-color: $brand-warning !important;
+    border-color: darken($brand-warning, 15%) !important;
+}
+
+.btn-warning:hover {
+    color: #fff !important;
+    background-color: darken($brand-warning, 15%) !important;
+    border-color: darken($brand-warning, 25%) !important;
+}
+
+.btn-danger {
+    color: #fff !important;
+    background-color: $brand-danger !important;
+    border-color: darken($brand-danger, 15%) !important;
+}
+
+.btn-danger:hover {
+    color: #fff !important;
+    background-color: darken($brand-danger, 15%) !important;
+    border-color: darken($brand-danger, 25%) !important;
 }
