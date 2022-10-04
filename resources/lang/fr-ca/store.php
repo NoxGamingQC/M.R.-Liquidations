@@ -33,5 +33,8 @@ return [
     'displayed_items' => "Articles affichés",
     'hidden_items' => "Articles cachés",
     'available_items' => "Articles disponibles",
-    'not_available_items' => "Articles non disponibles"
+    'not_available_items' => "Articles non disponibles",
+    'item_pictures' => "Photos de l'article",
+    'check_radio_feature_picture' => "Cocher la case circulaire pour choisir la photo principal à afficher dans la boutique. En voici un exemple: ",
+    'add_picture' => "Ajouter une photo",
 ];

@@ -70,6 +70,41 @@
             <div class="col-md-6">
                 <h4><b>{{trans('store.stock')}}: <input type="text" class="form-control" value="{{$stock}}">
             </div>
+            <div class="col-md-12">
+                <hr />
+            </div>
+            <div class="col-md-12">
+                <h3>{{trans('store.item_pictures')}}</h3>
+                <span class="text-warning">{{trans('store.check_radio_feature_picture')}} <input type="radio" name="reference" checked></span>
+                <hr />
+                <div class="row">
+                    @foreach($pictures as $key => $value)
+                        <div class="col-md-4 panel panel-default text-center">
+                            <div class="col-md-6 text-left">
+                                <br />
+                                <input type="radio" id="{{$value->id}}" name="item_pictures" value="{{$value->id}}">
+                            </div>
+                            <div class="col-md-6 text-right">
+                                <br />
+                                <button class="btn btn-danger "><i class="fa fa-times" area-hidden="true"></i></button>
+                            </div>
+                            <img src="{{$value->picture}}" width="100%" />
+                        </div>
+                    @endforeach
+                     <div class="col-md-12 panel panel-default text-center">
+                        <h4>{{trans('store.add_picture')}}</h4>
+                        <div class="col-md-offset-4 col-md-4">
+                            <input type="file" class="form-control" />
+                            <br />
+                        </div>
+                        <div class="col-md-offset-4 col-md-4">
+                        </div>
+                     </div>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <br />
+            </div>
         </div>
     </div>
 </div>

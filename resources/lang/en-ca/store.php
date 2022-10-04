@@ -33,6 +33,9 @@ return [
     'displayed_items' => "Displayed items",
     'hidden_items' => "Hidden items",
     'available_items' => "Available items",
-    'not_available_items' => "Not available items"
+    'not_available_items' => "Not available items",
+    'item_pictures' => "Item pictures",
+    'check_radio_feature_picture' => "Check the radio to select the featured picture in the store. Here's an exemple: ",
+    'add_picture' => "Add a picture",
     
 ];
