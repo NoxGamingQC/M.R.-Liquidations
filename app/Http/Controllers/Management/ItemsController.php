@@ -14,7 +14,7 @@ class ItemsController extends Controller
     public function index() {
         if(Auth::check()) {
             if(Auth::user()->isDev || Auth::user()->isAdmin) {
-                $items = Items::all();
+                $items = Items::orderBy('id', 'desc')->get();
 
                 return view('management.items')->with([
                     'items' => $items,
