@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\PageList;
 use App\ItemPictures;
 use App\Items;
 use Auth;
@@ -11,6 +12,9 @@ use Auth;
 class StoreController extends Controller
 {
     public function index($language, $page, $sortby = 'alphabetical') {
+        if(PageList::isInMaintenance('store')) {
+            abort(503);
+        }
         $skipCount = (($page * 9) - 9);
         if($sortby == 'alphabetical') {
             $items = Items::getItemsAlphabetical()->skip($skipCount)->take(9)->get();
@@ -47,6 +51,9 @@ class StoreController extends Controller
     }
 
     public function addItem(Request $request) {
+        if(PageList::isInMaintenance('store')) {
+            abort(503);
+        }
         if(Auth::check()) {
             if(Auth::user()->isManager || Auth::user()->isDev) {
                 $item = new Items;
@@ -74,6 +81,9 @@ class StoreController extends Controller
     }
 
     public function editItem(Request $request) {
+        if(PageList::isInMaintenance('store')) {
+            abort(503);
+        }
         if(Auth::check()) {
             if(Auth::user()->isManager || Auth::user()->isDev) {
                 $item = Items::findOrFail($request->id);
@@ -94,6 +104,9 @@ class StoreController extends Controller
     }
 
     public function showItem($language, $id) {
+        if(PageList::isInMaintenance('store')) {
+            abort(503);
+        }
        $item = Items::findOrFail($id);
        $canSeeHiddenItems = false;
        if(Auth::check()) {

@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Management;
 use Illuminate\Http\Request;
 
 use App\Http\Controllers\Controller;
+use App\PageList;
 use App\ItemPictures;
 use App\Items;
 use Auth;
@@ -12,6 +13,9 @@ use Auth;
 class ItemController extends Controller
 {
     public function index($language, $id) {
+        if(PageList::isInMaintenance('management.items')) {
+            abort(503);
+        }
         if(Auth::check()) {
             if(Auth::user()->isDev || Auth::user()->isAdmin) {
                 $item = Items::findOrFail($id);
@@ -43,6 +47,9 @@ class ItemController extends Controller
     }
 
     public function edit(Request $request) {
+        if(PageList::isInMaintenance('management.items')) {
+            abort(503);
+        }
         if(Auth::check()) {
             if(Auth::user()->isManager || Auth::user()->isDev) {
                 $item = Items::findOrFail($request->id);
@@ -84,6 +91,9 @@ class ItemController extends Controller
     }
 
     public function deletePicture(Request $request) {
+        if(PageList::isInMaintenance('management.items')) {
+            abort(503);
+        }
         if(Auth::check()) {
             if(Auth::user()->isManager || Auth::user()->isDev) {
                 $picture = ItemPictures::findOrFail($request->id);

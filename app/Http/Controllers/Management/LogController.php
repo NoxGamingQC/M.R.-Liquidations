@@ -7,11 +7,15 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\File;
 use Carbon\Carbon;
+use App\PageList;
 
 class LogController extends Controller
 {
     public function index(Request $request)
     {
+        if(PageList::isInMaintenance('management.logs')) {
+            abort(503);
+        }
         if (Auth::user()) {
             if (Auth::user()->isDev) {
                 if($request->date) {
