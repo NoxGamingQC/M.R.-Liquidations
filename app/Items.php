@@ -49,7 +49,7 @@ class Items extends Model
 
     static public function getItemsAlphabetical() {
         if(Auth::check()) {
-            if(Auth::user()->isDev || Auth::user()->isAdmin) {
+            if(Auth::user()->isDev || Auth::user()->isManager) {
                 $items = Items::leftJoin('item_pictures', function($join) {
                     $join->on('items.id', '=', 'item_pictures.itemID')
                             ->where('item_pictures.isFeatured', '=', true);

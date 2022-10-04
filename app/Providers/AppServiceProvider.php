@@ -2,6 +2,8 @@
 
 namespace App\Providers;
 
+use Auth;
+use App\PageList;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -16,7 +18,26 @@ class AppServiceProvider extends ServiceProvider
         if($this->app->environment('production') || env('APP_URL') !== 'http://localhost') {
             \URL::forceScheme('https');
         }
-        return view();
+
+        $pageList = PageList::all();
+        $pages = [];
+        if($this->app->environment('production') || env('APP_URL') !== 'http://localhost') {
+            foreach($pageList as $key => $page) {
+                $pages[$page->slug] = [
+                    'slug' => $page->slug,
+                    'inMaintenance' => $page->inMaintenance
+                ];
+            }
+        } else {
+            foreach($pageList as $key => $page) {
+                $pages[$page->slug] = [
+                    'slug' => $page->slug,
+                    'inMaintenance' => false
+                ];
+            }
+        }
+        
+        return view()->share('page', $pages);
     }
 
     /**

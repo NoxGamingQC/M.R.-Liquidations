@@ -15,9 +15,9 @@
         <div class="collapse navbar-collapse" id="bs-navbar-collapse">
             <ul class="nav navbar-nav">
                 <li class="nav-home"><a href="/{{app()->getLocale()}}"><i class="fa fa-home" aria-hidden="true"></i> {{trans('general.welcome')}} <span class="sr-only">current</span></a></li>
-                <li class="nav-store"><a href="/{{app()->getLocale()}}/store/1"><i class="fa fa-shopping-cart" aria-hidden="true"></i> {{trans('general.store')}} <span class="sr-only">current</span></a></li>
-                <li class="nav-privacy_policy"><a href="/{{app()->getLocale()}}/privacy_policy"><i class="fa fa-file-text" aria-hidden="true"></i> {{trans('general.privacy_policy')}} <span class="sr-only">current</span></a></li>
-                <li class="nav-contact"><a href="/{{app()->getLocale()}}/contact_us"><i class="fa fa-address-book " aria-hidden="true"></i> {{trans('general.contact_us')}} <span class="sr-only">current</span></a></li>
+                <li class="nav-store {{$page['store']['inMaintenance'] ? 'disabled' : ''}}"><a href="{{$page['store']['inMaintenance'] ? '#' : '/' . app()->getLocale() . '/store/1'}}"><i class="fa {{$page['store']['inMaintenance'] ? 'fa-wrench' : 'fa-shopping-cart'}}" aria-hidden="true"></i> {{trans('general.store')}} <span class="sr-only">current</span></a></li>
+                <li class="nav-privacy_policy {{$page['privacy_policy']['inMaintenance'] ? 'disabled' : ''}}"><a href="{{$page['privacy_policy']['inMaintenance'] ? '#' : '/' . app()->getLocale() . '/privacy_policy'}}"><i class="fa {{$page['privacy_policy']['inMaintenance'] ? 'fa-wrench' : 'fa-file-text'}}" aria-hidden="true"></i> {{trans('general.privacy_policy')}} <span class="sr-only">current</span></a></li>
+                <li class="nav-contact {{$page['contact_us']['inMaintenance'] ? 'disabled' : ''}}"><a href="{{$page['privacy_policy']['inMaintenance'] ? '#' : '/' . app()->getLocale() . '/contact_us'}}"><i class="fa {{$page['contact_us']['inMaintenance'] ? 'fa-wrench' : 'fa-address-book'}}" aria-hidden="true"></i> {{trans('general.contact_us')}} <span class="sr-only">current</span></a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li class="dropdown">
@@ -41,8 +41,8 @@
                                 @if(Auth::user()->isDev)
                                     <li><a href="/{{app()->getLocale()}}/management/pages"><i class="fa fa-wrench" aria-hidden="true"></i> {{trans('management.pages')}}</a></li>    
                                 @endif
-                                <li class="disabled"><a href="/{{app()->getLocale()}}/management/categories"><i class="fa fa-wrench" aria-hidden="true"></i> {{trans('management.categories')}}</a></li>
-                                <li><a href="/{{app()->getLocale()}}/management/items"><i class="fa fa-cubes" aria-hidden="true"></i> {{trans('management.items')}}</a></li>
+                                <li class="{{$page['management.categories']['inMaintenance'] ? 'disabled' : ''}}"><a href="{{$page['management.categories']['inMaintenance'] ? '#' : '/'. app()->getLocale() .'/management/categories'}}"><i class="fa {{$page['management.categories']['inMaintenance'] ? 'fa-wrench' : 'fa-file-text-o'}}" aria-hidden="true"></i> {{trans('management.categories')}}</a></li>
+                                <li class="{{$page['management.items']['inMaintenance'] ? 'disabled' : ''}}"><a href="{{$page['management.items']['inMaintenance'] ? '#' : '/'. app()->getLocale() .'/management/items'}}"><i class="fa {{$page['management.items']['inMaintenance'] ? 'fa-wrench' : 'fa-cubes'}}" aria-hidden="true"></i> {{trans('management.items')}}</a></li>
                                 @if(Auth::user()->isDev)
                                     <li><a href="/{{app()->getLocale()}}/management/logs"><i class="fa fa-tasks" aria-hidden="true"></i> {{trans('management.logs')}}</a></li>
                                 @endif
@@ -54,10 +54,8 @@
                             <i class="fa fa-user-circle-o" aria-hidden="true"></i> {{ Auth::user()->name }} <span class="caret"></span>
                         </a>
                         <ul class="dropdown-menu">
-                            <li>
-                                <a href="/{{app()->getLocale()}}/profile/edit"><i class="fa fa-wrench" aria-hidden="true"></i> {{trans('general.edit_profile')}}</a>
-                                <a href="/logout"><i class="fa fa-sign-out" aria-hidden="true"></i> {{trans('general.logout')}}</a>
-                            </li>
+                                <li class="{{$page['profile.edit']['inMaintenance'] ? 'disabled' : ''}}"><a href="{{$page['profile.edit']['inMaintenance'] ? '#' : '/' . app()->getLocale() . '/profile/edit'}}"><i class="fa {{$page['profile.edit']['inMaintenance'] ? 'fa-wrench' : 'fa-user'}}" aria-hidden="true"></i> {{trans('general.edit_profile')}}</a></li>
+                                <li class="{{$page['logout']['inMaintenance'] ? 'disabled' : ''}}"><a href="{{$page['logout']['inMaintenance'] ? '#' : '/logout'}}"><i class="fa {{$page['logout']['inMaintenance'] ? 'fa-wrench' : 'fa-sign-out'}}" aria-hidden="true"></i> {{trans('general.logout')}}</a></li>
                         </ul>
                     </li>
                 @endauth
@@ -67,10 +65,8 @@
                             <i class="fa fa-user-circle-o" aria-hidden="true"></i> {{trans('general.my_profile')}} <span class="caret"></span>
                         </a>
                         <ul class="dropdown-menu">
-                            <li>
-                                <a href="{{ route('login', app()->getLocale()) }}"><i class="fa fa-sign-in" aria-hidden="true"></i> {{trans("general.login")}}</a>
-                                <a href="{{ route('register', app()->getLocale()) }}"><i class="fa fa-user-plus" aria-hidden="true"></i> {{trans("general.register")}}</a>
-                            </li>
+                            <li><a href="{{ route('login', app()->getLocale()) }}"><i class="fa fa-sign-in" aria-hidden="true"></i> {{trans("general.login")}}</a></li>
+                            <li class="{{$page['register']['inMaintenance'] ? 'disabled' : ''}}"><a href="{{$page['register']['inMaintenance'] ? '#' : route('register', app()->getLocale())}}"><i class="fa {{$page['register']['inMaintenance'] ? 'fa-wrench' : 'fa-user-plus'}}" aria-hidden="true"></i> {{trans("general.register")}}</a></li>
                         </ul>
                     </li>
                 @endguest
