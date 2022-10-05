@@ -110,7 +110,7 @@ class StoreController extends Controller
        $item = Items::findOrFail($id);
        $canSeeHiddenItems = false;
        if(Auth::check()) {
-            if(Auth::user()->isAdmin || Auth::user()->isDev) {
+            if(Auth::user()->isManager || Auth::user()->isDev) {
                 $canSeeHiddenItems = true;
             }
        }

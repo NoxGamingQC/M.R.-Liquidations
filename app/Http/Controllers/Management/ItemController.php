@@ -17,11 +17,11 @@ class ItemController extends Controller
             abort(503);
         }
         if(Auth::check()) {
-            if(Auth::user()->isDev || Auth::user()->isAdmin) {
+            if(Auth::user()->isDev || Auth::user()->isManager) {
                 $item = Items::findOrFail($id);
                 $canSeeHiddenItems = false;
                 if(Auth::check()) {
-                    if(Auth::user()->isDev || Auth::user()->isAdmin) {
+                    if(Auth::user()->isDev || Auth::user()->isManager) {
                         $canSeeHiddenItems = true;
                     }
                 }

@@ -17,7 +17,7 @@ class ItemsController extends Controller
             abort(503);
         }
         if(Auth::check()) {
-            if(Auth::user()->isDev || Auth::user()->isAdmin) {
+            if(Auth::user()->isDev || Auth::user()->isManager) {
                 $items = Items::orderBy('id', 'desc')->get();
 
                 return view('management.items')->with([

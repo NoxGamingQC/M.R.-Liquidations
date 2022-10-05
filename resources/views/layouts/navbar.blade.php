@@ -32,7 +32,7 @@
                     </ul>
                 </li>
                 @auth
-                    @if(Auth::user()->isDev || Auth::user()->isAdmin)
+                    @if(Auth::user()->isDev || Auth::user()->isManager)
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true">
                                 <i class="fa fa-dashboard" aria-hidden="true"></i> {{trans('general.management')}} <span class="caret"></span>

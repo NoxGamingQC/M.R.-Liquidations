@@ -70,7 +70,7 @@
                     <h4 class="text-warning">{{trans('general.feature_coming_soon')}}</h4>
                 @endguest
                 @auth
-                    @if(Auth::user()->isAdmin || Auth::user()->isDev)
+                    @if(Auth::user()->isManager || Auth::user()->isDev)
                         <h4>{{trans('store.management')}}:</h4>
                         <ul>
                             <li>{{trans('store.displayed_items')}} ({{$displayedItemCount}})</li>
