@@ -17,7 +17,7 @@
                     <input id="inMaintenance-{{$value->id}}" type="checkbox" {{$value->inMaintenance ? 'checked' : ''}}>
                 </div>
                 <div class="col-md-4 text-center">
-                    <button id="{{$value->id}}" type="button" class="btn btn-success submit-pages"><i class="fa fa-save" area-hidden="true"></i></button>
+                    <button id="{{$value->id}}" type="button" class="btn btn-success submit-pages disabled" disabled><i class="fa fa-save" area-hidden="true"></i></button>
                 </div>
             </div>
             <hr />
