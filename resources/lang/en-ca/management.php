@@ -7,5 +7,6 @@ return [
     'logs' => "Logs",
     'edit_page' => "Edit page",
     'item_management' => "Item management",
-    'slug' => "Slug"
+    'slug' => "Slug",
+    'inMaintenance' => "In maintenance"
 ];

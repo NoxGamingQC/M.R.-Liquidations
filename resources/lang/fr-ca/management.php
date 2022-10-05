@@ -7,5 +7,6 @@ return [
     'logs' => "Journeaux",
     'edit_page' => "Page de modification",
     'item_management' => "Gestion d'articles",
-    'slug' => "Slug"
+    'slug' => "Slug",
+    'inMaintenance' => "En maintenance"
 ];
