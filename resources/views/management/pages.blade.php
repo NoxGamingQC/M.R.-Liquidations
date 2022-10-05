@@ -10,7 +10,7 @@
                     <label>{{trans('management.slug')}}: </label>
                 </div>
                 <div class="col-md-3 text-center">
-                    <input id="slug-{{$value->id}}" type="text" class="form-control" value="{{$value->slug}}">
+                    <input type="text" class="form-control disabled" value="{{$value->slug}}" disabled>
                 </div>
                 <div class="col-md-4 text-center">
                     <label>{{trans('management.inMaintenance')}}: </label>
