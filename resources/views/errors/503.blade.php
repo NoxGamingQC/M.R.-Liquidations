@@ -9,7 +9,7 @@
                 <div class="panel-body">
                     <h1 class="text-highlight">ERREUR 503 - SERVICE NON DISPONIBLE.</h1>
                     <hr />
-                    <h5 class="text-highlight">Désolé, mais la page demandé est présentement en maintenance. Elle devrait être de retour bientôt.</h5>
+                    <h5 class="text-highlight">Désolé, mais la page demandé est présentement sous maintenance. Elle devrait être de retour bientôt.</h5>
                     <br />
                     <br />
                     <br />
