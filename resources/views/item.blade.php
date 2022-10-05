@@ -7,11 +7,11 @@
     <div class="row">
         <div class="col-md-12">
             <div class="row">
-                <div class="col-md-{{Auth::check() ? ((Auth::user()->isAdmin || Auth::user()->isDev) ? '8' : '10') : '10'}}">
+                <div class="col-md-{{Auth::check() ? ((Auth::user()->isManager || Auth::user()->isDev) ? '8' : '10') : '10'}}">
                     <h1>{{$name}}</h1>
                 </div>
                 @auth
-                    @if(Auth::user()->isAdmin || Auth::user()->isDev)
+                    @if(Auth::user()->isManager || Auth::user()->isDev)
                         <div class="col-md-2">
                             <br />
                             <a href="/{{app()->getLocale()}}/management/item/{{$id}}" class="text-right btn btn-warning"><i class="fa fa-pencil" aria-hidden="true"></i></a>
