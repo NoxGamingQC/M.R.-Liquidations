@@ -23,7 +23,6 @@ class ItemsController extends Controller
                 return view('management.items')->with([
                     'items' => $items,
                 ]);
-                abort(404);
             }
             abort(403);
         }
