@@ -20,8 +20,8 @@
         @foreach($items as $key => $item)
             <tr>
                 <td class="text-center">{{$item->id}}</td>
-                <td class="limit-text-length">{{$item->name}}</td>
-                <td class="limit-text-length">{{$item->description}}</td>
+                <td class="limit-text-length" title="{{$item->name}}">{{$item->name}}</td>
+                <td class="limit-text-length" title="{{$item->description}}">{{$item->description}}</td>
                 <td class="text-center">{{$item->price}}</td>
                 <td class="text-center">{{$item->stock}}</td>
                 <td class="text-center">{{$item->isAvailable ? trans('general.yes') : trans('general.no')}}</td>
