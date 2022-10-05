@@ -98,7 +98,7 @@
                                 </div>
                                 <div class="col-md-6 text-left">
                                     <br />
-                                    <h5>{{$item->name}}</h5>
+                                    <h5 class="limit-text-length">{{$item->name}}</h5>
                                 </div>
                                 <div class="col-md-6 text-right">
                                     <br />

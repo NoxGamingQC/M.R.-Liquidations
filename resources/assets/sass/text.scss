@@ -1,0 +1,14 @@
+
+td.limit-text-length {
+    text-overflow:ellipsis;
+    overflow:hidden;
+    white-space:nowrap;
+    max-width: 200px;
+}
+
+h5.limit-text-length {
+    overflow: hidden !important;
+    display: -webkit-box !important;
+    -webkit-line-clamp: 5 !important;
+    -webkit-box-orient: vertical !important;
+}

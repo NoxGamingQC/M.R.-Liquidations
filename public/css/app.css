@@ -3526,6 +3526,20 @@ a.search-result .panel {
   margin-bottom: -3% !important;
 }
 
+td.limit-text-length {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  max-width: 200px;
+}
+
+h5.limit-text-length {
+  overflow: hidden !important;
+  display: -webkit-box !important;
+  -webkit-line-clamp: 5 !important;
+  -webkit-box-orient: vertical !important;
+}
+
 /*!
  * Bootstrap v3.4.1 (https://getbootstrap.com/)
  * Copyright 2011-2019 Twitter, Inc.
