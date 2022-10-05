@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.app', ['forceTitle' => true])
 @section('title', 'METHOD NOT ALLOWED')
 @section('content')
 
