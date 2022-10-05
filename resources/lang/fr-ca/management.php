@@ -6,5 +6,6 @@ return [
     'items' => "Articles",
     'logs' => "Journeaux",
     'edit_page' => "Page de modification",
-    'item_management' => "Gestion d'articles"
+    'item_management' => "Gestion d'articles",
+    'slug' => "Slug"
 ];

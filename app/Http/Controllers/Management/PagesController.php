@@ -13,12 +13,17 @@ class PagesController extends Controller
 {
     public function index(Request $request)
     {
-        if(!Auth::user()->isDev) {
+        $pages = PageList::all();
+        if (Auth::check()) {
+            if(!Auth::user()->isDev) {
+                abort(503);
+            }
+        } else {
             abort(503);
         }
 
         return view('management.pages')->with([
-
+            'pages' => $pages
         ]);
     }
 }
