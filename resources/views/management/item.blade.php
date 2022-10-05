@@ -1,128 +1,123 @@
-@extends('layouts.app')
+@extends('layouts.app', ['forceTitle' => true])
 @section('title', $name)
 @section('content')
 
 <input id="id" type="hidden" value="{{$id}}">
-<div class="container">
-    <div class="row">
-        <div class="col-md-12">
-            <div class="row">
-                <div class="col-md-10">
-                    <input id="name" class="form-control input-lg" type="text" value="{{$name}}">
-                </div>
-                <div class="col-md-2">
-                    <button id="saveItem" type="submit" class="text-right btn btn-success btn-lg" >{{trans('general.save')}}</button>
-                </div>
-            </div>
-            <hr />
-            <div class="col-md-9">
-                <textarea id="description" class="form-control" rows="20">{{$description}}</textarea>
-            </div>
-            <div class="col-md-3">
-                @if (count($pictures) > 1)
-                    <div id="itemCarousel" class="carousel slide" data-ride="carousel">
-                        <!-- Indicators -->
-                        <ol class="carousel-indicators">
-                            @foreach($pictures as $key => $value)
-                                @if($key == 0)
-                                    <li data-target="#itemCarousel" data-slide-to="{{$key}}" class="active"></li>
-                                @else
-                                    <li data-target="#itemCarousel" data-slide-to="{{$key}}"></li>
-                                @endif
-                            @endforeach
-                        </ol>
-                        <div class="carousel-inner" role="listbox">
-                            @foreach($pictures as $key => $value)
-                                @if($key == 0)
-                                    <div class="item active">
-                                        <img src="{{$value->picture}}" />
-                                    </div>
-                                @else
-                                    <div class="item">
-                                        <img src="{{$value->picture}}" />
-                                    </div>
-                                @endif
-                            @endforeach
-                        </div>
-                        <a class="left carousel-control" href="#itemCarousel" role="button" data-slide="prev">
-                            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-                            <span class="sr-only">Previous</span>
-                        </a>
-                        <a class="right carousel-control" href="#itemCarousel" role="button" data-slide="next">
-                            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-                            <span class="sr-only">Next</span>
-                        </a>
-                    </div>
-                @else
-                    @if(count($pictures) == 1)
-                        <img src="{{$pictures[0]->picture}}" width="100%" />
-                    @else
-                        <img src="/img/no-image.png" width="100%" />
-                    @endif
-                @endif
-                <br />
-                <br />
-                <label>{{trans('store.isAvailable')}}: <input id="isAvailable" type="checkbox" {{$isAvailable ? 'checked' : ''}} /></label>
-                <br />
-                <label>{{trans('store.isHidden')}}: <input id="isHidden" type="checkbox" {{$isHidden ? 'checked' : ''}} /></label>
-            </div>
-            <div class="col-md-12">
-                <hr />
-            </div>
-            <div class="col-md-6">
-                <div class="form-inline">
-                    <h4><b>{{trans('store.price')}}: <input id="price" type="text" class="form-control" value="{{$price}}"> C$</b></h4>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="form-inline">
-                    <h4><b>{{trans('store.stock')}}: <input id="stock" type="text" class="form-control" value="{{$stock}}"> {{trans('store.item_left')}}</b></h4>
-                </div>
-            </div>
-            <div class="col-md-12">
-                <hr />
-            </div>
-            <div class="col-md-12">
-                <h3>{{trans('store.item_pictures')}}</h3>
-                <span class="text-warning">{{trans('store.check_radio_feature_picture')}} <input type="radio" name="reference" checked></span>
-                <p class="text-warning">{{trans('store.recommended_picture_ratio')}}</p>
-                <hr />
-                <div class="row">
-                    @foreach($pictures as $key => $value)
-                        <div class="col-md-4 panel panel-default text-center">
-                            <div class="col-md-6 text-left">
-                                <br />
-                                <input type="radio" class="featured" name="item_pictures" value="{{$value->id}}" {{$value->isFeatured ? 'checked' : ''}}>
-                            </div>
-                            <div class="col-md-6 text-right">
-                                <br />
-                                <button id="{{$value->id}}" class="delete-picture btn btn-danger"><i class="fa fa-times" area-hidden="true"></i></button>
-                            </div>
-                            &nbsp
-                            <img src="{{$value->picture}}" width="100%" />
-                            &nbsp
-                        </div>
-                    @endforeach
-                     <div class="col-md-12 panel panel-default text-center">
-                        <br />
-                        <h4>{{trans('store.add_picture')}}</h4>
-                        <div class="col-md-offset-4 col-md-4">
-                            <input class="form-control disabled" id="itemPictureInput" type="file" accept="image/*" />
-                            <br />
-                            <img id="itemPicture" src="" width="100%"/>
-                            <br />
-                            <br />
-                        </div>
-                        <div class="col-md-offset-4 col-md-4">
-                        </div>
-                     </div>
-                </div>
-            </div>
-            <div class="col-md-12">
-                <br />
-            </div>
-        </div>
+
+<div class="row">
+    <div class="col-md-10">
+        <input id="name" class="form-control input-lg" type="text" value="{{$name}}">
     </div>
+    <div class="col-md-2">
+        <button id="saveItem" type="submit" class="text-right btn btn-success btn-lg" >{{trans('general.save')}}</button>
+    </div>
+</div>
+<hr />
+<div class="col-md-9">
+    <textarea id="description" class="form-control" rows="20">{{$description}}</textarea>
+</div>
+<div class="col-md-3">
+    @if (count($pictures) > 1)
+        <div id="itemCarousel" class="carousel slide" data-ride="carousel">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+                @foreach($pictures as $key => $value)
+                    @if($key == 0)
+                        <li data-target="#itemCarousel" data-slide-to="{{$key}}" class="active"></li>
+                    @else
+                        <li data-target="#itemCarousel" data-slide-to="{{$key}}"></li>
+                    @endif
+                @endforeach
+            </ol>
+            <div class="carousel-inner" role="listbox">
+                @foreach($pictures as $key => $value)
+                    @if($key == 0)
+                        <div class="item active">
+                            <img src="{{$value->picture}}" />
+                        </div>
+                    @else
+                        <div class="item">
+                            <img src="{{$value->picture}}" />
+                        </div>
+                    @endif
+                @endforeach
+            </div>
+            <a class="left carousel-control" href="#itemCarousel" role="button" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#itemCarousel" role="button" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    @else
+        @if(count($pictures) == 1)
+            <img src="{{$pictures[0]->picture}}" width="100%" />
+        @else
+            <img src="/img/no-image.png" width="100%" />
+        @endif
+    @endif
+    <br />
+    <br />
+    <label>{{trans('store.isAvailable')}}: <input id="isAvailable" type="checkbox" {{$isAvailable ? 'checked' : ''}} /></label>
+    <br />
+    <label>{{trans('store.isHidden')}}: <input id="isHidden" type="checkbox" {{$isHidden ? 'checked' : ''}} /></label>
+</div>
+<div class="col-md-12">
+    <hr />
+</div>
+<div class="col-md-6">
+    <div class="form-inline">
+        <h4><b>{{trans('store.price')}}: <input id="price" type="text" class="form-control" value="{{$price}}"> C$</b></h4>
+    </div>
+</div>
+<div class="col-md-6">
+    <div class="form-inline">
+        <h4><b>{{trans('store.stock')}}: <input id="stock" type="text" class="form-control" value="{{$stock}}"> {{trans('store.item_left')}}</b></h4>
+    </div>
+</div>
+<div class="col-md-12">
+    <hr />
+</div>
+<div class="col-md-12">
+    <h3>{{trans('store.item_pictures')}}</h3>
+    <span class="text-warning">{{trans('store.check_radio_feature_picture')}} <input type="radio" name="reference" checked></span>
+    <p class="text-warning">{{trans('store.recommended_picture_ratio')}}</p>
+    <hr />
+    <div class="row">
+        @foreach($pictures as $key => $value)
+            <div class="col-md-4 panel panel-default text-center">
+                <div class="col-md-6 text-left">
+                    <br />
+                    <input type="radio" class="featured" name="item_pictures" value="{{$value->id}}" {{$value->isFeatured ? 'checked' : ''}}>
+                </div>
+                <div class="col-md-6 text-right">
+                    <br />
+                    <button id="{{$value->id}}" class="delete-picture btn btn-danger"><i class="fa fa-times" area-hidden="true"></i></button>
+                </div>
+                &nbsp
+                <img src="{{$value->picture}}" width="100%" />
+                &nbsp
+            </div>
+        @endforeach
+            <div class="col-md-12 panel panel-default text-center">
+            <br />
+            <h4>{{trans('store.add_picture')}}</h4>
+            <div class="col-md-offset-4 col-md-4">
+                <input class="form-control disabled" id="itemPictureInput" type="file" accept="image/*" />
+                <br />
+                <img id="itemPicture" src="" width="100%"/>
+                <br />
+                <br />
+            </div>
+            <div class="col-md-offset-4 col-md-4">
+            </div>
+            </div>
+    </div>
+</div>
+<div class="col-md-12">
+    <br />
 </div>
 <script type="text/javascript">
 document.addEventListener("DOMContentLoaded", () => {

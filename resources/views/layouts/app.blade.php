@@ -24,7 +24,17 @@
 
 <body>
     @include('layouts.navbar')
-    @yield('content')
+    <div class="container">
+        <div class="row">
+            @if(!isset($forceTitle))
+                <div class="col-md-12">
+                    <h1>@yield('title')</h1>
+                    <hr />
+                </div>
+            @endif
+            @yield('content')
+        </div>
+    </div>
     @include('layouts.footer')
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>

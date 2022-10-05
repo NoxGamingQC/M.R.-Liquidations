@@ -1,6 +1,7 @@
-@extends('layouts.app')
+@extends('layouts.app', ['forceTitle' => true])
 @section('title', $name)
 @section('content')
+@section('forceTitle', false)
 
 
 <div class="container">

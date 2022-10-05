@@ -51,6 +51,7 @@ Route::group(
         Route::get('/management/logs/download', 'Management\LogController@download');
         Route::get('/management/item/{id}', 'Management\ItemController@index');
         Route::get('/management/items', 'Management\ItemsController@index');
+        Route::get('/management/pages', 'Management\PagesController@index');
     }
 );
 
