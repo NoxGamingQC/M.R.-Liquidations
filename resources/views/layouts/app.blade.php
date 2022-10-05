@@ -31,6 +31,13 @@
                     <h1>@yield('title')</h1>
                     <hr />
                 </div>
+            @else
+                @if($forceTitle == false)
+                    <div class="col-md-12">
+                        <h1>@yield('title')</h1>
+                        <hr />
+                    </div>
+                @endif
             @endif
             @yield('content')
         </div>
