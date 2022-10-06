@@ -167,7 +167,7 @@ document.addEventListener("DOMContentLoaded", () => {
                                                 '<div class="panel-body">' +
                                                     '<div class="col-md-9">' +
                                                         '<h4>'+ result['name'] +'</h4>'+
-                                                        '<p>'+ result['description'] +'</p>'+
+                                                        '<p class="limit-text-length">'+ result['description'] +'</p>'+
                                                         '<p><b>'+ result['price'] +'</b></p>'+
                                                     '</div>'+
                                                     '<div class="col-md-3">' +

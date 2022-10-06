@@ -3526,7 +3526,7 @@ a.search-result .panel {
   margin-bottom: -3% !important;
 }
 
-td.limit-text-length {
+p.limit-text-length, td.limit-text-length {
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;

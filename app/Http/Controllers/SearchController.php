@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Items;
+use App\ItemPictures;
 use Auth;
 
 
@@ -22,12 +23,13 @@ class SearchController extends Controller
         $itemList = [];
 
         foreach($items as $key => $item) {
+            $picture = ItemPictures::where('itemID', $item->id)->where('isFeatured', true)->first();
             $itemList[$key] = [
                 'id' => $item->id,
                 'name' => $item->name,
-                'description' => (strlen($item->description) > 80) ? $item->description = substr($item->description, 0, 80) . '...' : $item->description,
+                'description' => $item->description,
                 'price' => $item->price,
-                'picture' => $item->picture
+                'picture' => $picture ? $picture->picture : null
             ];
         }
 
