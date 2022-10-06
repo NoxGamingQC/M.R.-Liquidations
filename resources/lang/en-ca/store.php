@@ -37,6 +37,7 @@ return [
     'item_pictures' => "Item pictures",
     'check_radio_feature_picture' => "Check the radio to select the featured picture in the store. Here's an exemple: ",
     'add_picture' => "Add a picture",
-    'place_to_edit_picture' => "To edit or add pictures, you need to the specified item edit page"
+    'place_to_edit_picture' => "To edit or add pictures, you need to the specified item edit page",
+    'buy_now' => "Buy now"
     
 ];

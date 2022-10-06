@@ -8,7 +8,7 @@
     <div class="row">
         <div class="col-md-12">
             <div class="row">
-                <div class="col-md-{{Auth::check() ? ((Auth::user()->isManager || Auth::user()->isDev) ? '8' : '10') : '10'}}">
+                <div class="col-md-{{Auth::check() ? ((Auth::user()->isManager || Auth::user()->isDev) ? '6' : '8') : '8'}}">
                     <h1>{{$name}}</h1>
                 </div>
                 @auth
@@ -21,7 +21,11 @@
                 @endauth
                 <div class="col-md-2">
                     <br />
-                        <a href="/{{app()->getLocale()}}/store/1" class="text-right btn btn-danger">{{trans('store.back_to_store')}}</a>
+                    <a href="https://www.facebook.com/profile.php?id=100075930327806" class="text-right btn btn-success">{{trans('store.buy_now')}}</a>
+                </div>
+                <div class="col-md-2">
+                    <br />
+                    <a href="/{{app()->getLocale()}}/store/1" class="text-right btn btn-danger">{{trans('store.back_to_store')}}</a>
                 </div>
             </div>
             <hr />
