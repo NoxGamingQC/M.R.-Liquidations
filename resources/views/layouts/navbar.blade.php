@@ -8,7 +8,9 @@
                 <span class="icon-bar"></span>
             </button>
             <div>
-                <img class="img" src="/img/logo.png" width="150px" style="padding-top:15px;margin-top:-20px;margin-bottom:-30px;"/>&nbsp&nbsp&nbsp&nbsp
+                <a href="/{{app()->getLocale()}}" style="text-decoration:none">
+                    <img class="img" src="/img/logo.png" width="150px" style="padding-top:15px;margin-top:-20px;margin-bottom:-30px;"/>
+                </a>&nbsp&nbsp&nbsp&nbsp
             </div>
         </div>
         
