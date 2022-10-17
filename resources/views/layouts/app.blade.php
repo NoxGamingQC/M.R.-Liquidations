@@ -19,7 +19,7 @@
     <link href="{{mix('css/app.css')}}" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.9/dist/css/bootstrap-select.min.css">
     <meta property=’og:title’ content='@yield('title')' />
-    <meta property=’og:image’ content='@yield('thumbnail', '/img/favicon.png')’ />
+    <meta property=’og:image’ content='@yield('thumbnail', '/img/favicon.png')' />
     <meta property=’og:description’ content='M.R. Liquidations' />
     <meta property=’og:url’ content='https://mrliquidations.ca' />
     <meta property='og:image:width' content='500' />
