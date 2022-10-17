@@ -4,7 +4,13 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="M.R.Liquidations's Website">
+    <meta name="description" property='og:description' content="@yield('description', 'Manuel et Roxanne  sommes heureux  de vous accueillir sur notre boutique en ligne  nous débutons d')">
+    <meta property='og:title' content='M.R. Liquidations - @yield('title')' />
+    <meta property='og:image' content='@yield('thumbnail', env('APP_URL') . '/img/favicon.png')' />
+    <meta property='og:url' content='{{URL::current()}}' />
+    <meta property='og:image:width' content='500' />
+    <meta property='og:image:height' content='500' />
+    <meta property="og:type" content='website' />
     <meta name="author" content="M.R.Liquidations">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
