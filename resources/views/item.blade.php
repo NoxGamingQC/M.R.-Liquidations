@@ -1,9 +1,8 @@
 @extends('layouts.app', ['forceTitle' => true])
 @section('title', $name)
-@section('thumbnail', (count($pictures) > 1) ? $pictures[0]->picture : '/img/no-image.png')
+@section('thumbnail', '/store/item/' . $id . '/thumbnail')
 @section('content')
 @section('forceTitle', false)
-
 
 <div class="container">
     <div class="row">

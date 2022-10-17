@@ -16,4 +16,10 @@ class ItemPictures extends Model
 
         return $pictures;
     }
+
+    public static function getfeaturedPicture($id) {
+        $picture = ItemPictures::where('itemID', $id)->where('isFeatured', true)->first();
+
+        return $picture;
+    }
 }

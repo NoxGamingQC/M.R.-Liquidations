@@ -129,4 +129,21 @@ class StoreController extends Controller
         }
         abort(404);
     }
+
+    public function getThumbnail($id) {
+        $item = Items::findOrFail($id);
+        $picture = ItemPictures::getfeaturedPicture($item->id);
+        if ($picture) {
+            $code_base64 = explode( ',', $picture->picture)[1];
+            $code_binary = base64_decode($code_base64);
+            $image = imagecreatefromstring($code_binary);
+            $pictureExtension = str_replace(';base64', '', str_replace('data:image/', '', explode( ',', $picture->picture )[0]));
+            header('Content-Type: image/' . $pictureExtension);
+            
+            return imagepng($image);
+        }
+        $noPicture = "img/no-image.png";
+        header('Content-type: image/png');
+        return readfile($noPicture);
+    }
 }
