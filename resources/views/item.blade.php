@@ -1,6 +1,7 @@
 @extends('layouts.app', ['forceTitle' => true])
 @section('title', $name)
 @section('thumbnail', '/store/item/' . $id . '/thumbnail')
+@section('description', $description)
 @section('content')
 @section('forceTitle', false)
 
