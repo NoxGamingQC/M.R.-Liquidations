@@ -4,9 +4,9 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" property='og:description' content="M.R.Liquidations's Website">
+    <meta name="description" property='og:description' content="@yield('description', 'Manuel et Roxanne  sommes heureux  de vous accueillir sur notre boutique en ligne  nous débutons d')">
     <meta name="author" content="M.R.Liquidations">
-    <meta property='og:title' content='@yield('title')' />
+    <meta property='og:title' content='M.R. Liquidations - @yield('title')' />
     <meta property='og:image' content='@yield('thumbnail', '/img/favicon.png')' />
     <meta property='og:url' content='{{URL::current()}}' />
     <meta property='og:image:width' content='500' />
