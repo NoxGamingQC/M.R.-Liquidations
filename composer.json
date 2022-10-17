@@ -6,11 +6,11 @@
     "type": "project",
     "require": {
         "php": ">=7.0.0",
+        "ext-gd": "*",
         "fideloper/proxy": "~3.3",
         "globalpayments/php-sdk": "^3.1",
         "laravel/framework": "5.5.*",
-        "laravel/tinker": "~1.0",
-        "ext-gd": "*"
+        "laravel/tinker": "~1.0"
     },
     "require-dev": {
         "filp/whoops": "~2.0",
