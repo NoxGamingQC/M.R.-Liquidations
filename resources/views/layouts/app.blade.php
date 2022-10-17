@@ -18,7 +18,7 @@
     <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
     <link href="{{mix('css/app.css')}}" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.9/dist/css/bootstrap-select.min.css">
-    <meta property=’og:title’ content='@yield('title'/>
+    <meta property=’og:title’ content='@yield('title)'/>
     <meta property=’og:image’ content='/img/favicon.png’/>
     <meta property=’og:description’ content='M.R. Liquidations'/>
     <meta property=’og:url’ content='https://mrliquidations.ca'/>
