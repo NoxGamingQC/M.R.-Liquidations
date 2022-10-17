@@ -7,7 +7,7 @@
     <meta name="description" property='og:description' content="@yield('description', 'Manuel et Roxanne  sommes heureux  de vous accueillir sur notre boutique en ligne  nous débutons d')">
     <meta name="author" content="M.R.Liquidations">
     <meta property='og:title' content='M.R. Liquidations - @yield('title')' />
-    <meta property='og:image' content='@yield('thumbnail', '/img/favicon.png')' />
+    <meta property='og:image' content='@yield('thumbnail', env('APP_URL') . '/img/favicon.png')' />
     <meta property='og:url' content='{{URL::current()}}' />
     <meta property='og:image:width' content='500' />
     <meta property='og:image:height' content='500' />
