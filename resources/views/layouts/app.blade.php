@@ -21,7 +21,7 @@
     <meta property='og:title' content='@yield('title')' />
     <meta property='og:image' content='@yield('thumbnail', '/img/favicon.png')' />
     <meta property='og:description' content='M.R. Liquidations' />
-    <meta property='og:url' content='https://mrliquidations.ca' />
+    <meta property='og:url' content='{{URL::current()}}' />
     <meta property='og:image:width' content='500' />
     <meta property='og:image:height' content='500' />
     <meta property="og:type" content='website'/>
