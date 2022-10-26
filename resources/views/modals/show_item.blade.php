@@ -28,7 +28,7 @@
                         <p>{{trans('store.stock_left')}}: <b id="showItemStock"></b></p>
                     </div>
                     <div class="col-md-6">
-                    <p>{{trans('store.price')}}: <b id="showItemPrice"></b></p>
+                    <p>{{trans('store.price')}}: <b id="showItemPrice"></b><b>C$ +tx</b></p>
                     </div>
                 </div>
             </div>

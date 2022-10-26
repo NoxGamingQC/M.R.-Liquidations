@@ -80,7 +80,7 @@
                 <hr />
             </div>
             <div class="col-md-6">
-                <h4><b>{{trans('store.price')}}: {{$price}} C$</b></h4>
+                <h4><b>{{trans('store.price')}}: {{$price}} C$ +tx</b></h4>
             </div>
             <div class="col-md-6">
                 @if($isAvailable)

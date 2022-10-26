@@ -103,7 +103,7 @@
                                 <div class="col-md-6 text-right">
                                     <br />
                                     @if($item->isAvailable)
-                                        <p>{{$item->price != "0.00" ? $item->price . 'C$ + tx' : trans('store.free')}}</p>
+                                        <p>{{$item->price != "0.00" ? $item->price . 'C$ +tx' : trans('store.free')}}</p>
                                         <br />
                                         <button id="{{$item->id}}" type="button" class="btn-show-item btn btn-success" data-toggle="modal" data-target="#showItemModal">{{trans('store.available')}}</button>
                                     @else
