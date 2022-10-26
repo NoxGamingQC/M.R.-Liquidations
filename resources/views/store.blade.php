@@ -103,7 +103,7 @@
                                 <div class="col-md-6 text-right">
                                     <br />
                                     @if($item->isAvailable)
-                                        <p>{{$item->price != "0.00" ? $item->price . 'C$' : trans('store.free')}}</p>
+                                        <p>{{$item->price != "0.00" ? $item->price . 'C$ + tx' : trans('store.free')}}</p>
                                         <br />
                                         <button id="{{$item->id}}" type="button" class="btn-show-item btn btn-success" data-toggle="modal" data-target="#showItemModal">{{trans('store.available')}}</button>
                                     @else
@@ -168,7 +168,7 @@ document.addEventListener("DOMContentLoaded", () => {
                                                     '<div class="col-md-9">' +
                                                         '<h4>'+ result['name'] +'</h4>'+
                                                         '<p class="limit-text-length">'+ result['description'] +'</p>'+
-                                                        '<p><b>'+ result['price'] +'</b></p>'+
+                                                        '<p><b>'+ result['price'] +' +tx</b></p>'+
                                                     '</div>'+
                                                     '<div class="col-md-3">' +
                                                         '<img src="' + (result['picture'] ? result['picture'] : '/img/no-image.png') + '" width="100%" />'+
