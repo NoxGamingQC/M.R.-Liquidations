@@ -16,7 +16,7 @@ class AppServiceProvider extends ServiceProvider
     {
         $pageList = PageList::all();
         $pages = [];
-        if($this->app->environment('production') || env('APP_URL') !== 'http://localhost') {
+        if($this->app->environment('production') || env('APP_URL') !== 'http://localhost:8000') {
             \URL::forceScheme('https');
             foreach($pageList as $key => $page) {
                 $pages[$page->slug] = [
