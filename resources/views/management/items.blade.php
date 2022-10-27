@@ -5,7 +5,7 @@
 @include('modals.add_item')
 
 <div class="row">
-    <div class="col-md-8">
+    <div class="col-md-9">
         <h1>{{trans('management.item_management')}}</h1>
     </div>
     <div class="col-md-3 text-right">
