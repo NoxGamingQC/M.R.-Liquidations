@@ -3,87 +3,77 @@
 @section('content')
 
 <div class="col-md-12">
-    <h3>Introduction</h3>
-    <p>Devant le développement des nouveaux outils de communication, il est nécessaire de porter une attention particulière à la protection de la vie privée. 
-    C’est pourquoi, nous nous engageons à respecter la confidentialité des renseignements personnels que nous collectons.</p>
+    <h3>{{trans('privacy_policy.introduction')}}</h3>
+    <p>{{trans('privacy_policy.introduction_text')}}</p>
 </div>
 <div class="col-md-12">
-    <h3>Collecte des renseignements personnels</h3>
+    <h3>{{trans('privacy_policy.collection_personal_info')}}</h3>
     <ul>
-        <li>Prénom</li>
-        <li>Adresse postale</li>
-        <li>Code postal</li>
-        <li>Adresse électronique</li>
-        <li>Numéro de téléphone / télécopieur</li>
+        <li>{{trans('privacy_policy.firstname')}}</li>
+        <li>{{trans('privacy_policy.postal_address')}}</li>
+        <li>{{trans('privacy_policy.postal_code')}}</li>
+        <li>{{trans('privacy_policy.email')}}</li>
+        <li>{{trans('privacy_policy.phone_fax_number')}}</li>
     </ul>
-    <p>Les renseignements personnels que nous collectons sont recueillis
-    au travers de formulaires et grâce à l’interactivité établie entre vous et notre site Web.
-    Nous utilisons également,
-    comme indiqué dans la section suivante,
-    des fichiers témoins et/ou journaux pour réunir des informations vous concernant.</p>
+    <p>{{trans('privacy_policy.collection_personal_info_text')}}</p>
 </div>
 <div class="col-md-12">
-    <h3>Formulaires et interactivité:</h3>
-    <p>Vos renseignements personnels sont collectés par le biais de formulaire, à savoir :</p>
+    <h3>{{trans('privacy_policy.form_interactivity')}}</h3>
+    <p>{{trans('privacy_policy.form_interactivity_text_01')}}</p>
     <ul>
-        <li>Formulaire d'inscription au site Web</li>
-        <li>Formulaire de commande</li>
+        <li>{{trans('privacy_policy.register_form')}}</li>
+        <li>{{trans('privacy_policy.order_form')}}</li>
     </ul>
-    <p>Nous utilisons les renseignements ainsi collectés pour les finalités suivantes :</p>
+    <p>{{trans('privacy_policy.form_interactivity_text_02')}}</p>
     <ul>
-        <li>Suivi de la commande</li>
-        <li>Informations / Offres promotionnelles</li>
-        <li>Statistiques</li>
-        <li>Contact</li>
+        <li>{{trans('privacy_policy.order_tracking')}}</li>
+        <li>{{trans('privacy_policy.information_ads_offer')}}</li>
+        <li>{{trans('privacy_policy.statistics')}}</li>
+        <li>{{trans('privacy_policy.contact')}}</li>
     </ul>
-    <p>Vos renseignements sont également collectés par le biais de l’interactivité pouvant s’établir entre vous et notre site Web et ce, de la façon suivante:</p>
-    <p>Nous utilisons les renseignements ainsi collectés pour les finalités suivantes :</p>
+    <p>{{trans('privacy_policy.form_interactivity_text_03')}}</p>
     <ul>
-        <li>Contact</li>
+        <li>{{trans('privacy_policy.contact')}}</li>
     </ul>
 </div>
 <div class="col-md-12">
-    <h3>Droit d’opposition et de retrait</h3>
-    <p>Nous nous engageons à vous offrir un droit d’opposition et de retrait quant à vos renseignements personnels.</p>
-    <p>Le droit d’opposition s’entend comme étant la possibilité offerte aux internautes de refuser
-    que leurs renseignements personnels soient utilisées à certaines fins mentionnées lors de la collecte.</p>
-    <p>Le droit de retrait s’entend comme étant la possibilité offerte aux internautes de demander à ce que leurs renseignements personnels ne figurent plus, par exemple, dans une liste de diffusion.</p>
-    <p>Pour pouvoir exercer ces droits, vous pouvez :</p>
+    <h3>{{trans('privacy_policy.right_opposition_withdrawal')}}</h3>
+    <p>{{trans('privacy_policy.right_opposition_withdrawal_text_01')}}</p>
+    <p>{{trans('privacy_policy.right_opposition_withdrawal_text_02')}}</p>
+    <p>{{trans('privacy_policy.right_opposition_withdrawal_text_03')}}</p>
+    <p>{{trans('privacy_policy.right_opposition_withdrawal_text_04')}}</p>
     <hr />
-    <p>Code postal :  G9T 4A8 </p>
+    <p>{{trans('privacy_policy.company_postal_code_text')}} :  {{trans('privacy_policy.company_postal_code')}} </p>
 
-    <p>Courriel :  M.R.Liquidations@hotmail.com </p>
+    <p>{{trans('privacy_policy.company_email_text')}} :  {{trans('privacy_policy.company_email')}} </p>
 
-    <p>Téléphone :  819-989-0867 </p>
+    <p>{{trans('privacy_policy.company_phone_text')}} :  {{trans('privacy_policy.company_phone')}} </p>
 
-    <p>Section du site web :   https://www.mrliquidations.ca/ </p>
+    <p>{{trans('privacy_policy.company_website_text')}} :   {{trans('privacy_policy.company_website_link')}} </p>
     <hr />
 </div>
 <div class="col-md-12">
-    <h3>Droit d’accès</h3>
-    <p>Nous nous engageons à reconnaître un droit d’accès et de rectification aux personnes concernées désireuses de consulter, modifier, voire radier les informations les concernant.</p>
-    <p>L’exercice de ce droit se fera :</p>
+    <h3>{{trans('privacy_policy.access_rights')}}</h3>
+    <p>{{trans('privacy_policy.access_rights_text_01')}}</p>
+    <p>{{trans('privacy_policy.access_rights_text_02')}}</p>
     <hr />
-    <p>Code postal :  G9T 4A8 </p>
+    <p>{{trans('privacy_policy.company_postal_code_text')}} :  {{trans('privacy_policy.company_postal_code')}} </p>
 
-    <p>Courriel :  M.R.Liquidations@hotmail.com </p>
+    <p>{{trans('privacy_policy.company_email_text')}} :  {{trans('privacy_policy.company_email')}} </p>
 
-    <p>Téléphone :  819-989-0867 </p>
+    <p>{{trans('privacy_policy.company_phone_text')}} :  {{trans('privacy_policy.company_phone')}} </p>
 
-    <p>Section du site web :   https://www.mrliquidations.ca/ </p>
+    <p>{{trans('privacy_policy.company_website_text')}} :   {{trans('privacy_policy.company_website_link')}} </p>
     <hr />
 </div>
 <div class="col-md-12">
-    <h3>Sécurité</h3>
-    <p>Les renseignements personnels que nous collectons sont conservés dans un environnement sécurisé. Les personnes travaillant pour nous sont tenues de respecter la confidentialité de vos informations.</p>
-    <p>Pour assurer la sécurité de vos renseignements personnels, nous avons recours aux mesures suivantes :</p>
+    <h3>{{trans('privacy_policy.security')}}</h3>
+    <p>{{trans('privacy_policy.security_text_01')}}</p>
+    <p>{{trans('privacy_policy.security_text_02')}}</p>
     <ul>
-        <li>Gestion des accès - personne autorisée</li>
-        <li>Identifiant / mot de passe</li>
+        <li>{{trans('privacy_policy.access_management')}}</li>
+        <li>{{trans('privacy_policy.username_password')}}</li>
     </ul>
-    <p>Nous nous engageons à maintenir un haut degré de confidentialité en intégrant les dernières innovations technologiques
-    permettant d’assurer la confidentialité de vos transactions.
-    Toutefois, comme aucun mécanisme n’offre une sécurité maximale,
-    une part de risque est toujours présente lorsque l’on utilise Internet pour transmettre des renseignements personnels.</p>
+    <p>{{trans('privacy_policy.security_text_03')}}</p>
 </div>
 @stop
