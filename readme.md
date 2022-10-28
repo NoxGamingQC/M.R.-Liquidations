@@ -35,7 +35,7 @@ Project is: _in progress_
 
 ## Contact
 
-Created by [@noxgamingqc](https://www.noxgamingqc.ca/) - feel free to contact me!
+Created by [@noxgamingqc](https://www.noxgamingqc.ca/)
 
 ## License
 
