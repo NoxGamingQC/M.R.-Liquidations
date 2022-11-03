@@ -24,7 +24,7 @@ class StoreController extends Controller
             $itemCount = Items::getItemsAlphabetical()->count() ? Items::getItemsAlphabetical()->count() : 9;
         }
         $pageCount = (int)ceil(($itemCount / 9));
-        if($pageCount < $page) {
+        if($pageCount < $page || $page < 1) {
             abort(404);
         }
         
