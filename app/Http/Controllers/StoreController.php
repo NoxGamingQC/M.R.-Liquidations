@@ -15,6 +15,9 @@ class StoreController extends Controller
         if(PageList::isInMaintenance('store')) {
             abort(503);
         }
+        if(!is_numeric($page)) {
+            abort(404);
+        }
         $skipCount = (($page * 9) - 9);
         if($sortby == 'alphabetical') {
             $items = Items::getItemsAlphabetical()->skip($skipCount)->take(9)->get();
@@ -106,6 +109,9 @@ class StoreController extends Controller
     public function showItem($language, $id) {
         if(PageList::isInMaintenance('store')) {
             abort(503);
+        }
+        if(!is_numeric($id)) {
+            abort(404);
         }
        $item = Items::findOrFail($id);
        $canSeeHiddenItems = false;
