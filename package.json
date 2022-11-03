@@ -26,23 +26,27 @@
     "dependencies": {
         "@fortawesome/fontawesome": "^1.1.8",
         "@fortawesome/fontawesome-free": "^5.15.2",
+        "Font-Awesome": "FortAwesome/Font-Awesome",
         "ansi-regex": "^6.0.1",
         "bootstrap": "^3.3.7",
         "bootstrap-select": "^1.13.18",
         "css-loader": "^5.0.1",
         "dompurify": "^2.2.6",
-        "font-awesome": "4.7.0",
-        "Font-Awesome": "FortAwesome/Font-Awesome",
-        "gulp": "^4.0.2",
+        "font-awesome": "^4.7.0",
+        "glob-parent": "^6.0.2",
+        "gulp": "^3.9.1",
         "gulp-cli": "^2.3.0",
         "install": "^0.12.2",
         "jquery": "^3.6.1",
+        "json-schema": "^0.4.0",
         "less": "^4.1.1",
         "less-loader": "^7.3.0",
+        "minimatch": "^5.1.0",
         "moment": "^2.29.1",
         "node-gyp": "^9.0.0",
-        "npm": "^7.21.0",
+        "npm": "^8.19.2",
         "querystring": "^0.2.0",
-        "toastr": "^2.1.4"
+        "toastr": "^2.1.4",
+        "unset-value": "^2.0.1"
     }
 }
