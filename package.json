@@ -34,7 +34,7 @@
         "dompurify": "^2.2.6",
         "font-awesome": "^4.7.0",
         "glob-parent": "^6.0.2",
-        "gulp": "^3.9.1",
+        "gulp": "^4.0.0",
         "gulp-cli": "^2.3.0",
         "install": "^0.12.2",
         "jquery": "^3.6.1",
