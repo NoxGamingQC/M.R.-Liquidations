@@ -19,7 +19,7 @@
 
 ## Technologies Used
 
-* Laravel 7.30.6
+* Laravel 8.83.26
 * PHP 7.4.*
 
 ## Setup
