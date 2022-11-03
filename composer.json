@@ -9,6 +9,7 @@
         "ext-gd": "*",
         "facade/ignition": "^2.0",
         "fideloper/proxy": "^4",
+        "fruitcake/laravel-cors": "^3.0",
         "globalpayments/php-sdk": "^3.1",
         "laravel/framework": "^7.0",
         "laravel/helpers": "^1.5",
