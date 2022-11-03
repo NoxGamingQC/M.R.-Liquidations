@@ -5,11 +5,12 @@
     "license": "MIT",
     "type": "project",
     "require": {
-        "php": ">=7.0.0",
+        "php": ">=7.2.0",
         "ext-gd": "*",
-        "fideloper/proxy": "~3.3",
+        "fideloper/proxy": "^4",
         "globalpayments/php-sdk": "^3.1",
-        "laravel/framework": "5.5.*",
+        "laravel/framework": "~6.20.4",
+        "laravel/helpers": "^1.5",
         "laravel/tinker": "~1.0"
     },
     "require-dev": {
