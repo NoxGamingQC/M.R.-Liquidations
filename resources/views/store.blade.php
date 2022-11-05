@@ -122,13 +122,19 @@
     @if($currentPage != 1)
         <a class="btn btn-default" href="/{{app()->getLocale()}}/store/{{$currentPage - 1}}">{{trans('store.last_page')}}</a>
     @endif
-    @for($i = 1; $i <= $pageCount; $i++)
-        @if($i == 6 && $pageCount > 11)
-            <button class="btn btn-default">...<button>
-            {{$i = ($pageCount - 6)}}
+    @if(($currentPage - 5) > 1 ? true : false)
+        <a class="btn btn-default">...</a>
+    @endif
+    @for($i = (($currentPage - 5) > 0 ? ($currentPage - 5) : 1); $i <= (($currentPage + 5) > $pageCount ? $pageCount : ($currentPage + 5)); $i++)
+        @if($currentPage == $i)
+            <a class="btn btn-primary" href="/{{app()->getLocale()}}/store/{{$i}}">{{$i}}</a>
+        @else
+            <a class="btn btn-default" href="/{{app()->getLocale()}}/store/{{$i}}">{{$i}}</a>
         @endif
-        <a class="btn btn-default" href="/{{app()->getLocale()}}/store/{{$i}}">{{$i}}</a>
     @endfor
+    @if(($currentPage + 5) < $pageCount - 1 ? true : false)
+        <a class="btn btn-default">...</a>
+    @endif
     @if($currentPage != ($pageCount))
         <a class="btn btn-default" href="/{{app()->getLocale()}}/store/{{$currentPage + 1}}">{{trans('store.next_page')}}</a>
     @endif
