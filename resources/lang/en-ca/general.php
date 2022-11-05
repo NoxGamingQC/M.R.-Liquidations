@@ -37,5 +37,5 @@ return [
     'view' => "View",
     'edit' => "Edit",
     'delete' => "Delete",
-    'coded_by' => "Created and maintained by "
+    'coded_by' => "Website created and maintained by "
 ];

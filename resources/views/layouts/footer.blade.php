@@ -7,7 +7,7 @@
             <h3>&copy{{trans('general.copyright')}}</h3>
             <br />
             <h4>{{trans('general.coded_by')}} <a href="https://noxgamingqc.ca">NGST</a>.</h4>
-            <p><small>{{$sourceVersion}}</small></p>
+            <p><small>commit: {{$sourceVersion}}</small></p>
         </div>
     </div>
 </div>

@@ -37,5 +37,5 @@ return [
     'view' => "Voir",
     'edit' => "Modifier",
     'delete' => "Supprimer",
-    'coded_by' => "Créé et maintenu par "
+    'coded_by' => "Site web créé et maintenu par "
 ];
