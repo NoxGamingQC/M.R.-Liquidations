@@ -32,7 +32,13 @@ class AppServiceProvider extends ServiceProvider
                 ];
             }
         }
-        
+
+        if(env('GIT_SHA')) {
+            $sourceVersion = env('GIT_SHA');
+        } else {
+            $sourceVersion = 'undefined';
+        }
+        view()->share('sourceVersion', $sourceVersion);
         return view()->share('page', $pages);
     }
 

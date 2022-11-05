@@ -36,5 +36,6 @@ return [
     'no' => "No",
     'view' => "View",
     'edit' => "Edit",
-    'delete' => "Delete"
+    'delete' => "Delete",
+    'coded_by' => "Created and maintained by "
 ];
