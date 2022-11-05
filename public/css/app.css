@@ -3270,7 +3270,12 @@ button.toast-close-button {
 .welcome-page {
   background-image: url("/img/home_background.png");
   background-color: #f5f8fa;
-  background-size: 50%;
+  background-size: cover;
+}
+@media (min-width: 992px) {
+  .welcome-page {
+    background-size: 50% !important;
+  }
 }
 
 .title {
