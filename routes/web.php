@@ -57,9 +57,10 @@ Route::group(
         Route::get('/store/item/{id}', 'StoreController@showItem');
         Route::get('/contact_us', 'ContactUsController@index');
         Route::get('/privacy_policy', 'PrivacyPolicyController@index');
-        Route::get('/profile/edit', 'ProfileController@index');
 
-        
+        Route::get('/profile/edit', 'ProfileController@index');
+        Route::get('/profile/cart', 'ShoppingCartController@index');
+
         Route::get('/management/logs', 'Management\LogController@index');
         Route::get('/management/logs/download', 'Management\LogController@download');
         Route::get('/management/item/{id}', 'Management\ItemController@index');

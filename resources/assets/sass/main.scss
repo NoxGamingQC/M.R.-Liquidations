@@ -112,3 +112,7 @@ img.disabled {
     -ms-filter: grayscale(100%);
         filter: grayscale(100%); 
 }
+
+.no-border {
+    border: 0 solid transparent !important;
+}

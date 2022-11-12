@@ -3382,6 +3382,10 @@ img.disabled {
   filter: grayscale(100%);
 }
 
+.no-border {
+  border: 0 solid transparent !important;
+}
+
 .badge-danger {
   background-color: #d9534f;
   text-align: center;

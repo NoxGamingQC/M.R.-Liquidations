@@ -7,7 +7,6 @@
     "require": {
         "php": "^8.0.2",
         "ext-gd": "*",
-        "spatie/laravel-ignition": "^1.0",
         "fideloper/proxy": "^4",
         "fruitcake/laravel-cors": "^3.0",
         "globalpayments/php-sdk": "^3.1",
@@ -18,7 +17,8 @@
         "laravel/tinker": "^2.0",
         "laravel/ui": "^3.0",
         "nunomaduro/collision": "^6.1",
-        "phpunit/phpunit": "^9.0"
+        "phpunit/phpunit": "^9.0",
+        "spatie/laravel-ignition": "^1.0"
     },
     "require-dev": {
         "filp/whoops": "~2.0",
