@@ -31,7 +31,7 @@
             @endforeach
             <div class="col-md-12">
                 <div class="text-right">
-                    <h4>{{trans('shopping_cart.subtotal')}} ({{count($shoppingCart)}} {{trans('shopping_cart.item')}}): <b>${{$total}}</b></h4>
+                    <h4>{{trans('shopping_cart.subtotal')}} ({{count($shoppingCart)}} {{ trans_choice('shopping_cart.item', count($shoppingCart)) }}): <b>${{$total}}</b></h4>
                 </div>
                 <div class="text-right">
                     <h4>{{trans('shopping_cart.tps')}}: <b>${{number_format($total * 0.05, 2)}}</b></h4>
@@ -44,7 +44,7 @@
                 </div>
                 <div class="text-right">
                     <hr />
-                    <h4><a type="button" class="btn btn-success btn-lg disabled" disabled>{{trans('shopping_cart.buy')}} ({{count($shoppingCart)}} {{trans('shopping_cart.item')}})</a></h4>
+                    <h4><a type="button" class="btn btn-success btn-lg disabled" disabled>{{trans('shopping_cart.buy')}} ({{count($shoppingCart)}} {{ trans_choice('shopping_cart.item', count($shoppingCart)) }})</a></h4>
                 </div>
             </div>
         </div>
@@ -52,7 +52,8 @@
 </div>
 @else
     <div class="col-md-12 text-center">
-        <h3>{{trans('shopping_cart.no_content_cart')}}</h3>
+        <br />
+        <h3 class="text-danger"><b>{{trans('shopping_cart.no_content_cart')}}</b></h3>
     </div>
 @endif
 

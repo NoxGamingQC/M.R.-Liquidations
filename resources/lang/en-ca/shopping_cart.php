@@ -9,7 +9,7 @@ return [
     'tps' => "GST",
     'tvq' => "QST",
     'total' => "Total",
-    'item' => "item(s)",
+    'item' => "{1} item|[2,*] items",
     'buy' => "Order now",
     'added_cart_success' => "Item added to cart successfully.",
     'removed_cart_success' => "Item removed from cart successfully.",

@@ -9,7 +9,7 @@ return [
     'tps' => "TPS",
     'tvq' => "TVQ",
     'total' => "Total",
-    'item' => "article(s)",
+    'item' => "{1} article|[2,*] articles",
     'buy' => "Passer la commande",
     'added_cart_success' => "Article ajouté au panier avec succès.",
     'removed_cart_success' => "Article retiré du panier avec succès.",
