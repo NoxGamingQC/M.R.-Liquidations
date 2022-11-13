@@ -42,5 +42,6 @@ return [
     'success' => "Succès",
     'warning' => "Attention",
     'error' => "Erreur",
-    'info' => "Information"
+    'info' => "Information",
+    'not_logged_in' => "Vous n'êtes pas connecté. Veuillez-vous connecter et recommencer.",
 ];

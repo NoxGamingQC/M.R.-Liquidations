@@ -11,5 +11,6 @@ return [
     'total' => "Total",
     'item' => "article(s)",
     'buy' => "Passer la commande",
-    'added_cart_success' => "Article ajouté au panier avec succès."
+    'added_cart_success' => "Article ajouté au panier avec succès.",
+    'removed_cart_success' => "Article retiré du panier avec succès."
 ];

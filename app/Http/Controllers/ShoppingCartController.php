@@ -35,16 +35,20 @@ class ShoppingCartController extends Controller
             //$cartItem->quantity = $request->quantity;
             $cartItem->user_id = Auth::user()->id;
             $cartItem->save();
+            return redirect()->back()->with('success', trans('shopping_cart.added_cart_success'));
+        } else {
+            return redirect()->back()->with('error', trans('general.not_logged_in'));
         }
-        return redirect()->back()->with('success', trans('shopping_cart.added_cart_success'));
     }
 
     public function remove(Request $request) {
         if(Auth::check()) {
             $cartItem = ShoppingCart::findOrFail($request->id);
             $cartItem->delete();
+            return redirect()->back()->with('success', trans('shopping_cart.removed_cart_success'));
+        } else {
+            return redirect()->back()->with('error', trans('general.not_logged_in'));
         }
-        return redirect()->back();
     }
 
     public function pay() {
