@@ -9,15 +9,15 @@
             @foreach($shoppingCart as $key => $item)
             <div class="col-md-2">
                 @if($item->picture)
-                    <img src="{{$item->picture}}" width="80%" />
+                    <a href="/store/item/{{$item->id}}"><img src="{{$item->picture}}" width="80%" /></a>
                 @else
-                    <img src="/img/no-image.png" width="80%" />
+                    <a href="/store/item/{{$item->id}}"><img src="/img/no-image.png" width="80%" /></a>
                 @endif
             </div>
                 <div class="col-md-10">
                     <div class="row">
                         <div class="col-md-8 text-left">
-                            <h4>{{$item->name}}</h4>
+                            <h4><a class="text-link" href="/store/item/{{$item->id}}">{{$item->name}}</a></h4>
                         </div>
                         <div class="col-md-4 text-right">
                             <h4><b>${{$item->price}}</b></h4>

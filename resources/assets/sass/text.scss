@@ -12,3 +12,8 @@ h5.limit-text-length {
     -webkit-line-clamp: 5 !important;
     -webkit-box-orient: vertical !important;
 }
+
+a.text-link, a.text-link:hover, a.text-link:active, a.text-link:visited, a.text-link:link {
+    color: $text-color !important;
+    text-decoration: none !important;
+}

@@ -3558,6 +3558,11 @@ h5.limit-text-length {
   -webkit-box-orient: vertical !important;
 }
 
+a.text-link, a.text-link:hover, a.text-link:active, a.text-link:visited, a.text-link:link {
+  color: #000 !important;
+  text-decoration: none !important;
+}
+
 .navbar {
   border-top: 0px solid transparent !important;
   margin-top: 2%;
