@@ -9,21 +9,21 @@
             @foreach($shoppingCart as $key => $item)
             <div class="col-md-2">
                 @if($item->picture)
-                    <a href="/store/item/{{$item->id}}"><img src="{{$item->picture}}" width="80%" /></a>
+                    <a href="/store/item/{{$item->item_id}}"><img src="{{$item->picture}}" width="80%" /></a>
                 @else
-                    <a href="/store/item/{{$item->id}}"><img src="/img/no-image.png" width="80%" /></a>
+                    <a href="/store/item/{{$item->item_id}}"><img src="/img/no-image.png" width="80%" /></a>
                 @endif
             </div>
                 <div class="col-md-10">
                     <div class="row">
                         <div class="col-md-8 text-left">
-                            <h4><a class="text-link" href="/store/item/{{$item->id}}">{{$item->name}}</a></h4>
+                            <h4><a class="text-link" href="/store/item/{{$item->item_id}}">{{$item->name}}</a></h4>
                         </div>
                         <div class="col-md-4 text-right">
                             <h4><b>${{$item->price}}</b></h4>
                         </div>
                     </div>
-                    <p>{{trans('shopping_cart.quantity')}}: {{$item->quantity}}&nbsp&nbsp | <a class="btn btn-link"><small>{{trans('shopping_cart.delete')}}</small></a> | <a class="btn btn-link"><small>{{trans('shopping_cart.save_for_later')}}</small></a></p>
+                    <p>{{trans('shopping_cart.quantity')}}: {{$item->quantity}}&nbsp&nbsp | <a class="btn btn-link" href="/profile/cart/remove/{{$item->id}}"><small>{{trans('shopping_cart.delete')}}</small></a> | <a class="btn btn-link disabled" disabled><small>{{trans('shopping_cart.save_for_later')}}</small></a></p>
                 </div>
                 <div class="col-md-12">
                     <hr />
@@ -44,7 +44,7 @@
                 </div>
                 <div class="text-right">
                     <hr />
-                    <h4><a type="button" class="btn btn-success btn-lg">{{trans('shopping_cart.buy')}} ({{count($shoppingCart)}} {{trans('shopping_cart.item')}})</a></h4>
+                    <h4><a type="button" class="btn btn-success btn-lg disabled" disabled>{{trans('shopping_cart.buy')}} ({{count($shoppingCart)}} {{trans('shopping_cart.item')}})</a></h4>
                 </div>
             </div>
         </div>

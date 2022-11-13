@@ -1,0 +1,71 @@
+.panel-success > .panel-heading {
+    background-image: none;
+    background-color: $brand-success;
+    color: darken($brand-success, 45%);
+    border-color: darken($brand-success, 25%);
+}
+
+.panel-success > .panel-body {
+    background-image: none;
+    background-color: $brand-success;
+    color: darken($brand-success, 45%);
+    border-color: darken($brand-success, 25%);
+}
+
+.panel-success {
+    border-color: darken($brand-success, 25%);
+}
+
+.panel-warning > .panel-heading {
+    background-image: none;
+    background-color: $brand-warning;
+    color: darken($brand-warning, 45%);
+    border-color: darken($brand-warning, 25%);
+}
+
+.panel-warning > .panel-body {
+    background-image: none;
+    background-color: $brand-warning;
+    color: darken($brand-warning, 45%);
+    border-color: darken($brand-warning, 25%);
+}
+
+.panel-warning {
+    border-color: darken($brand-warning, 25%);
+}
+
+.panel-danger > .panel-heading {
+    background-image: none;
+    background-color: $brand-danger;
+    color: darken($brand-danger, 45%);
+    border-color: darken($brand-danger, 25%);
+}
+
+.panel-danger > .panel-body {
+    background-image: none;
+    background-color: $brand-danger;
+    color: darken($brand-danger, 45%);
+    border-color: darken($brand-danger, 25%);
+}
+
+.panel-danger {
+    border-color: darken($brand-danger, 25%);
+}
+
+.panel-info > .panel-heading {
+    background-image: none;
+    background-color: $brand-info;
+    color: darken($brand-info, 45%);
+    border-color: darken($brand-info, 25%);
+}
+
+.panel-info > .panel-body {
+    background-image: none;
+    background-color: $brand-info;
+    color: darken($brand-info, 45%);
+    border-color: darken($brand-info, 25%);
+}
+
+.panel-info {
+    border-color: darken($brand-info, 25%);
+}

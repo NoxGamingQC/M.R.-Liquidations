@@ -32,6 +32,9 @@ Route::post('/store/item/edit', 'StoreController@editItem');
 Route::get('/store/item/search', 'SearchController@item');
 Route::get('/store/item/{id}/thumbnail', 'StoreController@getThumbnail');
 
+Route::get('/profile/cart/add/{id}', 'ShoppingCartController@add');
+Route::get('/profile/cart/remove/{id}', 'ShoppingCartController@remove');
+
 Route::post('/management/item/edit', 'Management\ItemController@edit');
 Route::post('/management/item/picture/delete', 'Management\ItemController@deletePicture');
 

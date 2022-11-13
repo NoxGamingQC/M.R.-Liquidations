@@ -38,5 +38,9 @@ return [
     'edit' => "Modifier",
     'delete' => "Supprimer",
     'coded_by' => "Site web créé et maintenu par ",
-    'shopping_cart' => "Mon panier"
+    'shopping_cart' => "Mon panier",
+    'success' => "Succès",
+    'warning' => "Attention",
+    'error' => "Erreur",
+    'info' => "Information"
 ];

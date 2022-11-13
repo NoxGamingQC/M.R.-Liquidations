@@ -22,7 +22,10 @@
                 @endauth
                 <div class="col-md-2">
                     <br />
-                    <a href="https://www.facebook.com/profile.php?id=100075930327806" class="text-right btn btn-success">{{trans('store.buy_now')}}</a>
+                    <!--<a href="https://www.facebook.com/profile.php?id=100075930327806" class="text-right btn btn-success">{trans('store.buy_now')}</a>-->
+                    @auth
+                        <a href="/profile/cart/add/{{$id}}" class="text-right btn btn-success">{{trans('store.add_cart')}}</a>
+                    @endauth
                 </div>
                 <div class="col-md-2">
                     <br />

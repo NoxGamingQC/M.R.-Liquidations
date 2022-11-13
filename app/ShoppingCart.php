@@ -19,7 +19,7 @@ class ShoppingCart extends Model
             $join->on('items.id', '=', 'item_pictures.itemID')
                     ->where('item_pictures.isFeatured', '=', true);
         })
-        ->select('items.id', 'items.name', 'shopping_cart.quantity', 'items.price', 'item_pictures.picture');
+        ->select('shopping_cart.id', 'items.name', 'shopping_cart.quantity', 'shopping_cart.item_id', 'items.price', 'item_pictures.picture');
     }
 
 }

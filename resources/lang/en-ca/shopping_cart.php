@@ -10,5 +10,6 @@ return [
     'tvq' => "QST",
     'total' => "Total",
     'item' => "item(s)",
-    'buy' => "Order now"
+    'buy' => "Order now",
+    'added_cart_success' => "Item added to cart successfully."
 ];

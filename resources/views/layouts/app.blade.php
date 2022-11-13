@@ -29,6 +29,7 @@
 
 <body>
     @include('layouts.navbar')
+    @include('alert.alert')
     <div class="container">
         <div class="row">
             @if(!isset($forceTitle))

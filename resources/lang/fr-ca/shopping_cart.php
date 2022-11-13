@@ -10,5 +10,6 @@ return [
     'tvq' => "TVQ",
     'total' => "Total",
     'item' => "article(s)",
-    'buy' => "Passer la commande"
+    'buy' => "Passer la commande",
+    'added_cart_success' => "Article ajouté au panier avec succès."
 ];

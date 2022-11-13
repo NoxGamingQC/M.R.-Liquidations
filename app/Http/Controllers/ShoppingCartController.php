@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Auth;
 use App\ShoppingCart;
+use Illuminate\Http\Request;
 
 class ShoppingCartController extends Controller
 {
@@ -25,6 +26,25 @@ class ShoppingCartController extends Controller
         } else {
             abort(403);
         }
+    }
+
+    public function add(Request $request) {
+        if(Auth::check()) {
+            $cartItem = new ShoppingCart;
+            $cartItem->item_id = $request->id;
+            //$cartItem->quantity = $request->quantity;
+            $cartItem->user_id = Auth::user()->id;
+            $cartItem->save();
+        }
+        return redirect()->back()->with('success', trans('shopping_cart.added_cart_success'));
+    }
+
+    public function remove(Request $request) {
+        if(Auth::check()) {
+            $cartItem = ShoppingCart::findOrFail($request->id);
+            $cartItem->delete();
+        }
+        return redirect()->back();
     }
 
     public function pay() {
