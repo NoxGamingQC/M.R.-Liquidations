@@ -52,7 +52,7 @@
 </div>
 @else
     <div class="col-md-12 text-center">
-        <h3>No content in cart</h3>
+        <h3>{{trans('shopping_cart.no_content_cart')}}</h3>
     </div>
 @endif
 
