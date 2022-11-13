@@ -12,5 +12,6 @@ return [
     'item' => "item(s)",
     'buy' => "Order now",
     'added_cart_success' => "Item added to cart successfully.",
-    'removed_cart_success' => "Item removed from cart successfully."
+    'removed_cart_success' => "Item removed from cart successfully.",
+    'no_content_cart' => "No content in cart."
 ];
