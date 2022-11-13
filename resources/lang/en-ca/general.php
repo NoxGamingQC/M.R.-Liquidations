@@ -37,5 +37,6 @@ return [
     'view' => "View",
     'edit' => "Edit",
     'delete' => "Delete",
-    'coded_by' => "Website created and maintained by "
+    'coded_by' => "Website created and maintained by ",
+    'shopping_cart' => "My cart"
 ];

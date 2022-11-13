@@ -57,6 +57,7 @@
                         </a>
                         <ul class="dropdown-menu">
                                 <li class="{{$page['profile.edit']['inMaintenance'] ? 'disabled' : ''}}"><a href="{{$page['profile.edit']['inMaintenance'] ? '#' : '/' . app()->getLocale() . '/profile/edit'}}"><i class="fa {{$page['profile.edit']['inMaintenance'] ? 'fa-wrench' : 'fa-user'}}" aria-hidden="true"></i> {{trans('general.edit_profile')}}</a></li>
+                                <li><a href="/{{app()->getLocale()}}/profile/cart"><i class="fa fa-shopping-cart" aria-hidden="true"></i> {{trans('general.shopping_cart')}}</a></li>
                                 <li class="{{$page['logout']['inMaintenance'] ? 'disabled' : ''}}"><a href="{{$page['logout']['inMaintenance'] ? '#' : '/logout'}}"><i class="fa {{$page['logout']['inMaintenance'] ? 'fa-wrench' : 'fa-sign-out'}}" aria-hidden="true"></i> {{trans('general.logout')}}</a></li>
                         </ul>
                     </li>
