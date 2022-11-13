@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('title', 'My Cart')
+@section('title', trans('shopping_cart.my_cart'))
 @section('content')
 
 @if(count($shoppingCart) > 0)
@@ -23,7 +23,7 @@
                             <h4><b>${{$item->price}}</b></h4>
                         </div>
                     </div>
-                    <p>Qty: {{$item->quantity}}&nbsp&nbsp | <a class="btn btn-link"><small>Delete</small></a> | <a class="btn btn-link"><small>Save for later</small></a></p>
+                    <p>{{trans('shopping_cart.quantity')}}: {{$item->quantity}}&nbsp&nbsp | <a class="btn btn-link"><small>{{trans('shopping_cart.delete')}}</small></a> | <a class="btn btn-link"><small>{{trans('shopping_cart.save_for_later')}}</small></a></p>
                 </div>
                 <div class="col-md-12">
                     <hr />
@@ -31,20 +31,20 @@
             @endforeach
             <div class="col-md-12">
                 <div class="text-right">
-                    <h4>Sous-total ({{count($shoppingCart)}} items): <b>${{$total}}</b></h4>
+                    <h4>{{trans('shopping_cart.subtotal')}} ({{count($shoppingCart)}} {{trans('shopping_cart.item')}}): <b>${{$total}}</b></h4>
                 </div>
                 <div class="text-right">
-                    <h4>TPS: <b>${{number_format($total * 0.05, 2)}}</b></h4>
+                    <h4>{{trans('shopping_cart.tps')}}: <b>${{number_format($total * 0.05, 2)}}</b></h4>
                 </div>
                 <div class="text-right">
-                    <h4>TVQ: <b>${{number_format($total * 0.09975, 2)}}</b></h4>
+                    <h4>{{trans('shopping_cart.tvq')}}: <b>${{number_format($total * 0.09975, 2)}}</b></h4>
                 </div>
                 <div class="text-right">
-                    <h4>Total: <b>${{number_format($total + ($total * 0.05) + ($total * 0.09975), 2)}}</b></h4>
+                    <h4>{{trans('shopping_cart.total')}}: <b>${{number_format($total + ($total * 0.05) + ($total * 0.09975), 2)}}</b></h4>
                 </div>
                 <div class="text-right">
                     <hr />
-                    <h4><a type="button" class="btn btn-success btn-lg">Acheter maintenant</a></h4>
+                    <h4><a type="button" class="btn btn-success btn-lg">{{trans('shopping_cart.buy')}} ({{count($shoppingCart)}} {{trans('shopping_cart.item')}})</a></h4>
                 </div>
             </div>
         </div>
