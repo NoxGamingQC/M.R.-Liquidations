@@ -1,106 +1,99 @@
 @extends('layouts.app')
-@section('title', 'Edit profile')
+@section('title', trans('general.edit_profile'))
 @section('content')
 
-<div class="container">
-    <div class="row">
-        <div class="col-md-10">
-            <h1>{{trans('profile.profile_edit')}}</h1>
-            <hr />
+<div class="col-md-12">
+    <h3>{{trans('profile.profile_info')}}</h3>
+    <br />
+    <div class="col-md-12">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="username">{{trans('profile.username')}}</label>
+                <input type="text" class="form-control" id="username" placeholder="Username" value="{{$username}}" />
+            </div>
         </div>
-        <div class="col-md-12">
-            <h3>{{trans('profile.profile_info')}}</h3>
-            <br />
-            <div class="col-md-12">
-                <div class="col-md-6">
-                    <div class="form-group">
-                        <label for="username">{{trans('profile.username')}}</label>
-                        <input type="text" class="form-control" id="username" placeholder="Username" value="{{$username}}" />
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="col-md-6">
-                        <label for="avatar">{{trans('profile.avatar')}}</label>
-                        <input class="form-control" id="selectAvatar" type="file" />
-                    </div>
-                </div>
+        <div class="col-md-6">
+            <div class="col-md-6">
+                <label for="avatar">{{trans('profile.avatar')}}</label>
+                <input class="form-control" id="selectAvatar" type="file" />
             </div>
-            <div class="col-md-12">
-                <div class="col-md-6">
-                    <div class="form-group">
-                        <label for="email">{{trans('profile.email')}}</label>
-                        <input type="email" class="form-control" id="email" placeholder="Email" value="{{$email}}" />
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="form-group">
-                        <label for="phoneNumber">{{trans('profile.phoneNumber')}}</label>
-                        <input type="phoneNumber" class="form-control" id="phoneNumber" placeholder="phoneNumber" value="{{$phoneNumber}}" />
-                    </div>
-                </div>
+        </div>
+    </div>
+    <div class="col-md-12">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="email">{{trans('profile.email')}}</label>
+                <input type="email" class="form-control" id="email" placeholder="Email" value="{{$email}}" />
             </div>
-            <div class="col-md-12">
-                <div class="col-md-6">
-                    <div class="form-group">
-                        <label for="firstname">{{trans('profile.firstname')}}</label>
-                        <input type="text" class="form-control" id="firstname" placeholder="Firstname" value="{{$firstname}}" />
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="form-group">
-                        <label for="lastname">{{trans('profile.lastname')}}</label>
-                        <input type="text" class="form-control" id="lastname" placeholder="Lastname" value="{{$lastname}}" />
-                    </div>
-                </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="phoneNumber">{{trans('profile.phone_number')}}</label>
+                <input type="phoneNumber" class="form-control" id="phoneNumber" placeholder="phoneNumber" value="{{$phoneNumber}}" />
             </div>
-            <div class="col-md-12">
-                <h3>Adresse</h3>
-                <hr />
-                <div class="col-md-6">
-                    <div class="form-group">
-                        <label for="address">{{trans('profile.address')}}</label>
-                        <input type="text" class="form-control" id="address" placeholder="Address" value="{{$address}}" />
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="form-group">
-                        <label for="city">{{trans('profile.city')}}</label>
-                        <input type="text" class="form-control" id="city" placeholder="City" value="{{$city}}" />
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="form-group">
-                        <label for="state">{{trans('profile.state')}}</label>
-                        <input type="text" class="form-control" id="state" placeholder="State" value="{{$state}}" />
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="form-group">
-                        <label for="country">{{trans('profile.country')}}</label>
-                        <input type="text" class="form-control" id="country" placeholder="Country" value="{{$country}}" />
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="form-group">
-                        <label for="postal_code">{{trans('profile.postal_code')}}</label>
-                        <input type="text" class="form-control" id="postalCode" placeholder="Postal code" value="{{$postalCode}}" />
-                    </div>
-                </div>
-                <div class="col-md-12">
-                    <div class="form-group">
-                        <label for="depositComment">{{trans('profile.depositComment')}}</label>
-                        <textarea type="text" class="form-control" id="depositComment" placeholder="Deposit comment" value="{{$depositComment}}"></textarea>
-                    </div>
-                </div>
+        </div>
+    </div>
+    <div class="col-md-12">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="firstname">{{trans('profile.firstname')}}</label>
+                <input type="text" class="form-control" id="firstname" placeholder="Firstname" value="{{$firstname}}" />
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="lastname">{{trans('profile.lastname')}}</label>
+                <input type="text" class="form-control" id="lastname" placeholder="Lastname" value="{{$lastname}}" />
+            </div>
+        </div>
+    </div>
+    <div class="col-md-12">
+        <h3>{{trans('profile.address')}}</h3>
+        <hr />
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="address">{{trans('profile.address')}}</label>
+                <input type="text" class="form-control" id="address" placeholder="Address" value="{{$address}}" />
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="city">{{trans('profile.city')}}</label>
+                <input type="text" class="form-control" id="city" placeholder="City" value="{{$city}}" />
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="state">{{trans('profile.state')}}</label>
+                <input type="text" class="form-control" id="state" placeholder="State" value="{{$state}}" />
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="country">{{trans('profile.country')}}</label>
+                <input type="text" class="form-control" id="country" placeholder="Country" value="{{$country}}" />
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="postal_code">{{trans('profile.postal_code')}}</label>
+                <input type="text" class="form-control" id="postalCode" placeholder="Postal code" value="{{$postalCode}}" />
             </div>
         </div>
         <div class="col-md-12">
-            <div class="col-md-12 text-right">
-                <button type="submit" id="submit" class="btn btn-primary">{{trans('general.submit')}}</button>
+            <div class="form-group">
+                <label for="depositComment">{{trans('profile.deposit_comment')}}</label>
+                <textarea type="text" class="form-control" id="depositComment" placeholder="{{trans('profile.deposit_comment_placeholder')}}" value="{{$depositComment}}"></textarea>
             </div>
         </div>
     </div>
 </div>
+<div class="col-md-12">
+    <div class="col-md-12 text-right">
+        <button type="submit" id="submit" class="btn btn-success">{{trans('general.save')}}</button>
+    </div>
+</div>
+
 <script type="text/javascript">
 
 $(document).ready(function() {

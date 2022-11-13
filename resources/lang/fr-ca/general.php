@@ -17,7 +17,7 @@ return [
     'submit' => "Envoyer",
     'search' => "Rechercher",
     'featured' => "En vedette",
-    'edit_profile' => "Modifier le profile",
+    'edit_profile' => "Modifier le profil",
     'console_wait' => "UN INSTANT!",
     'console_copy_paste01' => "Si quelqu'un vous demande de copier/coller quelque chose ici vous avez 11/10 chance d'être victime d'une arnaque.",
     'console_copy_paste02' => "Coller quelque chose ici pourrais donner aux attaquants accès à votre compte.",
