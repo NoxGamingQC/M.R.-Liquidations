@@ -3267,6 +3267,31 @@ button.toast-close-button {
     padding: 15px 50px 15px 15px;
   }
 }
+html, body {
+  overflow-x: hidden;
+}
+
+footer {
+  margin-top: 5%;
+  background-color: #000;
+  color: #fff;
+}
+footer a {
+  color: #fff;
+}
+footer a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+footer a:visited {
+  color: #fff;
+  text-decoration: none;
+}
+
+.container {
+  min-height: 40vh;
+}
+
 .welcome-page {
   background-image: url("/img/home_background.png");
   background-color: #f5f8fa;
@@ -3281,22 +3306,6 @@ button.toast-close-button {
 .title {
   font-family: "Blenda Script", sans-serif !important;
   text-shadow: 2px 2px #000;
-}
-
-.footer {
-  background-color: #000;
-  color: #fff;
-}
-.footer a {
-  color: #fff;
-}
-.footer a:hover {
-  color: #fff;
-  text-decoration: none;
-}
-.footer a:visited {
-  color: #fff;
-  text-decoration: none;
 }
 
 .bg-primary {
@@ -3547,6 +3556,11 @@ h5.limit-text-length {
   display: -webkit-box !important;
   -webkit-line-clamp: 5 !important;
   -webkit-box-orient: vertical !important;
+}
+
+.navbar {
+  border-top: 0px solid transparent !important;
+  margin-top: 2%;
 }
 
 /*!

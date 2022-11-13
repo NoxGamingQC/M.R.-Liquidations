@@ -1,18 +1,9 @@
-.welcome-page {
-    background-image: url('/img/home_background.png');
-    background-color: $background-color;
-    background-size: cover;
-    @media (min-width: 992px) {
-        background-size: 50% !important;
-    }
+html, body {
+    overflow-x: hidden;
 }
 
-.title {
-    font-family: 'Blenda Script', sans-serif !important;
-    text-shadow: 2px 2px #000;
-}
-
-.footer {
+footer {
+    margin-top: 5%;
     background-color: $footer-color;
     color: $text-inverted-color;
     a {
@@ -26,6 +17,24 @@
         color: $text-inverted-color;
         text-decoration: none;
     }
+}
+
+.container {
+    min-height: 40vh;
+}
+
+.welcome-page {
+    background-image: url('/img/home_background.png');
+    background-color: $background-color;
+    background-size: cover;
+    @media (min-width: 992px) {
+        background-size: 50% !important;
+    }
+}
+
+.title {
+    font-family: 'Blenda Script', sans-serif !important;
+    text-shadow: 2px 2px #000;
 }
 
 .bg-primary {
