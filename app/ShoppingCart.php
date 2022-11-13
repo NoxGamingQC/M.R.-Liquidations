@@ -15,7 +15,11 @@ class ShoppingCart extends Model
     public function scopeGetItems($query) {
         return $query->leftJoin('items', function($join) {
             $join->on('items.id', '=', 'shopping_cart.item_id');
-        })->select('shopping_cart.id', 'items.name', 'shopping_cart.quantity', 'items.price');
+        })->leftJoin('item_pictures', function($join) {
+            $join->on('items.id', '=', 'item_pictures.itemID')
+                    ->where('item_pictures.isFeatured', '=', true);
+        })
+        ->select('shopping_cart.id', 'items.name', 'shopping_cart.quantity', 'items.price', 'item_pictures.picture');
     }
 
 }

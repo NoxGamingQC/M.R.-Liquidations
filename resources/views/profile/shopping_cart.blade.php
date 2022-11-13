@@ -3,63 +3,53 @@
 @section('content')
 
 @if(count($shoppingCart) > 0)
-    <table class="table">
-        <thead>
-            <tr>
-                <th class="text-center" scope="col">#</th>
-                <th class="text-center" scope="col">Item</th>
-                <th class="text-center" scope="col">Quantity</th>
-                <th class="text-center" scope="col">Price</th>
-                <th class="text-center" scope="col">Remove</th>
-            </tr>
-        </thead>
-        <tbody>
+<div class="row">
+    <div class="col-md-12">
+        <div class="row">
             @foreach($shoppingCart as $key => $item)
-                <tr>
-                    <th class="text-center" scope="row">{{$key + 1}}</th>
-                    <td class="text-center">{{$item->name}}</td>
-                    <td class="text-center">{{$item->quantity}}</td>
-                    <td class="text-center">{{$item->price}}$</td>
-                    <td class="text-center"><a class="btn btn-danger btn-sm"><i class="fa fa-times" area-hidden="true"></i></a></td>
-                </tr>
+            <div class="col-md-2">
+                @if($item->picture)
+                    <img src="{{$item->picture}}" width="80%" />
+                @else
+                    <img src="/img/no-image.png" width="80%" />
+                @endif
+            </div>
+                <div class="col-md-10">
+                    <div class="row">
+                        <div class="col-md-8 text-left">
+                            <h4>{{$item->name}}</h4>
+                        </div>
+                        <div class="col-md-4 text-right">
+                            <h4><b>${{$item->price}}</b></h4>
+                        </div>
+                    </div>
+                    <p>Qty: {{$item->quantity}}&nbsp&nbsp | <a class="btn btn-link"><small>Delete</small></a> | <a class="btn btn-link"><small>Save for later</small></a></p>
+                </div>
+                <div class="col-md-12">
+                    <hr />
+                </div>
             @endforeach
-            <tr>
-                <th class="" scope="row"></th>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <th class="text-center no-border" scope="row"></th>
-                <td class="text-center no-border"></td>
-                <td class="text-right no-border"><b>Total - </b></td>
-                <td class="text-center no-border"><b>{{$total}}$</b></td>
-                <td class="text-center no-border"></td>
-            </tr>
-            <tr>
-                <th class="text-center no-border" scope="row"></th>
-                <td class="text-center no-border"></td>
-                <td class="text-right no-border"><b>TPS -</b></td>
-                <td class="text-center no-border"><b>{{number_format($total * 0.05, 2)}}$</b></td>
-                <td class="text-center no-border"></td>
-            </tr>
-            <tr>
-                <th class="text-center no-border" scope="row"></th>
-                <td class="text-center no-border"></td>
-                <td class="text-right no-border"><b>TVQ -</b></td>
-                <td class="text-center no-border"><b>{{number_format($total * 0.09975, 2)}}$</b></td>
-                <td class="text-center no-border"></td>
-            </tr>
-            <tr>
-                <th class="text-center no-border" scope="row"></th>
-                <td class="text-center no-border"></td>
-                <td class="text-right no-border"><b>Grand total -</b></td>
-                <td class="text-center no-border"><b>{{number_format($total + ($total * 0.05) + ($total * 0.09975), 2)}}$</b></td>
-                <td class="text-center no-border"></td>
-            </tr>
-        </tbody>
-    </table>
+            <div class="col-md-12">
+                <div class="text-right">
+                    <h4>Sous-total ({{count($shoppingCart)}} items): <b>${{$total}}</b></h4>
+                </div>
+                <div class="text-right">
+                    <h4>TPS: <b>${{number_format($total * 0.05, 2)}}</b></h4>
+                </div>
+                <div class="text-right">
+                    <h4>TVQ: <b>${{number_format($total * 0.09975, 2)}}</b></h4>
+                </div>
+                <div class="text-right">
+                    <h4>Total: <b>${{number_format($total + ($total * 0.05) + ($total * 0.09975), 2)}}</b></h4>
+                </div>
+                <div class="text-right">
+                    <hr />
+                    <h4><a type="button" class="btn btn-success btn-lg">Acheter maintenant</a></h4>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 @else
     <div class="col-md-12 text-center">
         <h3>No content in cart</h3>
