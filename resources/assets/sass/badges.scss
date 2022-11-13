@@ -1,41 +1,66 @@
 .badge-danger {
+    display: inline-table;
     background-color: $brand-danger;
     text-align: center;
-    border-radius: 5px 5px 5px 5px;
-    padding: 5px;
+    border-radius: 50%;
+    vertical-align: middle;
+    width: 20px;
+    height: 20px;
+    color: $text-inverted-color;
 }
 
 .badge-info {
+    display: inline-table;
     background-color: $brand-info;
     text-align: center;
-    border-radius: 5px 5px 5px 5px;
-    padding: 5px;
+    border-radius: 50%;
+    vertical-align: middle;
+    width: 20px;
+    height: 20px;
+    color: $text-color;
 }
 
 .badge-default {
+    display: inline-table;
     background-color: $background-color;
+    border: 1px solid $text-color;
     text-align: center;
-    border-radius: 5px 5px 5px 5px;
-    padding: 5px;
+    border-radius: 50%;
+    vertical-align: middle;
+    width: 20px;
+    height: 20px;
+    color: $text-color;
 }
 
 .badge-success {
+    display: inline-table;
     background-color: $brand-success;
     text-align: center;
-    border-radius: 5px 5px 5px 5px;
-    padding: 5px;
+    border-radius: 50%;
+    vertical-align: middle;
+    width: 20px;
+    height: 20px;
+    color: $text-color;
 }
 
 .badge-warning {
+    display: inline-table;
     background-color: $brand-warning;
     text-align: center;
-    border-radius: 5px 5px 5px 5px;
-    padding: 5px;
+    border-radius: 50%;
+    vertical-align: middle;
+    width: 20px;
+    height: 20px;
+    color: $text-color;
 }
 
 .badge-primary {
+    display: inline-table;
     background-color: $brand-primary;
     text-align: center;
-    border-radius: 5px 5px 5px 5px;
-    padding: 5px;
+    border-radius: 50%;
+    vertical-align: middle;
+    width: 20px;
+    height: 20px;
+    color: $text-inverted-color;
 }

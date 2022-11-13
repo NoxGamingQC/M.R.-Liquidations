@@ -3396,45 +3396,70 @@ img.disabled {
 }
 
 .badge-danger {
+  display: inline-table;
   background-color: #d9534f;
   text-align: center;
-  border-radius: 5px 5px 5px 5px;
-  padding: 5px;
+  border-radius: 50%;
+  vertical-align: middle;
+  width: 20px;
+  height: 20px;
+  color: #fff;
 }
 
 .badge-info {
+  display: inline-table;
   background-color: #5bc0de;
   text-align: center;
-  border-radius: 5px 5px 5px 5px;
-  padding: 5px;
+  border-radius: 50%;
+  vertical-align: middle;
+  width: 20px;
+  height: 20px;
+  color: #000;
 }
 
 .badge-default {
+  display: inline-table;
   background-color: #f5f8fa;
+  border: 1px solid #000;
   text-align: center;
-  border-radius: 5px 5px 5px 5px;
-  padding: 5px;
+  border-radius: 50%;
+  vertical-align: middle;
+  width: 20px;
+  height: 20px;
+  color: #000;
 }
 
 .badge-success {
+  display: inline-table;
   background-color: #5cb85c;
   text-align: center;
-  border-radius: 5px 5px 5px 5px;
-  padding: 5px;
+  border-radius: 50%;
+  vertical-align: middle;
+  width: 20px;
+  height: 20px;
+  color: #000;
 }
 
 .badge-warning {
+  display: inline-table;
   background-color: #f0ad4e;
   text-align: center;
-  border-radius: 5px 5px 5px 5px;
-  padding: 5px;
+  border-radius: 50%;
+  vertical-align: middle;
+  width: 20px;
+  height: 20px;
+  color: #000;
 }
 
 .badge-primary {
+  display: inline-table;
   background-color: #B11201;
   text-align: center;
-  border-radius: 5px 5px 5px 5px;
-  padding: 5px;
+  border-radius: 50%;
+  vertical-align: middle;
+  width: 20px;
+  height: 20px;
+  color: #fff;
 }
 
 .btn-primary {

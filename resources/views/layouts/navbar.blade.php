@@ -51,7 +51,7 @@
                             </ul>
                         </li>
                     @endif
-                    <li class="nav-cart"><a href="/{{app()->getLocale()}}/profile/cart"><i class="fa fa-shopping-cart" aria-hidden="true"></i> {{trans('general.shopping_cart')}}<span class="sr-only">current</span></a></li>
+                    <li class="nav-cart"><a href="/{{app()->getLocale()}}/profile/cart"><i class="fa fa-shopping-cart" aria-hidden="true"></i> {{trans('general.shopping_cart')}} <small class="badge-primary">{{$itemCartCount}}</small><span class="sr-only">current</span></a></li>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true">
                             <i class="fa fa-user-circle-o" aria-hidden="true"></i> {{ Auth::user()->name }} <span class="caret"></span>
