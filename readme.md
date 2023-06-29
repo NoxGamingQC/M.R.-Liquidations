@@ -1,6 +1,6 @@
-# M.R. Liquidations
+# M.R. Liquidations [Company is no longer in service]
 
-> M.R. Liquidations official website. [Company is no longer in service]
+> M.R. Liquidations official website. 
 > ~~Live website [_here_](https://www.mrliquidations.ca)~~. <!-- If you have the project hosted somewhere, include the link here. -->
 
 ## Table of Contents
