@@ -3,6 +3,13 @@
 > M.R. Liquidations official website. 
 > ~~Live website [_here_](https://www.mrliquidations.ca)~~. <!-- If you have the project hosted somewhere, include the link here. -->
 
+[![Type](https://img.shields.io/badge/project%20type-website-red?style=for-the-badge)](#)
+[![Website](https://img.shields.io/website?url=https%3A%2F%2Fwww.mrliquidations.ca&style=for-the-badge)](#)
+[![License](https://img.shields.io/badge/license-mit-green?style=for-the-badge)](#)]
+[![Laravel version](https://img.shields.io/badge/laravel-9.38.0-blue?style=for-the-badge)](#)
+[![PHP version](https://img.shields.io/badge/php-%5E8.0.2-blue?style=for-the-badge)](#)
+[![NPM version](https://img.shields.io/badge/npm-%5E8.19.2-blue?style=for-the-badge)](#)
+
 ## Table of Contents
 
 * [General Info](#general-information)
