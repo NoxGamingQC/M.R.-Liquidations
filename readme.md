@@ -3,6 +3,7 @@
 > M.R. Liquidations official website. 
 > ~~Live website [_here_](https://www.mrliquidations.ca)~~. <!-- If you have the project hosted somewhere, include the link here. -->
 
+[![State](https://img.shields.io/badge/State-discontinued-%23888888?style=for-the-badge)](#)
 [![Type](https://img.shields.io/badge/project%20type-website-red?style=for-the-badge)](#)
 [![Website](https://img.shields.io/website?url=https%3A%2F%2Fwww.mrliquidations.ca&style=for-the-badge)](#)
 [![License](https://img.shields.io/github/license/NoxGamingQC/M.R.-Liquidations?style=for-the-badge)](#)
